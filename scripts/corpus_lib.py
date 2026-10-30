@@ -146,6 +146,44 @@ def sont_independantes(a: str, b: str, sources_par_id: dict[str, Fiche]) -> bool
     return not (origines(a, sources_par_id) & origines(b, sources_par_id))
 
 
+def niveaux_par_type(types_sources: dict) -> dict[str, int]:
+    return {code: t.get("niveau") for code, t in (types_sources.get("types") or {}).items()}
+
+
+def niveau_source(id_source: str, sources_par_id: dict[str, Fiche], niveaux: dict[str, int]) -> int | None:
+    fiche = sources_par_id.get(id_source)
+    if fiche is None:
+        return None
+    return niveaux.get(fiche.entete.get("type"))
+
+
+def evaluer_validation(ids: list[str], sources_par_id: dict[str, Fiche], niveaux: dict[str, int]) -> dict:
+    """Applique la règle de validation d'un fait.
+
+    Un fait est valide s'il repose sur 1 source de niveau 1,
+    ou sur 2 sources indépendantes de niveau 2 ou mieux.
+    Renvoie {"valide": bool, "mode": "niveau-1" | "deux-sources" | None,
+             "sources_niveau_1": [...], "independantes_n2": int}.
+    """
+    sources_n1 = [i for i in ids if niveau_source(i, sources_par_id, niveaux) == 1]
+    sources_n2_ou_mieux = [
+        i for i in ids if (niveau_source(i, sources_par_id, niveaux) or 99) <= 2
+    ]
+    n_independantes = nombre_sources_independantes(sources_n2_ou_mieux, sources_par_id)
+    if n_independantes >= 2:
+        mode = "deux-sources"
+    elif sources_n1:
+        mode = "niveau-1"
+    else:
+        mode = None
+    return {
+        "valide": mode is not None,
+        "mode": mode,
+        "sources_niveau_1": sources_n1,
+        "independantes_n2": n_independantes,
+    }
+
+
 def nombre_sources_independantes(ids: list[str], sources_par_id: dict[str, Fiche]) -> int:
     """Taille d'un groupe de sources deux à deux indépendantes (calcul glouton)."""
     retenues: list[str] = []

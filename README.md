@@ -7,7 +7,7 @@ Agents d'aide à la vérification de l'actualité économique et politique fran�
 ## Principe
 
 - **Agent Vérificateur** : vous lui soumettez une information ; il indique, affirmation par affirmation, si elle est *exacte*, *fausse*, *trompeuse*, *incomplète* ou *non vérifiable*, en citant uniquement les fiches du corpus.
-- **Agent Curateur** : il aide à enrichir le corpus, en exigeant au moins **deux sources indépendantes** par fait.
+- **Agent Curateur** : il aide à enrichir le corpus. Un fait n'est validé que s'il repose sur **une source primaire officielle** (statistique ou texte juridique) ou sur **deux sources indépendantes** fiables.
 - **Corpus public** : fiches Markdown (sources et faits) relues par des humains via Pull Request.
 
 Thèmes de départ : **immigration**, **emploi**, **finances publiques**. Sources principalement françaises (INSEE, DARES, Eurostat, Légifrance, Cour des comptes, AFP, presse de référence…).

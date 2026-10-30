@@ -23,7 +23,8 @@ from corpus_lib import (
     charger_corpus,
     charger_json,
     configurer_sortie,
-    nombre_sources_independantes,
+    evaluer_validation,
+    niveaux_par_type,
 )
 
 MOTIF_NOM = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*\.md$")
@@ -98,6 +99,7 @@ def main() -> int:
 
     sources_par_id = {f.id: f for f in corpus.sources if f.id and not f.erreur_lecture}
     types_connus = corpus.types_sources.get("types", {})
+    niveaux = niveaux_par_type(corpus.types_sources)
 
     # --- Sources -----------------------------------------------------------
     for fiche in corpus.sources:
@@ -150,13 +152,33 @@ def main() -> int:
             if id_source not in sources_par_id:
                 rapport.erreur(fiche, f"contredit_par : source « {id_source} » introuvable dans le corpus")
         if e["statut"] == "valide":
-            n = nombre_sources_independantes(ids_sources, sources_par_id)
-            if n < 2:
+            bilan = evaluer_validation(ids_sources, sources_par_id, niveaux)
+            if not bilan["valide"]:
                 rapport.erreur(
                     fiche,
-                    f"statut « valide » mais seulement {n} source(s) indépendante(s) : il en faut au moins 2 "
-                    "(éditeurs différents, sans reprise commune via depend_de)",
+                    "statut « valide » non justifié : il faut 1 source de niveau 1, ou 2 sources indépendantes "
+                    f"de niveau 2 ou mieux (ici : {bilan['independantes_n2']} source(s) indépendante(s) de niveau ≤ 2, "
+                    "aucune de niveau 1). Les niveaux 3 et 4 ne valident jamais un fait.",
                 )
+            elif bilan["mode"] == "niveau-1":
+                # Garde-fous quand une seule source de niveau 1 valide le fait.
+                for s in e["sources"]:
+                    if s["source"] in bilan["sources_niveau_1"] and not str(s.get("localisation") or "").strip():
+                        rapport.erreur(
+                            fiche,
+                            f"fait validé par une seule source de niveau 1 : indiquer la localisation précise "
+                            f"de l'extrait de « {s['source']} » (tableau, ligne, page…)",
+                        )
+                stats_n1 = [
+                    i for i in bilan["sources_niveau_1"]
+                    if sources_par_id[i].entete.get("type") == "donnees-officielles"
+                ]
+                if stats_n1 and not e.get("etat_donnee"):
+                    rapport.erreur(
+                        fiche,
+                        "fait validé par une seule source statistique de niveau 1 : renseigner etat_donnee "
+                        "(provisoire ou definitif)",
+                    )
         if e["statut"] == "conteste" and not e.get("contredit_par"):
             rapport.erreur(fiche, "statut « conteste » : renseigner contredit_par")
         if e["date_validite"] < aujourd_hui:

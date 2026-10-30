@@ -14,12 +14,12 @@ import argparse
 import json
 import sys
 
-from corpus_lib import FICHIER_INDEX, charger_corpus, configurer_sortie
+from corpus_lib import FICHIER_INDEX, charger_corpus, configurer_sortie, niveaux_par_type
 
 
 def construire_index() -> dict:
     corpus = charger_corpus()
-    niveaux = {code: t.get("niveau") for code, t in (corpus.types_sources.get("types") or {}).items()}
+    niveaux = niveaux_par_type(corpus.types_sources)
     sources = [f for f in corpus.sources if f.id and not f.erreur_lecture]
     faits = [f for f in corpus.faits if f.id and not f.erreur_lecture]
 

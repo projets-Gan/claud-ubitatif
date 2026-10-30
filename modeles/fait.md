@@ -12,12 +12,13 @@ periode: "2026"                              # AAAA, AAAA-MM, AAAA-T1 à T4 ou A
 themes: [emploi]
 sous_themes: []
 pays: [FR]
-statut: en-attente                           # valide (≥ 2 sources indépendantes), en-attente, conteste
+etat_donnee: null                            # statistique : provisoire ou definitif (obligatoire si 1 seule source N1)
+statut: en-attente                           # valide (1 source N1, ou 2 sources N2+ indépendantes), en-attente, conteste
 date_validite: 2026-12-31                    # date de la prochaine publication qui pourrait le modifier
 sources:
   - source: id-de-la-premiere-source
     extrait: "Court extrait qui appuie le fait."
-    localisation: "page, tableau ou paragraphe"
+    localisation: "page, tableau ou paragraphe"   # obligatoire si 1 seule source N1
   - source: id-de-la-seconde-source-independante
     extrait: "Court extrait qui appuie le fait."
 contredit_par: []                            # obligatoire si statut = conteste

@@ -8,13 +8,15 @@
 |---|---|---|---|
 |  | source / fait | valide / en-attente / conteste |  |
 
-## Indépendance des sources
+## Justification des faits « valide »
 
-<!-- Pour chaque fait « valide » : pourquoi les sources sont-elles indépendantes ? (éditeurs différents, pas de reprise d'une même dépêche…) -->
+<!-- Pour chaque fait « valide », préciser la voie de validation :
+     - 1 source de niveau 1 : pourquoi le document est-il primaire et non orienté ? Localisation de l'extrait, état provisoire / définitif.
+     - 2 sources de niveau 2 ou mieux : pourquoi sont-elles indépendantes ? (éditeurs différents, pas de reprise d'un même communiqué ou d'une même dépêche) -->
 
 ## Points d'attention pour le relecteur
 
-<!-- Archive manquante, extrait à confirmer, définition ambiguë, sujet sensible… -->
+<!-- Faits validés par une seule source de niveau 1 (à relire en priorité), archive manquante, extrait à confirmer, définition ambiguë, sujet sensible… -->
 
 ## Vérifications
 

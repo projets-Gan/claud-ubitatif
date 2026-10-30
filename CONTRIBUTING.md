@@ -29,7 +29,8 @@ Avec Claude Code, vous pouvez demander : « Utilise l'agent curateur pour ajoute
 
 Une PR est fusionnée si :
 - la validation automatique passe ;
-- chaque fait `valide` repose sur au moins deux sources réellement indépendantes ;
+- chaque fait `valide` repose sur 1 source de niveau 1 (avec localisation précise de l'extrait et, pour une statistique, son état provisoire ou définitif), ou sur 2 sources de niveau 2 ou mieux réellement indépendantes ;
+- chaque source est classée selon le document lui-même, pas selon l'organisme qui le publie (un communiqué de ministère est de niveau 2, son tableau statistique de niveau 1) ;
 - les extraits sont courts, exacts et localisés ;
 - les définitions et périmètres sont explicites ;
 - rien n'est copié au-delà du droit de courte citation.

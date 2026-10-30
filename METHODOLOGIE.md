@@ -15,12 +15,23 @@ Ce document décrit comment le corpus est constitué et comment les verdicts son
 
 | Niveau | Types (`config/types-sources.yaml`) | Exemples |
 |---|---|---|
-| 1 | `donnees-officielles`, `texte-officiel`, `institution-publique` | INSEE, Eurostat, DARES, Légifrance, Journal officiel, Cour des comptes, Banque de France |
-| 2 | `agence-presse` | AFP, Reuters |
+| 1 | `donnees-officielles`, `texte-officiel` : documents **primaires et non orientés** | Tableaux et séries de l'INSEE, d'Eurostat, de la DARES ; textes de Légifrance et du Journal officiel |
+| 2 | `agence-presse`, `institution-publique` : documents qui relaient, analysent ou commentent, donc **potentiellement orientés** | AFP, Reuters ; communiqués de ministères, rapports de la Cour des comptes, de l'OFII |
 | 3 | `presse-reference`, `fact-check`, `recherche` | Presse nationale, AFP Factuel, Les Décodeurs, OFCE |
-| 4 | `autre` | Blogs, réseaux sociaux, communiqués : avec prudence |
+| 4 | `autre` | Blogs, réseaux sociaux, communiqués de partis : avec prudence |
 
-Le niveau oriente le choix des sources ; il ne dispense jamais de la règle des deux sources indépendantes.
+**On classe le document, pas l'organisme.** Le même ministère peut publier un tableau statistique (niveau 1) et un communiqué qui le commente (niveau 2). Au moindre doute sur le caractère primaire et non orienté d'un document, il est classé au niveau 2.
+
+### Règle de validation
+
+> Un fait est **valide** s'il repose sur **1 source de niveau 1**, ou sur **2 sources indépendantes de niveau 2 (ou mieux)**. Les sources de niveau 3 et 4 ne valident jamais un fait, même à plusieurs : elles servent au contexte ou à signaler un désaccord.
+
+Quand une **seule source de niveau 1** valide un fait, aucune seconde source ne peut révéler une erreur de lecture. Trois garde-fous la remplacent :
+1. l'extrait est exact et sa **localisation précise** est indiquée (tableau, ligne, page) ;
+2. pour une statistique, l'**état de la donnée** est indiqué (`provisoire` ou `definitif`) ;
+3. la **relecture humaine** de la Pull Request contrôle la lecture du document.
+
+Le script `scripts/valider_corpus.py` applique cette règle et ces garde-fous automatiquement.
 
 ### Indépendance
 
@@ -28,7 +39,9 @@ Deux sources sont **indépendantes** si :
 - elles ne viennent pas du même éditeur ;
 - aucune ne reprend l'autre, et elles ne reprennent pas une même source d'origine (champ `depend_de`).
 
-Exemple : trois journaux qui publient la même dépêche AFP comptent pour **une** source. Une statistique de l'INSEE et un rapport de la Cour des comptes qui la confirment comptent pour **deux**. Le script `scripts/valider_corpus.py` applique cette règle automatiquement.
+Exemples : trois journaux qui publient la même dépêche AFP comptent pour **une** source. Une dépêche AFP et une dépêche Reuters qui reprennent le même communiqué de ministère comptent aussi pour **une** source : le communiqué d'origine doit alors figurer dans le corpus et être déclaré dans `depend_de`. Une dépêche AFP et un rapport de la Cour des comptes établis séparément comptent pour **deux**.
+
+Deux sources de niveau 1 en désaccord (souvent à cause de définitions différentes, par exemple INSEE et Eurostat) donnent soit deux fiches faits distinctes, chacune avec sa définition, soit le statut `conteste`.
 
 ### Stockage
 
@@ -40,8 +53,8 @@ Un fait est une affirmation précise et vérifiable : une valeur, une unité, un
 
 | Statut | Signification | Utilisable pour un verdict |
 |---|---|---|
-| `valide` | Au moins 2 sources indépendantes concordantes | Oui |
-| `en-attente` | Une seule source, ou vérification incomplète | Non |
+| `valide` | 1 source de niveau 1, ou 2 sources indépendantes concordantes de niveau 2 ou mieux | Oui |
+| `en-attente` | Règle de validation non remplie, ou vérification incomplète | Non |
 | `conteste` | Des sources sérieuses divergent (`contredit_par` renseigné) | Non, mais à signaler |
 
 Chaque fait a une **date de validité** : en général la date de la prochaine publication de la statistique. Une fois dépassée, le fait doit être mis à jour ; les agents le signalent.
@@ -73,7 +86,7 @@ Chaque verdict cite les fiches utilisées avec un court extrait et le lien vers 
 
 ## 6. Contrôle humain
 
-Toute modification du corpus passe par une **Pull Request** relue par un humain, après une validation automatique (schémas, vocabulaire, règle des deux sources, index à jour). Voir `CONTRIBUTING.md`.
+Toute modification du corpus passe par une **Pull Request** relue par un humain, après une validation automatique (schémas, vocabulaire, règle de validation et garde-fous, index à jour). Voir `CONTRIBUTING.md`.
 
 ## 7. Évaluation
 

@@ -24,6 +24,10 @@
       "type": "string",
       "description": "Définition ou mesure utilisée (ex. chômage au sens du BIT, immigré au sens de l'INSEE)."
     },
+    "etat_donnee": {
+      "description": "Pour une statistique : provisoire (susceptible de révision) ou définitive. Obligatoire si le fait est validé par une seule source de niveau 1 de type donnees-officielles.",
+      "enum": ["provisoire", "definitif", null]
+    },
     "periode": {
       "type": "string",
       "description": "Période à laquelle le fait se rapporte : AAAA, AAAA-MM, AAAA-TN (trimestre) ou AAAA-MM-JJ.",
@@ -37,7 +41,10 @@
       "uniqueItems": true,
       "items": { "type": "string", "pattern": "^[A-Z]{2,3}$" }
     },
-    "statut": { "enum": ["valide", "en-attente", "conteste"] },
+    "statut": {
+      "description": "valide : 1 source de niveau 1, ou 2 sources indépendantes de niveau 2 ou mieux ; en-attente : conditions non remplies ; conteste : sources en désaccord.",
+      "enum": ["valide", "en-attente", "conteste"]
+    },
     "date_validite": {
       "description": "Date jusqu'à laquelle le fait est considéré à jour (ex. date de la prochaine publication de la statistique).",
       "type": "string",
@@ -60,7 +67,7 @@
           },
           "localisation": {
             "type": "string",
-            "description": "Où trouver l'extrait : page, tableau, paragraphe…"
+            "description": "Où trouver l'extrait : page, tableau, ligne, paragraphe… Obligatoire si le fait est validé par une seule source de niveau 1."
           }
         }
       }

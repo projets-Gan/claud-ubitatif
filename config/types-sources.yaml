@@ -1,23 +1,42 @@
 # Types de sources et niveau de fiabilité (1 = le plus fiable).
-# Le niveau guide la pondération, il ne dispense jamais de la règle des 2 sources indépendantes.
+#
+# Règle de validation d'un fait (appliquée par scripts/valider_corpus.py) :
+#   un fait est « valide » s'il repose sur 1 source de niveau 1,
+#   ou sur 2 sources indépendantes de niveau 2 (ou mieux).
+#   Les sources de niveau 3 et 4 ne valident jamais un fait seules :
+#   elles servent au contexte ou à signaler un désaccord.
+#
+# On classe le DOCUMENT, pas l'organisme : le même ministère peut publier
+# un tableau statistique (niveau 1) et un communiqué qui le commente (niveau 2).
+# Au moindre doute sur le caractère primaire et non orienté d'un document, niveau 2.
 
 types:
   donnees-officielles:
     niveau: 1
-    libelle: Données statistiques officielles
-    exemples: [INSEE, Eurostat, DARES, DREES, service statistique du ministère de l'Intérieur, Banque de France]
+    libelle: Données statistiques officielles (document primaire, non orienté)
+    description: >
+      Tableaux, séries et publications statistiques produits par un service
+      statistique public selon une méthode documentée. Pas les commentaires
+      ou communiqués qui les accompagnent.
+    exemples: [INSEE, Eurostat, DARES, DREES, service statistique du ministère de l'Intérieur, séries de la Banque de France]
   texte-officiel:
     niveau: 1
-    libelle: Texte juridique officiel
+    libelle: Texte juridique officiel (document primaire, non orienté)
+    description: >
+      Texte de loi, décret, arrêté, décision de justice ou du Conseil
+      constitutionnel, dans sa version officielle.
     exemples: [Légifrance, Journal officiel, EUR-Lex, Conseil constitutionnel]
-  institution-publique:
-    niveau: 1
-    libelle: Rapport ou publication d'une institution publique
-    exemples: [Cour des comptes, Haut Conseil des finances publiques, ministères, OFII, OFPRA, France Travail]
   agence-presse:
     niveau: 2
     libelle: Dépêche d'agence de presse
     exemples: [AFP, Reuters, AP]
+  institution-publique:
+    niveau: 2
+    libelle: Rapport, avis ou communiqué d'une institution publique
+    description: >
+      Documents qui analysent, commentent ou présentent des données et peuvent
+      donc comporter une orientation (choix des chiffres, de la période, du cadrage).
+    exemples: [communiqués de ministères, Cour des comptes, Haut Conseil des finances publiques, OFII, OFPRA, France Travail]
   presse-reference:
     niveau: 3
     libelle: Article de presse de référence
