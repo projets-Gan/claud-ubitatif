@@ -1,0 +1,60 @@
+# Vocabulaire contrôlé : thèmes, sous-thèmes et pays autorisés.
+# Toute nouvelle valeur s'ajoute ici par Pull Request, avant d'être utilisée dans le corpus.
+# Codes en ASCII, minuscules, tirets.
+
+themes:
+  immigration:
+    libelle: Immigration
+    description: >
+      Flux et stocks de population immigrée ou étrangère, titres de séjour, asile,
+      naturalisations, éloignements, législation sur l'entrée et le séjour.
+      Toujours préciser la définition utilisée (immigré, étranger, demandeur d'asile…).
+    sous_themes:
+      population-immigree: Population immigrée et étrangère (stocks)
+      titres-de-sejour: Premiers titres et renouvellements
+      asile: Demandes d'asile, décisions, protections accordées
+      naturalisation: Acquisitions de la nationalité française
+      eloignements: Obligations de quitter le territoire, éloignements exécutés
+      legislation-immigration: Lois et règlements sur l'entrée et le séjour
+      immigration-emploi: Immigration et marché du travail
+
+  emploi:
+    libelle: Emploi
+    description: >
+      Marché du travail : chômage, emploi, activité, salaires, contrats,
+      politiques de l'emploi. Préciser la mesure (BIT, demandeurs d'emploi inscrits…).
+    sous_themes:
+      chomage: Taux de chômage (au sens du BIT) et halo
+      demandeurs-emploi: Demandeurs d'emploi inscrits à France Travail
+      taux-emploi: Taux d'emploi et d'activité
+      creations-emploi: Créations et destructions d'emplois
+      salaires: Salaires, SMIC, pouvoir d'achat salarial
+      contrats: Types de contrats, intérim, apprentissage
+      politiques-emploi: Réformes et dispositifs publics (assurance chômage…)
+
+  finances-publiques:
+    libelle: Finances publiques
+    description: >
+      Budget de l'État et des administrations publiques : déficit, dette,
+      dépenses, recettes, prélèvements obligatoires, lois de finances.
+      Préciser le périmètre (État, administrations publiques, sécurité sociale).
+    sous_themes:
+      deficit: Déficit public (au sens de Maastricht ou budgétaire)
+      dette: Dette publique
+      depenses-publiques: Dépenses publiques
+      recettes-fiscales: Impôts, taxes et prélèvements obligatoires
+      lois-de-finances: Lois de finances et de financement de la sécurité sociale
+      securite-sociale: Comptes de la sécurité sociale
+
+# Codes pays : ISO 3166-1 alpha-2, plus "UE" pour l'Union européenne
+# et "INT" pour une portée internationale.
+pays:
+  FR: France
+  UE: Union européenne
+  INT: International
+  DE: Allemagne
+  BE: Belgique
+  ES: Espagne
+  IT: Italie
+  GB: Royaume-Uni
+  US: États-Unis

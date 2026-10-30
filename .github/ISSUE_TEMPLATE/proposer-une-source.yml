@@ -1,0 +1,55 @@
+name: Proposer une source
+description: Suggérer un document fiable à ajouter au corpus
+title: "[Source] "
+labels: ["source-proposee"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci ! Privilégiez les sources primaires (INSEE, DARES, Eurostat, Légifrance, Cour des comptes…) ou les agences de presse.
+        Ne collez pas l'article complet : un lien et un court extrait suffisent.
+  - type: input
+    id: url
+    attributes:
+      label: Lien vers la source
+      placeholder: https://…
+    validations:
+      required: true
+  - type: input
+    id: editeur
+    attributes:
+      label: Éditeur et date de publication
+      placeholder: "INSEE, 14/08/2026"
+    validations:
+      required: true
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Thème
+      options:
+        - immigration
+        - emploi
+        - finances-publiques
+        - autre (à préciser)
+    validations:
+      required: true
+  - type: textarea
+    id: faits
+    attributes:
+      label: Fait(s) que cette source permet d'établir
+      description: Un fait par ligne, avec chiffre, période et périmètre si possible.
+    validations:
+      required: true
+  - type: textarea
+    id: autres_sources
+    attributes:
+      label: Autres sources indépendantes qui confirment (facultatif)
+  - type: checkboxes
+    id: verifications
+    attributes:
+      label: Vérifications
+      options:
+        - label: La source est accessible publiquement.
+          required: true
+        - label: Je n'ai pas collé de texte protégé au-delà d'un court extrait.
+          required: true

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/projets-Gan/claud-ubitatif/schemas/fait.schema.json",
+  "title": "Fiche fait",
+  "description": "En-tête YAML d'une fiche décrivant un fait vérifiable, rattaché à ses sources. Le corps Markdown précise le contexte, les définitions et les limites.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "type_fiche", "enonce", "themes", "pays", "statut", "periode", "date_validite", "sources"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 80
+    },
+    "type_fiche": { "const": "fait" },
+    "enonce": {
+      "type": "string",
+      "description": "Le fait, en une phrase factuelle et précise (chiffre, période, périmètre).",
+      "minLength": 10
+    },
+    "valeur": { "type": ["number", "string", "null"] },
+    "unite": { "type": ["string", "null"] },
+    "definition": {
+      "type": "string",
+      "description": "Définition ou mesure utilisée (ex. chômage au sens du BIT, immigré au sens de l'INSEE)."
+    },
+    "periode": {
+      "type": "string",
+      "description": "Période à laquelle le fait se rapporte : AAAA, AAAA-MM, AAAA-TN (trimestre) ou AAAA-MM-JJ.",
+      "pattern": "^\\d{4}(-(\\d{2}|T[1-4])(-\\d{2})?)?$"
+    },
+    "themes": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } },
+    "sous_themes": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+    "pays": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[A-Z]{2,3}$" }
+    },
+    "statut": { "enum": ["valide", "en-attente", "conteste"] },
+    "date_validite": {
+      "description": "Date jusqu'à laquelle le fait est considéré à jour (ex. date de la prochaine publication de la statistique).",
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source", "extrait"],
+        "properties": {
+          "source": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "extrait": {
+            "type": "string",
+            "description": "Court extrait de la source qui appuie le fait (citation, moins de 300 caractères).",
+            "maxLength": 300
+          },
+          "localisation": {
+            "type": "string",
+            "description": "Où trouver l'extrait : page, tableau, paragraphe…"
+          }
+        }
+      }
+    },
+    "contredit_par": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "description": "Sources qui contredisent ce fait (obligatoire à renseigner si statut = conteste)."
+    },
+    "notes": { "type": "string" }
+  }
+}
