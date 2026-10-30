@@ -1,0 +1,36 @@
+# Types de sources et niveau de fiabilité (1 = le plus fiable).
+# Le niveau guide la pondération, il ne dispense jamais de la règle des 2 sources indépendantes.
+
+types:
+  donnees-officielles:
+    niveau: 1
+    libelle: Données statistiques officielles
+    exemples: [INSEE, Eurostat, DARES, DREES, service statistique du ministère de l'Intérieur, Banque de France]
+  texte-officiel:
+    niveau: 1
+    libelle: Texte juridique officiel
+    exemples: [Légifrance, Journal officiel, EUR-Lex, Conseil constitutionnel]
+  institution-publique:
+    niveau: 1
+    libelle: Rapport ou publication d'une institution publique
+    exemples: [Cour des comptes, Haut Conseil des finances publiques, ministères, OFII, OFPRA, France Travail]
+  agence-presse:
+    niveau: 2
+    libelle: Dépêche d'agence de presse
+    exemples: [AFP, Reuters, AP]
+  presse-reference:
+    niveau: 3
+    libelle: Article de presse de référence
+    exemples: [Le Monde, Le Figaro, Les Échos, Libération, La Croix]
+  fact-check:
+    niveau: 3
+    libelle: Article de vérification des faits
+    exemples: [AFP Factuel, Les Décodeurs, CheckNews, France Info Vrai ou Fake]
+  recherche:
+    niveau: 3
+    libelle: Publication académique ou de think tank
+    exemples: [articles à comité de lecture, OFCE, Institut des politiques publiques]
+  autre:
+    niveau: 4
+    libelle: Autre source, à utiliser avec prudence
+    exemples: [blogs, réseaux sociaux, communiqués de partis ou d'entreprises]

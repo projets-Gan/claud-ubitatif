@@ -1,0 +1,30 @@
+# Verdicts possibles, rendus par affirmation (jamais un verdict global unique).
+
+verdicts:
+  exact:
+    libelle: Exact
+    definition: L'affirmation correspond aux faits validés du corpus, dans leur contexte.
+  faux:
+    libelle: Faux
+    definition: L'affirmation est contredite par des faits validés du corpus.
+  trompeur:
+    libelle: Trompeur
+    definition: >
+      Les éléments cités sont exacts, mais présentés hors contexte, avec une
+      définition ou une période choisie de façon à induire une conclusion erronée.
+  incomplet:
+    libelle: Incomplet
+    definition: >
+      L'affirmation est en partie exacte mais omet des éléments importants
+      qui changent sa portée. Les éléments manquants doivent être listés.
+  non-verifiable:
+    libelle: Non vérifiable avec le corpus actuel
+    definition: >
+      Le corpus ne contient pas de fait validé permettant de conclure.
+      Ce verdict est préférable à toute conclusion non sourcée.
+
+# Statuts d'un fait dans le corpus.
+statuts_fait:
+  valide: Confirmé par au moins 2 sources indépendantes ; utilisable pour un verdict.
+  en-attente: Une seule source ou sources non encore vérifiées ; non utilisable pour un verdict.
+  conteste: Sources en désaccord ; à signaler, non utilisable seul pour un verdict.

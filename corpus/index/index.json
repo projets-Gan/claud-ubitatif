@@ -1,0 +1,24 @@
+{
+  "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
+  "statistiques": {
+    "sources": 0,
+    "faits": 0,
+    "faits_valides": 0
+  },
+  "par_theme": {
+    "immigration": {
+      "sources": [],
+      "faits": []
+    },
+    "emploi": {
+      "sources": [],
+      "faits": []
+    },
+    "finances-publiques": {
+      "sources": [],
+      "faits": []
+    }
+  },
+  "sources": [],
+  "faits": []
+}
