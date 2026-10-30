@@ -1,0 +1,37 @@
+Licence du contenu du corpus
+============================
+
+Le contenu rédigé par le projet claud-ubitatif est mis à disposition sous la
+Licence Ouverte / Open Licence, version 2.0, élaborée par Etalab.
+
+Texte officiel de la licence :
+- https://www.etalab.gouv.fr/licence-ouverte-open-licence/
+- https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf
+
+Ce qui est couvert
+------------------
+- Les fiches de sources et de faits du dossier corpus/ (métadonnées, résumés,
+  analyses rédigées par les contributeurs du projet).
+- Les fichiers de configuration éditoriale du dossier config/ (taxonomie,
+  types de sources, verdicts) et la documentation méthodologique.
+
+Ce qui n'est pas couvert
+------------------------
+- Les documents, articles et données des tiers cités dans le corpus. Ils restent
+  la propriété de leurs auteurs et éditeurs et sont soumis à leurs propres
+  conditions. Le projet n'en conserve que des liens, des métadonnées et de
+  courts extraits à titre de citation.
+- Le code (scripts, schémas, workflows), placé sous licence Apache-2.0 :
+  voir le fichier LICENSE.
+
+En résumé (ce résumé ne remplace pas le texte officiel)
+-------------------------------------------------------
+Chacun peut librement reproduire, copier, adapter, modifier, diffuser et
+exploiter ce contenu, y compris à des fins commerciales, à condition de
+mentionner sa paternité, par exemple :
+
+  « Corpus claud-ubitatif – https://github.com/projets-Gan/claud-ubitatif,
+    consulté le JJ/MM/AAAA »
+
+La réutilisation ne doit pas induire en erreur sur le contenu, sa source ou sa
+date de mise à jour.
