@@ -42,6 +42,7 @@ Sources :
 ```
 
 Termine par :
-- un **bilan** en une ou deux phrases (sans verdict global unique) ;
+- un premier **bilan** en une ou deux phrases (sans verdict global unique) ;
+- un second **bilan** avec plus de précision et les subtilité ;
 - la liste des affirmations **non vérifiables** et du type de source qui permettrait de les vérifier (pour l'agent Curateur) ;
 - le rappel : « Outil d'aide à la vérification fondé sur un corpus limité ; il ne remplace pas un travail journalistique. »
