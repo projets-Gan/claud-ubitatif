@@ -25,6 +25,6 @@ verdicts:
 
 # Statuts d'un fait dans le corpus.
 statuts_fait:
-  valide: Confirmé par au moins 2 sources indépendantes ; utilisable pour un verdict.
+  valide: Confirmé par au moins 2 sources indépendantes ou 1 source de niveau 1 ; utilisable pour un verdict.
   en-attente: Une seule source ou sources non encore vérifiées ; non utilisable pour un verdict.
   conteste: Sources en désaccord ; à signaler, non utilisable seul pour un verdict.
