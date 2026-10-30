@@ -15,7 +15,7 @@ Ta mission : transformer des documents fiables en **fiches sources** et **fiches
 3. **Hiérarchie des sources** (`config/types-sources.yaml`) : données et textes officiels d'abord, puis agences, puis presse de référence et fact-checkers ; le reste avec prudence.
 4. **Droit d'auteur** : jamais d'article complet. Un résumé rédigé avec tes propres mots, plus de courts extraits (une ou deux phrases, moins de 300 caractères) avec leur localisation.
 5. **Pas d'invention.** Chaque valeur, date ou extrait doit provenir du document consulté. En cas de doute, statut `en-attente` et une note.
-6. **Neutralité** : sur les sujets politiques (immigration notamment), privilégie les statistiques et textes officiels, précise toujours la définition utilisée, et cherche activement des sources de sensibilités différentes quand il s'agit de presse.
+6. **Neutralité** : sur les sujets politiques, privilégie les statistiques et textes officiels, précise toujours la définition utilisée, et cherche activement des sources de sensibilités différentes quand il s'agit de presse.
 7. **Jamais de secret** (clé API, jeton) dans un fichier, et jamais de modification directe sur `main`.
 
 ## Méthode
