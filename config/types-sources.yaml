@@ -1,36 +1,71 @@
-# Types de sources et niveau de fiabilité (1 = le plus fiable).
-# Le niveau guide la pondération, il ne dispense jamais de la règle des 2 sources indépendantes.
+# Types de sources et niveau auquel chacun est rattaché.
+# Les niveaux et les règles de validation sont définis dans config/niveaux.yaml.
+#
+# On classe le DOCUMENT, pas l'organisme : le même ministère peut publier un
+# tableau statistique (niveau 1) et un communiqué qui le commente (niveau 2).
+# Au moindre doute sur le caractère primaire et non orienté d'un document,
+# le classer au niveau inférieur.
 
 types:
+  texte-fondamental:
+    niveau: 0
+    libelle: Texte fondamental
+    description: Déclaration des droits de l'homme et du citoyen, Déclaration universelle des droits de l'homme, Constitution de 1958.
+    exemples: [Conseil constitutionnel, Légifrance, ONU]
+
   donnees-officielles:
     niveau: 1
     libelle: Données statistiques officielles
-    exemples: [INSEE, Eurostat, DARES, DREES, service statistique du ministère de l'Intérieur, Banque de France]
+    description: >
+      Tableaux, séries et publications statistiques produits par un service
+      statistique public selon une méthode documentée. Pas les commentaires
+      ou communiqués qui les accompagnent.
+    exemples: [INSEE, Eurostat, DARES, DREES, service statistique du ministère de l'Intérieur, séries de la Banque de France]
   texte-officiel:
     niveau: 1
-    libelle: Texte juridique officiel
-    exemples: [Légifrance, Journal officiel, EUR-Lex, Conseil constitutionnel]
-  institution-publique:
-    niveau: 1
-    libelle: Rapport ou publication d'une institution publique
-    exemples: [Cour des comptes, Haut Conseil des finances publiques, ministères, OFII, OFPRA, France Travail]
+    libelle: Texte juridique officiel, loi
+    description: Loi, ordonnance, décret, arrêté, décision de justice, dans leur version officielle.
+    exemples: [Légifrance, Journal officiel, EUR-Lex]
+
   agence-presse:
     niveau: 2
     libelle: Dépêche d'agence de presse
     exemples: [AFP, Reuters, AP]
   presse-reference:
-    niveau: 3
+    niveau: 2
     libelle: Article de presse de référence
     exemples: [Le Monde, Le Figaro, Les Échos, Libération, La Croix]
   fact-check:
-    niveau: 3
+    niveau: 2
     libelle: Article de vérification des faits
     exemples: [AFP Factuel, Les Décodeurs, CheckNews, France Info Vrai ou Fake]
   recherche:
-    niveau: 3
-    libelle: Publication académique ou de think tank
-    exemples: [articles à comité de lecture, OFCE, Institut des politiques publiques]
+    niveau: 2
+    libelle: Recherche empirique
+    description: Études fondées sur des données et une méthode explicite (revues à comité de lecture, instituts de recherche). Les essais et tribunes relèvent du niveau bonus.
+    exemples: [articles à comité de lecture, OFCE, Institut des politiques publiques, INED]
+  institution-publique:
+    niveau: 2
+    libelle: Rapport, avis ou communiqué d'une institution publique
+    description: >
+      Documents qui analysent, commentent ou présentent des données et peuvent
+      donc comporter une orientation (choix des chiffres, de la période, du cadrage).
+      Rattachement au niveau 2 à confirmer (voir METHODOLOGIE.md, questions ouvertes).
+    exemples: [communiqués de ministères, Cour des comptes, Haut Conseil des finances publiques, OFII, OFPRA, France Travail]
+
   autre:
+    niveau: 3
+    libelle: Autre source
+    exemples: [presse locale ou spécialisée, blogs d'experts, communiqués d'entreprises ou d'associations]
+
+  media-desinformation:
     niveau: 4
-    libelle: Autre source, à utiliser avec prudence
-    exemples: [blogs, réseaux sociaux, communiqués de partis ou d'entreprises]
+    libelle: Source réputée pour diffuser de la désinformation
+    description: Uniquement pour documenter l'origine d'une information fausse. Classement justifié dans config/sources-niveau-4.yaml.
+    exemples: []
+
+  analyse-essai:
+    niveau: bonus
+    libelle: Éclairage d'un philosophe, sociologue ou essayiste
+    description: Analyse ou point de vue d'auteur ; sert l'argumentaire, ne valide jamais un fait.
+    exemples: [ouvrages, entretiens, tribunes, conférences]

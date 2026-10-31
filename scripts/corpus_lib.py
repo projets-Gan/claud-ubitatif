@@ -98,15 +98,23 @@ def lister_fichiers(dossier: Path) -> list[Path]:
 class Corpus:
     taxonomie: dict
     types_sources: dict
+    niveaux: dict
+    sources_niveau_4: dict
     sources: list[Fiche] = field(default_factory=list)
     faits: list[Fiche] = field(default_factory=list)
     fichiers_inattendus: list[Path] = field(default_factory=list)
+
+    @property
+    def regles(self) -> "Regles":
+        return Regles(self.niveaux, self.types_sources)
 
 
 def charger_corpus() -> Corpus:
     corpus = Corpus(
         taxonomie=charger_yaml(RACINE / "config" / "taxonomie.yaml"),
         types_sources=charger_yaml(RACINE / "config" / "types-sources.yaml"),
+        niveaux=charger_yaml(RACINE / "config" / "niveaux.yaml"),
+        sources_niveau_4=charger_yaml(RACINE / "config" / "sources-niveau-4.yaml") or {},
     )
     for dossier, cible in ((DOSSIER_SOURCES, corpus.sources), (DOSSIER_FAITS, corpus.faits)):
         for chemin in lister_fichiers(dossier):
@@ -144,6 +152,75 @@ def sont_independantes(a: str, b: str, sources_par_id: dict[str, Fiche]) -> bool
     if editeur_a and editeur_a == editeur_b:
         return False
     return not (origines(a, sources_par_id) & origines(b, sources_par_id))
+
+
+class Regles:
+    """Règles de validation lues dans config/niveaux.yaml et config/types-sources.yaml.
+
+    Les niveaux numériques (0, 1, 2…) sont ordonnés : plus le nombre est petit,
+    plus la source est fiable. Les niveaux non numériques (« bonus ») ne sont
+    pas ordonnés et ne valident ni ne contestent jamais un fait.
+    """
+
+    def __init__(self, niveaux: dict, types_sources: dict) -> None:
+        self.niveaux: dict = {self._cle(k): v or {} for k, v in (niveaux.get("niveaux") or {}).items()}
+        self.niveau_du_type: dict = {
+            code: self._cle(t.get("niveau")) for code, t in (types_sources.get("types") or {}).items()
+        }
+
+    @staticmethod
+    def _cle(valeur):
+        try:
+            return int(valeur)
+        except (TypeError, ValueError):
+            return valeur
+
+    @staticmethod
+    def est_ordonne(niveau) -> bool:
+        return isinstance(niveau, int)
+
+    def niveau_source(self, id_source: str, sources_par_id: dict[str, Fiche]):
+        fiche = sources_par_id.get(id_source)
+        return None if fiche is None else self.niveau_du_type.get(fiche.entete.get("type"))
+
+    def param(self, niveau, nom: str):
+        return (self.niveaux.get(niveau) or {}).get(nom)
+
+    def peut_valider(self, niveau) -> bool:
+        return self.est_ordonne(niveau) and self.param(niveau, "sources_requises") is not None
+
+    def niveaux_validants(self) -> list[int]:
+        return sorted(n for n in self.niveaux if self.peut_valider(n))
+
+    def evaluer_validation(self, ids: list[str], sources_par_id: dict[str, Fiche]) -> dict:
+        """Un fait est valide s'il existe un niveau L tel que le nombre de sources
+        indépendantes de niveau L ou plus fiable atteigne sources_requises(L).
+
+        Renvoie {"valide", "niveau", "sources_validantes", "source_unique"} ;
+        source_unique = True si une seule source valide le fait (garde-fous).
+        """
+        for niveau in self.niveaux_validants():
+            requises = int(self.param(niveau, "sources_requises"))
+            candidates = [
+                i for i in ids
+                if self.est_ordonne(n := self.niveau_source(i, sources_par_id)) and n <= niveau
+            ]
+            n_indep = nombre_sources_independantes(candidates, sources_par_id)
+            if n_indep >= requises:
+                return {
+                    "valide": True,
+                    "niveau": niveau,
+                    "sources_validantes": candidates,
+                    "source_unique": n_indep < 2,
+                }
+        return {"valide": False, "niveau": None, "sources_validantes": [], "source_unique": False}
+
+    def resume(self) -> str:
+        morceaux = []
+        for n in self.niveaux_validants():
+            r = int(self.param(n, "sources_requises"))
+            morceaux.append(f"{r} source{'s indépendantes' if r > 1 else ''} de niveau {n}" + (" ou mieux" if n else ""))
+        return " ; ou ".join(morceaux)
 
 
 def nombre_sources_independantes(ids: list[str], sources_par_id: dict[str, Fiche]) -> int:
