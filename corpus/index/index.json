@@ -1,5 +1,6 @@
 {
   "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
+  "version_regles": 2,
   "statistiques": {
     "sources": 0,
     "faits": 0,

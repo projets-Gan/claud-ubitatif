@@ -7,7 +7,7 @@ Agents d'aide à la vérification de l'actualité économique et politique fran�
 ## Principe
 
 - **Agent Vérificateur** : vous lui soumettez une information ; il indique, affirmation par affirmation, si elle est *exacte*, *fausse*, *trompeuse*, *incomplète* ou *non vérifiable*, en citant uniquement les fiches du corpus.
-- **Agent Curateur** : il aide à enrichir le corpus. Un fait n'est validé que s'il repose sur **une source primaire officielle** (statistique ou texte juridique) ou sur **deux sources indépendantes** fiables.
+- **Agents de curation** : un *chercheur de sources*, un *contradicteur* qui vérifie que l'information retenue est la plus juste et pas seulement la plus répandue, et un *curateur* qui écrit les fiches. Un fait n'est validé que s'il repose sur **un texte fondamental ou une source officielle primaire** (statistique, loi) ou sur **deux sources indépendantes** de presse de référence, de fact-checking ou de recherche. Les niveaux de fiabilité sont décrits dans [config/niveaux.yaml](config/niveaux.yaml) et évolueront avec l'avis de professionnels de l'information.
 - **Corpus public** : fiches Markdown (sources et faits) relues par des humains via Pull Request.
 
 Thèmes de départ : **immigration**, **emploi**, **finances publiques**. Sources principalement françaises (INSEE, DARES, Eurostat, Légifrance, Cour des comptes, AFP, presse de référence…).
@@ -30,7 +30,7 @@ claude
 Puis, dans Claude Code :
 
 - « Utilise l'agent verificateur pour vérifier : *le taux de chômage a doublé en un an* »
-- « Utilise l'agent curateur pour ajouter cette source : *https://…* »
+- « Ajoute au corpus cette source : *https://…* » (Claude Code enchaîne alors les agents chercheur, contradicteur et curateur)
 
 Aucune clé API n'est nécessaire. Si la variable d'environnement `ANTHROPIC_API_KEY` est définie sur votre poste, Claude Code facture l'usage à l'API au lieu de votre abonnement.
 

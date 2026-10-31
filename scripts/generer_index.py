@@ -14,14 +14,16 @@ import argparse
 import json
 import sys
 
-from corpus_lib import FICHIER_INDEX, charger_corpus, configurer_sortie, niveaux_par_type
+from corpus_lib import FICHIER_INDEX, charger_corpus, configurer_sortie
 
 
 def construire_index() -> dict:
     corpus = charger_corpus()
-    niveaux = niveaux_par_type(corpus.types_sources)
+    regles = corpus.regles
+    niveaux = regles.niveau_du_type
     sources = [f for f in corpus.sources if f.id and not f.erreur_lecture]
     faits = [f for f in corpus.faits if f.id and not f.erreur_lecture]
+    sources_par_id = {f.id: f for f in sources}
 
     cite_par: dict[str, list[str]] = {}
     for f in faits:
@@ -60,6 +62,10 @@ def construire_index() -> dict:
                 "enonce": e.get("enonce"),
                 "periode": e.get("periode"),
                 "statut": e.get("statut"),
+                "niveau_validation": regles.evaluer_validation(
+                    [s.get("source") for s in e.get("sources") or [] if isinstance(s, dict)], sources_par_id
+                )["niveau"],
+                "etat_donnee": e.get("etat_donnee"),
                 "date_validite": e.get("date_validite"),
                 "themes": e.get("themes") or [],
                 "sous_themes": e.get("sous_themes") or [],
@@ -78,6 +84,7 @@ def construire_index() -> dict:
 
     return {
         "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
+        "version_regles": corpus.niveaux.get("version"),
         "statistiques": {
             "sources": len(entrees_sources),
             "faits": len(entrees_faits),

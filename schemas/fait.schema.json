@@ -24,6 +24,10 @@
       "type": "string",
       "description": "Définition ou mesure utilisée (ex. chômage au sens du BIT, immigré au sens de l'INSEE)."
     },
+    "biais_formulation": {
+      "type": "string",
+      "description": "Biais ou ambiguïté de formulation à signaler (ex. « Français d'origine étrangère » désigne des Français ; « immigré » et « étranger » ne sont pas synonymes)."
+    },
     "etat_donnee": {
       "description": "Pour une statistique : provisoire (susceptible de révision) ou définitive. Obligatoire si le fait est validé par une seule source de niveau 1 de type donnees-officielles.",
       "enum": ["provisoire", "definitif", null]
@@ -42,7 +46,7 @@
       "items": { "type": "string", "pattern": "^[A-Z]{2,3}$" }
     },
     "statut": {
-      "description": "valide : 1 source de niveau 1, ou 2 sources indépendantes de niveau 2 ou mieux ; en-attente : conditions non remplies ; conteste : sources en désaccord.",
+      "description": "valide : règles de config/niveaux.yaml remplies ; en-attente : conditions non remplies ; conteste : sources de niveau validant en désaccord.",
       "enum": ["valide", "en-attente", "conteste"]
     },
     "date_validite": {

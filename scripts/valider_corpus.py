@@ -23,8 +23,6 @@ from corpus_lib import (
     charger_corpus,
     charger_json,
     configurer_sortie,
-    evaluer_validation,
-    niveaux_par_type,
 )
 
 MOTIF_NOM = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*\.md$")
@@ -99,7 +97,35 @@ def main() -> int:
 
     sources_par_id = {f.id: f for f in corpus.sources if f.id and not f.erreur_lecture}
     types_connus = corpus.types_sources.get("types", {})
-    niveaux = niveaux_par_type(corpus.types_sources)
+    regles = corpus.regles
+
+    # --- Configuration des niveaux ----------------------------------------
+    chemin_niveaux = RACINE / "config" / "niveaux.yaml"
+    for code, niveau in regles.niveau_du_type.items():
+        if niveau not in regles.niveaux:
+            rapport.erreur(chemin_niveaux, f"le type « {code} » renvoie au niveau « {niveau} », absent de niveaux.yaml")
+    if not regles.niveaux_validants():
+        rapport.erreur(chemin_niveaux, "aucun niveau ne permet de valider un fait (sources_requises)")
+
+    # --- Liste des sources de niveau 4 -------------------------------------
+    chemin_n4 = RACINE / "config" / "sources-niveau-4.yaml"
+    editeurs_n4 = {}
+    for entree in corpus.sources_niveau_4.get("sources") or []:
+        nom = str(entree.get("editeur", "")).strip()
+        if not nom:
+            rapport.erreur(chemin_n4, "entrée sans editeur")
+            continue
+        editeurs_n4[nom.lower()] = nom
+        preuves = entree.get("preuves") or []
+        if len(preuves) < 2:
+            rapport.erreur(chemin_n4, f"« {nom} » : au moins 2 preuves (fiches sources du corpus) sont exigées")
+        for preuve in preuves:
+            if preuve not in sources_par_id:
+                rapport.erreur(chemin_n4, f"« {nom} » : preuve « {preuve} » introuvable dans le corpus")
+            elif not regles.peut_valider(regles.niveau_source(preuve, sources_par_id)):
+                rapport.erreur(chemin_n4, f"« {nom} » : la preuve « {preuve} » doit être une source de niveau validant")
+        if not entree.get("criteres"):
+            rapport.erreur(chemin_n4, f"« {nom} » : indiquer au moins un critère")
 
     # --- Sources -----------------------------------------------------------
     for fiche in corpus.sources:
@@ -115,6 +141,13 @@ def main() -> int:
         e = fiche.entete
         if e["type"] not in types_connus:
             rapport.erreur(fiche, f"type de source inconnu « {e['type']} » (voir config/types-sources.yaml)")
+        editeur = str(e["editeur"]).strip().lower()
+        if editeur in editeurs_n4 and regles.niveau_du_type.get(e["type"]) != 4:
+            rapport.erreur(
+                fiche,
+                f"l'éditeur « {e['editeur']} » est classé au niveau 4 (config/sources-niveau-4.yaml) : "
+                "utiliser le type media-desinformation",
+            )
         verifier_vocabulaire(fiche, corpus, rapport)
         attendu = DOSSIER_SOURCES / e["themes"][0] / e["date_publication"][:4]
         verifier_emplacement(fiche, rapport, attendu)
@@ -151,36 +184,66 @@ def main() -> int:
         for id_source in e.get("contredit_par") or []:
             if id_source not in sources_par_id:
                 rapport.erreur(fiche, f"contredit_par : source « {id_source} » introuvable dans le corpus")
+        bilan = regles.evaluer_validation(ids_sources, sources_par_id)
         if e["statut"] == "valide":
-            bilan = evaluer_validation(ids_sources, sources_par_id, niveaux)
             if not bilan["valide"]:
+                niveaux_presents = sorted(
+                    {str(regles.niveau_source(i, sources_par_id)) for i in ids_sources if i in sources_par_id}
+                )
                 rapport.erreur(
                     fiche,
-                    "statut « valide » non justifié : il faut 1 source de niveau 1, ou 2 sources indépendantes "
-                    f"de niveau 2 ou mieux (ici : {bilan['independantes_n2']} source(s) indépendante(s) de niveau ≤ 2, "
-                    "aucune de niveau 1). Les niveaux 3 et 4 ne valident jamais un fait.",
+                    f"statut « valide » non justifié. Il faut : {regles.resume()}. "
+                    f"Niveaux des sources de ce fait : {', '.join(niveaux_presents) or 'aucun'}. "
+                    "Les niveaux 3, 4 et bonus ne valident jamais un fait.",
                 )
-            elif bilan["mode"] == "niveau-1":
-                # Garde-fous quand une seule source de niveau 1 valide le fait.
+            elif bilan["source_unique"] and regles.param(bilan["niveau"], "garde_fous"):
+                # Garde-fous quand une seule source valide le fait.
                 for s in e["sources"]:
-                    if s["source"] in bilan["sources_niveau_1"] and not str(s.get("localisation") or "").strip():
+                    if s["source"] in bilan["sources_validantes"] and not str(s.get("localisation") or "").strip():
                         rapport.erreur(
                             fiche,
-                            f"fait validé par une seule source de niveau 1 : indiquer la localisation précise "
-                            f"de l'extrait de « {s['source']} » (tableau, ligne, page…)",
+                            f"fait validé par une seule source (niveau {bilan['niveau']}) : indiquer la localisation "
+                            f"précise de l'extrait de « {s['source']} » (article, tableau, ligne, page…)",
                         )
-                stats_n1 = [
-                    i for i in bilan["sources_niveau_1"]
+                stats = [
+                    i for i in bilan["sources_validantes"]
                     if sources_par_id[i].entete.get("type") == "donnees-officielles"
                 ]
-                if stats_n1 and not e.get("etat_donnee"):
+                if stats and not e.get("etat_donnee"):
                     rapport.erreur(
                         fiche,
-                        "fait validé par une seule source statistique de niveau 1 : renseigner etat_donnee "
-                        "(provisoire ou definitif)",
+                        "fait validé par une seule source statistique : renseigner etat_donnee (provisoire ou definitif)",
                     )
-        if e["statut"] == "conteste" and not e.get("contredit_par"):
-            rapport.erreur(fiche, "statut « conteste » : renseigner contredit_par")
+
+        # Contradictions : primauté des niveaux supérieurs, contestation par un niveau validant.
+        contradicteurs = [i for i in e.get("contredit_par") or [] if i in sources_par_id]
+        niveaux_primaute = [
+            n for i in ids_sources
+            if regles.est_ordonne(n := regles.niveau_source(i, sources_par_id)) and regles.param(n, "primaute")
+        ]
+        if e["statut"] == "conteste":
+            if not e.get("contredit_par"):
+                rapport.erreur(fiche, "statut « conteste » : renseigner contredit_par")
+            elif contradicteurs and not any(
+                regles.peut_valider(regles.niveau_source(i, sources_par_id)) for i in contradicteurs
+            ):
+                rapport.erreur(
+                    fiche,
+                    "statut « conteste » : aucune source contradictoire n'est d'un niveau validant "
+                    "(les niveaux 3, 4 et bonus ne suffisent pas à contester un fait)",
+                )
+            if niveaux_primaute:
+                p = min(niveaux_primaute)
+                if contradicteurs and not any(
+                    regles.est_ordonne(n := regles.niveau_source(i, sources_par_id)) and n <= p
+                    for i in contradicteurs
+                ):
+                    rapport.erreur(
+                        fiche,
+                        f"fait appuyé sur une source de niveau {p} : il ne peut pas être contesté par des sources "
+                        "de niveau inférieur (primauté). Statut attendu : valide.",
+                    )
+
         if e["date_validite"] < aujourd_hui:
             rapport.avertir(fiche, f"date de validité dépassée ({e['date_validite']}) : fait à mettre à jour")
 

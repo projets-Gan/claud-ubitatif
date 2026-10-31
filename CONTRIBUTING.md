@@ -23,13 +23,18 @@ Ouvrez une **Issue** avec le modèle « Proposer une source » : lien, éditeur,
    Corrigez toutes les erreurs. Les avertissements (archive manquante, date de validité dépassée) sont à traiter quand c'est possible.
 6. Ouvrez une **Pull Request** en remplissant le modèle : justification de l'indépendance des sources, statut des faits.
 
-Avec Claude Code, vous pouvez demander : « Utilise l'agent curateur pour ajouter cette source : <lien> ». Il suit les mêmes étapes.
+Avec Claude Code, vous pouvez demander : « Ajoute au corpus cette source : <lien> ». Claude Code enchaîne alors les agents chercheur-sources, contradicteur et curateur, qui suivent les mêmes étapes.
+
+## Faire évoluer les règles
+
+Les niveaux de fiabilité et les règles de validation sont dans `config/niveaux.yaml`. Toute proposition de changement passe par une Pull Request qui met à jour ce fichier (version, date, historique) et la section « Évolution de la méthode » de `METHODOLOGIE.md`. Le classement d'une source au niveau 4 (`config/sources-niveau-4.yaml`) exige des critères publics et au moins deux preuves.
 
 ## Règles de relecture
 
 Une PR est fusionnée si :
 - la validation automatique passe ;
-- chaque fait `valide` repose sur 1 source de niveau 1 (avec localisation précise de l'extrait et, pour une statistique, son état provisoire ou définitif), ou sur 2 sources de niveau 2 ou mieux réellement indépendantes ;
+- chaque fait `valide` respecte `config/niveaux.yaml` : 1 source de niveau 0 ou 1 (avec localisation précise de l'extrait et, pour une statistique, son état provisoire ou définitif), ou 2 sources de niveau 2 ou mieux réellement indépendantes ;
+- les biais de formulation sont signalés (champ `biais_formulation`) ;
 - chaque source est classée selon le document lui-même, pas selon l'organisme qui le publie (un communiqué de ministère est de niveau 2, son tableau statistique de niveau 1) ;
 - les extraits sont courts, exacts et localisés ;
 - les définitions et périmètres sont explicites ;

@@ -1,0 +1,24 @@
+# Sources classées au niveau 4 (réputées pour diffuser de la désinformation).
+#
+# Ce classement est sensible : il doit rester factuel, documenté et contestable.
+# Une source n'est ajoutée que par Pull Request relue, avec des preuves publiques.
+#
+# Critères (au moins un, documenté par des sources de niveau 0 à 2) :
+#   - diffusion répétée d'informations établies comme fausses par plusieurs
+#     fact-checkers indépendants ;
+#   - sanction ou mise en demeure d'une autorité de régulation (ex. Arcom) pour
+#     manquement à l'honnêteté de l'information ;
+#   - fabrication de faux documents, fausses citations ou faux sites ;
+#   - opération d'ingérence ou de manipulation de l'information identifiée par
+#     une autorité publique (ex. Viginum) ou par des enquêtes de presse concordantes.
+#
+# L'orientation politique ou éditoriale d'un média n'est JAMAIS un critère.
+#
+# Format :
+#   - editeur: "Nom exact, identique au champ editeur des fiches sources"
+#     criteres: [diffusion-repetee, sanction-regulateur, fabrication, ingerence]
+#     preuves: [id-de-fiche-source-du-corpus, ...]   # au moins 2
+#     date_ajout: AAAA-MM-JJ
+#     notes: ""
+
+sources: []
