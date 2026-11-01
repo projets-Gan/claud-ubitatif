@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dossiers de travail des agents (recherche, contradiction), non versionnés
+travail/

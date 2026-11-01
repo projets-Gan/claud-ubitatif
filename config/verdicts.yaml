@@ -25,6 +25,8 @@ verdicts:
 
 # Statuts d'un fait dans le corpus.
 statuts_fait:
-  valide: Confirmé par au moins 2 sources indépendantes ou 1 source de niveau 1 ; utilisable pour un verdict.
-  en-attente: Une seule source ou sources non encore vérifiées ; non utilisable pour un verdict.
+  valide: >
+    Remplit les règles de config/niveaux.yaml (version 2 : 1 source de niveau 0 ou 1,
+    ou 2 sources indépendantes de niveau 2 ou mieux) ; utilisable pour un verdict.
+  en-attente: Conditions de validation non remplies ou vérification incomplète ; non utilisable pour un verdict.
   conteste: Sources en désaccord ; à signaler, non utilisable seul pour un verdict.

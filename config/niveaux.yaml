@@ -1,0 +1,112 @@
+# Niveaux de fiabilité des sources et règles de validation.
+#
+# Ce fichier est la RÉFÉRENCE UNIQUE des règles : le script de validation,
+# les agents et la documentation s'appuient dessus. Pour faire évoluer les
+# règles (par exemple après un échange avec des journalistes), modifier ce
+# fichier par Pull Request, augmenter la version et compléter l'historique.
+#
+# Paramètres lus par scripts/valider_corpus.py :
+#   sources_requises : nombre de sources indépendantes de ce niveau (ou d'un
+#                      niveau plus fiable) qui suffisent à valider un fait ;
+#                      null = ce niveau ne valide jamais un fait.
+#   primaute         : true = un fait appuyé sur ce niveau ne peut pas être
+#                      contesté par une source d'un niveau inférieur.
+#   garde_fous       : true = quand une seule source de ce niveau valide un fait,
+#                      la localisation précise de l'extrait est obligatoire
+#                      (et l'état provisoire/définitif pour une statistique).
+#
+# Les types de sources rattachés à chaque niveau sont dans types-sources.yaml.
+# On classe le DOCUMENT, pas l'organisme qui le publie.
+
+version: 2
+date: 2026-10-31
+
+niveaux:
+  0:
+    libelle: Textes fondamentaux
+    sources_requises: 1
+    primaute: true
+    garde_fous: true
+    regles:
+      - Les informations de ce niveau ne peuvent pas être contredites par des informations de niveau inférieur.
+      - Citer l'article précis et la version en vigueur (la Constitution peut être révisée).
+    contient:
+      - Déclaration des droits de l'homme et du citoyen de 1789
+      - Déclaration universelle des droits de l'homme de 1948
+      - Constitution française du 4 octobre 1958
+
+  1:
+    libelle: Données et textes officiels
+    sources_requises: 1
+    primaute: false
+    garde_fous: true
+    regles:
+      - Une seule source de ce niveau suffit à valider un fait.
+      - Toujours vérifier que la formulation reste juste (exemple, « Français d'origine étrangère » désigne des Français) ; tout biais de formulation doit être précisé.
+      - Préciser la définition utilisée et l'état de la donnée (provisoire ou définitif).
+    contient:
+      - Données statistiques officielles
+      - Textes juridiques officiels
+      - Lois
+
+  2:
+    libelle: Presse, vérification et recherche
+    sources_requises: 2
+    primaute: false
+    garde_fous: false
+    regles:
+      - Un fait doit être confirmé par 2 sources indépendantes (éditeurs différents, sans reprise d'une même dépêche ou d'un même communiqué).
+    contient:
+      - Presse de référence
+      - Fact-checkers
+      - Recherche
+      - AFP et agences de presse
+
+  3:
+    libelle: Autres sources
+    sources_requises: null
+    primaute: false
+    garde_fous: false
+    regles:
+      - Ces informations servent uniquement de soutien aux niveaux 1 et 2 ; elles ne valident jamais un fait.
+    contient:
+      - Autres sources
+
+  4:
+    libelle: Sources réputées pour diffuser de la désinformation
+    sources_requises: null
+    primaute: false
+    garde_fous: false
+    regles:
+      - Éviter d'y puiser des informations ; elles ne valident jamais un fait et ne suffisent pas à contester un fait.
+      - Si l'utilisateur présente une information venant de ce niveau, expliquer d'où vient l'information, en plus de la corriger.
+      - Le classement d'un média à ce niveau doit être justifié publiquement dans config/sources-niveau-4.yaml.
+    contient:
+      - Médias réputés pour répandre de la désinformation
+
+  bonus:
+    libelle: Éclairages (sciences humaines, philosophie)
+    sources_requises: null
+    primaute: false
+    garde_fous: false
+    regles:
+      - A pour but de soutenir l'argumentaire, jamais de valider un fait.
+      - Toujours présenté comme un point de vue ou une analyse, attribué à son auteur.
+      - Veiller à la pluralité des points de vue cités.
+    contient:
+      - Philosophes
+      - Sociologues
+      - Autres auteurs d'analyses et d'essais
+
+historique:
+  - version: 1
+    date: 2026-10-30
+    resume: >
+      Niveaux 1 à 4. Valide = 1 source de niveau 1 (statistiques et textes
+      officiels) ou 2 sources indépendantes de niveau 2.
+  - version: 2
+    date: 2026-10-31
+    resume: >
+      Ajout du niveau 0 (textes fondamentaux, primauté) et du niveau bonus.
+      Presse de référence, fact-checkers et recherche passent au niveau 2.
+      Niveau 3 = soutien uniquement ; niveau 4 = désinformation.
