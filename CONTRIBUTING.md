@@ -15,19 +15,20 @@ Ouvrez une **Issue** avec le modèle « Proposer une source » : lien, éditeur,
    - faits : `corpus/faits/<premier-theme>/<id>.md`
    - le nom du fichier est l'`id` : ASCII, minuscules, chiffres et tirets (ex. `2026-10-15-insee-chomage-t3.md`).
 4. Utilisez uniquement les valeurs de `config/taxonomie.yaml` et `config/types-sources.yaml`. Pour un nouveau thème ou pays, modifiez d'abord la configuration dans une PR séparée.
-5. Lancez :
+5. Pour une fiche fait, renseignez `date_ajout` (date du jour) et laissez `date_derniere_verification: null` : l'agent veilleur s'en chargera.
+6. Lancez :
    ```
    python scripts/valider_corpus.py
    python scripts/generer_index.py
    ```
    Corrigez toutes les erreurs. Les avertissements (archive manquante, date de validité dépassée) sont à traiter quand c'est possible.
-6. Ouvrez une **Pull Request** en remplissant le modèle : justification de l'indépendance des sources, statut des faits.
+7. Ouvrez une **Pull Request** en remplissant le modèle : justification de l'indépendance des sources, statut des faits.
 
 Avec Claude Code, vous pouvez demander : « Ajoute au corpus cette source : <lien> ». Claude Code enchaîne alors les agents chercheur-sources, contradicteur et curateur, qui suivent les mêmes étapes.
 
 ## Faire évoluer les règles
 
-Les niveaux de fiabilité et les règles de validation sont dans `config/niveaux.yaml`. Toute proposition de changement passe par une Pull Request qui met à jour ce fichier (version, date, historique) et la section « Évolution de la méthode » de `METHODOLOGIE.md`. Le classement d'une source au niveau 4 (`config/sources-niveau-4.yaml`) exige des critères publics et au moins deux preuves.
+Les niveaux de fiabilité et les règles de validation sont dans `config/niveaux.yaml`. Toute proposition de changement passe par une Pull Request qui met à jour ce fichier (version, date, historique) et la section « Évolution de la méthode » de `METHODOLOGIE.md`. Lancez `python scripts/impact_regles.py` : les faits qui ne respectent plus les nouvelles règles doivent être corrigés dans la même Pull Request, ou repassés en « en-attente » avec `--appliquer`. Le classement d'une source au niveau 4 (`config/sources-niveau-4.yaml`) exige des critères publics et au moins deux preuves.
 
 ## Règles de relecture
 

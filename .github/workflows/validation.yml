@@ -27,3 +27,6 @@ jobs:
 
       - name: Vérifier que l'index est à jour
         run: python scripts/generer_index.py --check
+
+      - name: Rapport d'impact des règles
+        run: python scripts/impact_regles.py

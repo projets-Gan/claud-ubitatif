@@ -43,8 +43,12 @@ Aucune clé API n'est nécessaire. Si la variable d'environnement `ANTHROPIC_API
 | `config/` | Thèmes, pays, types de sources, verdicts |
 | `schemas/` | Schémas JSON des fiches |
 | `modeles/` | Modèles de fiches à copier |
-| `scripts/` | Validation du corpus et génération de l'index |
+| `scripts/` | Validation du corpus, génération de l'index, rapport d'impact des règles, liste des faits à revérifier |
 | `eval/` | Affirmations de test au verdict connu |
+
+## Mise à jour du corpus
+
+Chaque jour, un contrôle automatique vérifie que tout le corpus respecte les règles en vigueur, et un agent « veilleur » vérifie que les faits sont toujours à jour (nouvelle publication, révision, modification d'une loi). Les mises à jour nécessaires sont publiées sous forme d'Issues, puis traitées par Pull Request relue par un humain.
 
 ## Contribuer
 

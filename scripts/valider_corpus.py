@@ -244,6 +244,13 @@ def main() -> int:
                         "de niveau inférieur (primauté). Statut attendu : valide.",
                     )
 
+        if e["date_ajout"] > aujourd_hui:
+            rapport.erreur(fiche, f"date_ajout dans le futur ({e['date_ajout']})")
+        derniere = e.get("date_derniere_verification")
+        if derniere and derniere < e["date_ajout"]:
+            rapport.erreur(fiche, "date_derniere_verification antérieure à date_ajout")
+        if derniere and derniere > aujourd_hui:
+            rapport.erreur(fiche, f"date_derniere_verification dans le futur ({derniere})")
         if e["date_validite"] < aujourd_hui:
             rapport.avertir(fiche, f"date de validité dépassée ({e['date_validite']}) : fait à mettre à jour")
 

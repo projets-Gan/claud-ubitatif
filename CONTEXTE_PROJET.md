@@ -1,6 +1,6 @@
 # Contexte du projet : agents de vérification d'actualité
 
-> Dernière mise à jour : 31 octobre 2026 (synchronisé avec le tableau Trello « Claud-Ubitatif » : https://trello.com/b/1TJ2eZpp/claud-ubitatif)
+> Dernière mise à jour : 1er novembre 2026 (synchronisé avec le tableau Trello « Claud-Ubitatif » : https://trello.com/b/1TJ2eZpp/claud-ubitatif)
 > Ce fichier résume le projet, les décisions prises et l'avancement, afin de reprendre le travail sans rien perdre. Il est à la racine du dépôt et sert aussi de connaissance au projet Claude « claud-ubitatif ».
 
 ## 1. Consignes pour Claude
@@ -44,6 +44,8 @@ Construire des agents qui s'appuient sur un dépôt GitHub public :
 - **Stockage** : liens, métadonnées, courts extraits et lien d'archive. Pas d'articles complets (droit d'auteur).
 - **Niveaux de validation, version 2 (31/10/2026)** : niveaux 0 à 4 et bonus, définis dans `config/niveaux.yaml` (référence unique, versionnée, avec historique). Remplace la v1 du 30/10. **Les règles évolueront** après des rencontres avec des journalistes et des personnes relayant l'information avec neutralité ; chaque évolution passe par une Pull Request (niveaux.yaml + section « Évolution de la méthode » de METHODOLOGIE.md).
 - **Chaîne de curation (31/10/2026)** : chercheur-sources → contradicteur → curateur → relecture humaine, orchestrée depuis la conversation principale de Claude Code (`CLAUDE.md`).
+- **Contrôle quotidien des règles (01/11/2026)** : GitHub Actions revalide chaque jour **tout** le corpus avec les règles en vigueur (gratuit, sans IA) et ouvre une Issue `controle-quotidien` en cas de problème. Une fiche ne contient que son type ; son niveau est toujours recalculé, donc un changement de règle s'applique aussi aux fiches déjà fusionnées. Rapport d'impact : `scripts/impact_regles.py` (option `--appliquer` pour repasser en « en-attente »).
+- **Agent veilleur (01/11/2026)** : tâche planifiée Claude dans le cloud (quota de l'abonnement, pas de clé API), quotidienne. Vérifie la fraîcheur des faits : 1re vérification 72 h après l'ajout, puis 7 jours avant la date de validité, et au plus tard tous les 30 jours (`config/veille.yaml`, 15 faits max par passage). Ne modifie que `date_derniere_verification` ; ouvre une Issue `veille` pour chaque mise à jour nécessaire.
 - **Index** : `corpus/index/index.json` est généré par `scripts/generer_index.py` et versionné ; la validation automatique vérifie qu'il est à jour.
 
 ## 5. Décisions encore ouvertes
@@ -82,6 +84,8 @@ Construire des agents qui s'appuient sur un dépôt GitHub public :
 
 **Vérificateur :** réception de l'information → découpage en affirmations vérifiables → recherche dans l'index puis lecture des fichiers pertinents → comparaison → verdict par affirmation avec éléments manquants et citations → contrôle que chaque citation existe réellement dans le corpus.
 
+**Veille (quotidienne) :** `scripts/faits_a_verifier.py` → agent **veilleur** (source accessible ? publication plus récente ? révision ? texte juridique modifié ?) → Pull Request « Veille du AAAA-MM-JJ » (dates de vérification) + Issues `veille` → traitement des Issues par la chaîne de curation.
+
 **Curation :** demande (lien, sujet) → **chercheur-sources** (sources classées par niveau, remontée aux documents primaires, dossier `travail/recherche-<sujet>.md`) → **contradicteur** (popularité contre exactitude, chaîne des reprises, classement, indépendance, définitions, biais de formulation, contre-sources ; avis `travail/contradiction-<sujet>.md`) → **curateur** (fiches sources et faits, archivage, statut, validation, Pull Request expliquant le traitement des objections) → relecture humaine.
 
 ## 8. Structure du dépôt
@@ -99,12 +103,13 @@ requirements.txt           # dépendances des scripts (PyYAML, jsonschema)
 .gitattributes             # * text=auto eol=lf
 .gitignore
 .claude/
-  agents/                  # verificateur, chercheur-sources, contradicteur, curateur
+  agents/                  # verificateur, chercheur-sources, contradicteur, curateur, veilleur
 config/
   niveaux.yaml             # niveaux de fiabilité et règles de validation (référence)
   sources-niveau-4.yaml    # sources classées au niveau 4, avec critères et preuves
   taxonomie.yaml           # thèmes, sous-thèmes et pays autorisés
   types-sources.yaml       # types de sources et niveau de chacun
+  veille.yaml              # rythme de vérification de la fraîcheur
   verdicts.yaml
 schemas/
   source.schema.json
@@ -114,10 +119,11 @@ corpus/
   sources/<theme>/<annee>/<id>.md
   faits/<theme>/<id>.md
   index/index.json         # généré par script, jamais à la main
-scripts/                   # valider_corpus.py, generer_index.py
+scripts/                   # valider_corpus.py, generer_index.py, impact_regles.py, faits_a_verifier.py
 eval/                      # affirmations de test avec verdict attendu
 .github/
   workflows/validation.yml # validation automatique à chaque PR
+  workflows/controle-quotidien.yml # contrôle de tout le corpus chaque jour
   ISSUE_TEMPLATE/          # « proposer une source »
   PULL_REQUEST_TEMPLATE.md
 ```
@@ -171,7 +177,9 @@ Attention : si la variable d'environnement `ANTHROPIC_API_KEY` est définie, Cla
 - [x] Choisir les thèmes de départ : immigration, emploi, finances publiques
 - [x] Licence du contenu : Licence Ouverte 2.0 (PR n°1 fusionnée)
 - [x] Étape 3 : squelette complet (Pull Request n°2 fusionnée le 30/10/2026)
-- [ ] Niveaux de validation v2 et agents chercheur-sources / contradicteur — **en cours** (Pull Request n°3)
+- [x] Niveaux de validation v2 et agents chercheur-sources / contradicteur (Pull Request n°3 fusionnée le 01/11/2026)
+- [ ] Contrôle quotidien des règles + agent veilleur — **en cours** (Pull Request n°4) ; tâche planifiée du veilleur à créer après la fusion
+- [ ] Pilote du premier corpus : thème emploi, une dizaine de faits
 - [ ] Rencontres avec des journalistes et professionnels de l'information : faire évoluer `config/niveaux.yaml` (en continu)
 - [ ] Constituer un premier corpus (30 à 50 sources sur les 3 thèmes)
 - [ ] Agent Vérificateur v1
@@ -185,7 +193,8 @@ Suivi détaillé : tableau Trello « Claud-Ubitatif » (colonnes À faire / En c
 
 - **Biais de sélection du corpus** : critères publics, sources diversifiées, contributions externes bienvenues, agent contradicteur. Vigilance particulière sur l'immigration, sujet très polarisé.
 - **Classement au niveau 4** : sujet sensible ; critères publics, preuves exigées, jamais l'orientation politique comme critère.
-- **Information périmée** : dates de validité et mises à jour régulières.
+- **Information périmée** : dates de validité, agent veilleur quotidien.
+- **Changement de règles** : niveaux recalculés à chaque contrôle, rapport d'impact, contrôle quotidien de tout le corpus. Limite : les verdicts déjà rendus par le Vérificateur ne sont pas conservés ; chaque réponse indique la version des règles utilisée.
 - **Hallucinations** : citations vérifiées, verdict « non vérifiable » assumé.
 - **Droit d'auteur** : liens et courts extraits uniquement.
 - **Responsabilité** : outil d'aide à la vérification, pas arbitre ; le préciser dans le README.

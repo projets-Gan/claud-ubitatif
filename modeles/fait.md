@@ -16,6 +16,8 @@ biais_formulation: ""                        # biais ou ambiguïté de formulati
 etat_donnee: null                            # statistique : provisoire ou definitif (obligatoire si 1 seule source valide le fait)
 statut: en-attente                           # valide (1 source N0/N1, ou 2 sources N2+ indépendantes ; voir config/niveaux.yaml), en-attente, conteste
 date_validite: 2026-12-31                    # date de la prochaine publication qui pourrait le modifier
+date_ajout: 2026-01-01                       # date d'ajout au corpus
+date_derniere_verification: null             # mise à jour par l'agent veilleur
 sources:
   - source: id-de-la-premiere-source
     extrait: "Court extrait qui appuie le fait."
