@@ -2,9 +2,9 @@
   "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
   "version_regles": 2,
   "statistiques": {
-    "sources": 0,
-    "faits": 0,
-    "faits_valides": 0
+    "sources": 11,
+    "faits": 10,
+    "faits_valides": 7
   },
   "par_theme": {
     "immigration": {
@@ -12,14 +12,575 @@
       "faits": []
     },
     "emploi": {
-      "sources": [],
-      "faits": []
+      "sources": [
+        "1946-10-27-conseil-constitutionnel-preambule-1946",
+        "2026-05-24-jorf-arrete-smic-1er-juin-2026",
+        "2026-08-07-insee-chomage-t2-2026",
+        "2026-10-26-ministere-travail-smic-1er-juin-2026",
+        "2026-10-28-abcbourse-inscrits-france-travail-t3-2026",
+        "2026-10-28-afp-sudradio-inscrits-france-travail-t3-2026",
+        "2026-10-28-dreets-normandie-page-inscrits-t3-2026",
+        "2026-10-28-dreets-normandie-tableaux-inscrits-t3-2026",
+        "2026-10-30-bta-chomage-ue-septembre-2026",
+        "2026-10-30-eurostat-chomage-septembre-2026",
+        "2026-10-30-insee-emploi-salarie-prive-flash-t3-2026"
+      ],
+      "faits": [
+        "emploi-chomage-bit-15-24-france-2026-t2",
+        "emploi-chomage-bit-france-2026-t2",
+        "emploi-chomage-eurostat-zone-euro-ue-2026-09",
+        "emploi-halo-chomage-france-2026-t2",
+        "emploi-inscrits-france-travail-cat-a-2026-t3",
+        "emploi-inscrits-france-travail-cat-abc-2026-t3",
+        "emploi-preambule-1946-alinea-5",
+        "emploi-salarie-prive-flash-2026-t3",
+        "emploi-smic-horaire-brut-2026-06-01",
+        "emploi-taux-emploi-15-64-france-2026-t2"
+      ]
     },
     "finances-publiques": {
       "sources": [],
       "faits": []
     }
   },
-  "sources": [],
-  "faits": []
+  "sources": [
+    {
+      "id": "1946-10-27-conseil-constitutionnel-preambule-1946",
+      "chemin": "corpus/sources/emploi/1946/1946-10-27-conseil-constitutionnel-preambule-1946.md",
+      "titre": "Préambule de la Constitution du 27 octobre 1946",
+      "editeur": "Conseil constitutionnel",
+      "type": "texte-officiel",
+      "niveau": 1,
+      "date_publication": "1946-10-27",
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/preambule-de-la-constitution-du-27-octobre-1946",
+      "depend_de": [],
+      "cite_par": [
+        "emploi-preambule-1946-alinea-5"
+      ]
+    },
+    {
+      "id": "2026-05-24-jorf-arrete-smic-1er-juin-2026",
+      "chemin": "corpus/sources/emploi/2026/2026-05-24-jorf-arrete-smic-1er-juin-2026.md",
+      "titre": "Arrêté du 22 mai 2026 relatif au relèvement du salaire minimum de croissance",
+      "editeur": "Journal officiel de la République française (Légifrance)",
+      "type": "texte-officiel",
+      "niveau": 1,
+      "date_publication": "2026-05-24",
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "salaires"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054126589",
+      "depend_de": [],
+      "cite_par": [
+        "emploi-smic-horaire-brut-2026-06-01",
+        "emploi-smic-horaire-brut-2026-06-01",
+        "emploi-smic-horaire-brut-2026-06-01"
+      ]
+    },
+    {
+      "id": "2026-08-07-insee-chomage-t2-2026",
+      "chemin": "corpus/sources/emploi/2026/2026-08-07-insee-chomage-t2-2026.md",
+      "titre": "Au deuxième trimestre 2026, le taux de chômage augmente de 0,2 point et atteint 8,3 % (Informations rapides n° 192)",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-08-07",
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "chomage",
+        "taux-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/statistiques/9032359",
+      "depend_de": [],
+      "cite_par": [
+        "emploi-chomage-bit-15-24-france-2026-t2",
+        "emploi-chomage-bit-france-2026-t2",
+        "emploi-chomage-bit-france-2026-t2",
+        "emploi-chomage-bit-france-2026-t2",
+        "emploi-halo-chomage-france-2026-t2",
+        "emploi-halo-chomage-france-2026-t2",
+        "emploi-taux-emploi-15-64-france-2026-t2",
+        "emploi-taux-emploi-15-64-france-2026-t2"
+      ]
+    },
+    {
+      "id": "2026-10-26-ministere-travail-smic-1er-juin-2026",
+      "chemin": "corpus/sources/emploi/2026/2026-10-26-ministere-travail-smic-1er-juin-2026.md",
+      "titre": "Le SMIC augmente au 1er juin 2026 : êtes-vous concerné ?",
+      "editeur": "Ministère du Travail (code.travail.gouv.fr)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-10-26",
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "salaires"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://code.travail.gouv.fr/actualite/le-smic-augmente-au-1er-juin-2026-etes-vous-concerne",
+      "depend_de": [
+        "2026-05-24-jorf-arrete-smic-1er-juin-2026"
+      ],
+      "cite_par": [
+        "emploi-smic-horaire-brut-2026-06-01"
+      ]
+    },
+    {
+      "id": "2026-10-28-abcbourse-inscrits-france-travail-t3-2026",
+      "chemin": "corpus/sources/emploi/2026/2026-10-28-abcbourse-inscrits-france-travail-t3-2026.md",
+      "titre": "Le chômage repart à la hausse de 0,9 % en France… (inscrits à France Travail, 3e trimestre 2026)",
+      "editeur": "ABC Bourse",
+      "type": "autre",
+      "niveau": 3,
+      "date_publication": "2026-10-28",
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "demandeurs-emploi",
+        "politiques-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.abcbourse.com/marches/le-chomage-repart-a-la-hausse-de-0-9-en-france-les-moins-de-25-ans-particulie_705066",
+      "depend_de": [
+        "2026-10-28-dreets-normandie-tableaux-inscrits-t3-2026"
+      ],
+      "cite_par": [
+        "emploi-inscrits-france-travail-cat-a-2026-t3"
+      ]
+    },
+    {
+      "id": "2026-10-28-afp-sudradio-inscrits-france-travail-t3-2026",
+      "chemin": "corpus/sources/emploi/2026/2026-10-28-afp-sudradio-inscrits-france-travail-t3-2026.md",
+      "titre": "Chômage : le nombre d'inscrits à France Travail poursuit sa lente progression",
+      "editeur": "AFP",
+      "type": "agence-presse",
+      "niveau": 2,
+      "date_publication": "2026-10-28",
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "demandeurs-emploi",
+        "politiques-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.sudradio.fr/societe/chomage-le-nombre-dinscrits-a-france-travail-poursuit-sa-lente-progression",
+      "depend_de": [
+        "2026-10-28-dreets-normandie-tableaux-inscrits-t3-2026"
+      ],
+      "cite_par": [
+        "emploi-inscrits-france-travail-cat-a-2026-t3",
+        "emploi-inscrits-france-travail-cat-a-2026-t3",
+        "emploi-inscrits-france-travail-cat-a-2026-t3",
+        "emploi-inscrits-france-travail-cat-abc-2026-t3",
+        "emploi-inscrits-france-travail-cat-abc-2026-t3"
+      ]
+    },
+    {
+      "id": "2026-10-28-dreets-normandie-page-inscrits-t3-2026",
+      "chemin": "corpus/sources/emploi/2026/2026-10-28-dreets-normandie-page-inscrits-t3-2026.md",
+      "titre": "Les inscrits à France Travail au 3e trimestre 2026",
+      "editeur": "DREETS Normandie",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-10-28",
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "demandeurs-emploi",
+        "politiques-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://normandie.dreets.gouv.fr/Les-inscrits-a-France-travail-au-3e-trimestre-2026",
+      "depend_de": [],
+      "cite_par": [
+        "emploi-inscrits-france-travail-cat-a-2026-t3",
+        "emploi-inscrits-france-travail-cat-abc-2026-t3"
+      ]
+    },
+    {
+      "id": "2026-10-28-dreets-normandie-tableaux-inscrits-t3-2026",
+      "chemin": "corpus/sources/emploi/2026/2026-10-28-dreets-normandie-tableaux-inscrits-t3-2026.md",
+      "titre": "Inscrits à France Travail par catégorie, région Normandie, 3e trimestre 2026 (tableaux)",
+      "editeur": "DREETS Normandie",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-10-28",
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "demandeurs-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://normandie.dreets.gouv.fr/sites/normandie.dreets.gouv.fr/IMG/pdf/defm_reg_normandie_2026t3.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "emploi-inscrits-france-travail-cat-a-2026-t3",
+        "emploi-inscrits-france-travail-cat-abc-2026-t3"
+      ]
+    },
+    {
+      "id": "2026-10-30-bta-chomage-ue-septembre-2026",
+      "chemin": "corpus/sources/emploi/2026/2026-10-30-bta-chomage-ue-septembre-2026.md",
+      "titre": "EU and Euro Area Unemployment Rates Unchanged in September, Bulgaria's Down to 3.4%",
+      "editeur": "BTA (Bulgarian News Agency)",
+      "type": "agence-presse",
+      "niveau": 2,
+      "date_publication": "2026-10-30",
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "chomage"
+      ],
+      "pays": [
+        "UE"
+      ],
+      "url": "https://www.bta.bg/en/news/economy/1236303-eu-and-euro-area-unemployment-rates-unchanged-in-september-bulgaria-s-down-to-3",
+      "depend_de": [
+        "2026-10-30-eurostat-chomage-septembre-2026"
+      ],
+      "cite_par": [
+        "emploi-chomage-eurostat-zone-euro-ue-2026-09"
+      ]
+    },
+    {
+      "id": "2026-10-30-eurostat-chomage-septembre-2026",
+      "chemin": "corpus/sources/emploi/2026/2026-10-30-eurostat-chomage-septembre-2026.md",
+      "titre": "Euro area unemployment at 6.5% (Euro indicators, septembre 2026)",
+      "editeur": "Eurostat",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-10-30",
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "chomage"
+      ],
+      "pays": [
+        "UE"
+      ],
+      "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/3-30102026-bp",
+      "depend_de": [],
+      "cite_par": []
+    },
+    {
+      "id": "2026-10-30-insee-emploi-salarie-prive-flash-t3-2026",
+      "chemin": "corpus/sources/emploi/2026/2026-10-30-insee-emploi-salarie-prive-flash-t3-2026.md",
+      "titre": "Au troisième trimestre 2026, l'emploi salarié du secteur privé est quasi stable sur le trimestre (-0,1 %) et en recul sur un an (-0,3 %) (Informations rapides n° 265, estimation flash)",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-10-30",
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "creations-emploi",
+        "contrats"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/statistiques/9109624",
+      "depend_de": [],
+      "cite_par": [
+        "emploi-salarie-prive-flash-2026-t3",
+        "emploi-salarie-prive-flash-2026-t3",
+        "emploi-salarie-prive-flash-2026-t3"
+      ]
+    }
+  ],
+  "faits": [
+    {
+      "id": "emploi-chomage-bit-15-24-france-2026-t2",
+      "chemin": "corpus/faits/emploi/emploi-chomage-bit-15-24-france-2026-t2.md",
+      "enonce": "Au deuxième trimestre 2026, le taux de chômage au sens du BIT des actifs de 15 à 24 ans est de 21,6 % en France (Mayotte incluse), en hausse de 0,4 point sur le trimestre (données CVS).",
+      "periode": "2026-T2",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2026-11-10",
+      "date_ajout": "2026-11-01",
+      "date_derniere_verification": null,
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "chomage"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-08-07-insee-chomage-t2-2026"
+      ]
+    },
+    {
+      "id": "emploi-chomage-bit-france-2026-t2",
+      "chemin": "corpus/faits/emploi/emploi-chomage-bit-france-2026-t2.md",
+      "enonce": "Au deuxième trimestre 2026, le taux de chômage au sens du BIT s'établit à 8,3 % de la population active en France (Mayotte incluse), en hausse de 0,2 point sur le trimestre (données CVS, moyenne trimestrielle).",
+      "periode": "2026-T2",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2026-11-10",
+      "date_ajout": "2026-11-01",
+      "date_derniere_verification": null,
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "chomage"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-08-07-insee-chomage-t2-2026",
+        "2026-08-07-insee-chomage-t2-2026",
+        "2026-08-07-insee-chomage-t2-2026"
+      ]
+    },
+    {
+      "id": "emploi-chomage-eurostat-zone-euro-ue-2026-09",
+      "chemin": "corpus/faits/emploi/emploi-chomage-eurostat-zone-euro-ue-2026-09.md",
+      "enonce": "Selon le communiqué Eurostat du 30 octobre 2026, rapporté par l'agence BTA, le taux de chômage corrigé des variations saisonnières est de 6,5 % dans la zone euro et de 6,2 % dans l'Union européenne en septembre 2026, stable par rapport à août 2026.",
+      "periode": "2026-09",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "provisoire",
+      "date_validite": "2026-12-01",
+      "date_ajout": "2026-11-01",
+      "date_derniere_verification": null,
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "chomage"
+      ],
+      "pays": [
+        "UE"
+      ],
+      "sources": [
+        "2026-10-30-bta-chomage-ue-septembre-2026"
+      ]
+    },
+    {
+      "id": "emploi-halo-chomage-france-2026-t2",
+      "chemin": "corpus/faits/emploi/emploi-halo-chomage-france-2026-t2.md",
+      "enonce": "Au deuxième trimestre 2026, 1,9 million de personnes de 15 ans ou plus, inactives au sens du BIT, souhaitent un emploi (halo autour du chômage), un nombre quasi stable sur le trimestre (+6 000) ; le halo représente 4,4 % des 15-64 ans en France (Mayotte incluse).",
+      "periode": "2026-T2",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2026-11-10",
+      "date_ajout": "2026-11-01",
+      "date_derniere_verification": null,
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "chomage"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-08-07-insee-chomage-t2-2026",
+        "2026-08-07-insee-chomage-t2-2026"
+      ]
+    },
+    {
+      "id": "emploi-inscrits-france-travail-cat-a-2026-t3",
+      "chemin": "corpus/faits/emploi/emploi-inscrits-france-travail-cat-a-2026-t3.md",
+      "enonce": "Au troisième trimestre 2026, selon la série France Travail-Dares (STMT), 3 353 400 personnes sont inscrites à France Travail en catégorie A en France hors Mayotte (données CVS-CJO), soit +0,9 % sur le trimestre et +2,1 % sur un an.",
+      "periode": "2026-T3",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-01-28",
+      "date_ajout": "2026-11-01",
+      "date_derniere_verification": null,
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "demandeurs-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-10-28-dreets-normandie-tableaux-inscrits-t3-2026",
+        "2026-10-28-afp-sudradio-inscrits-france-travail-t3-2026",
+        "2026-10-28-afp-sudradio-inscrits-france-travail-t3-2026",
+        "2026-10-28-afp-sudradio-inscrits-france-travail-t3-2026",
+        "2026-10-28-dreets-normandie-page-inscrits-t3-2026",
+        "2026-10-28-abcbourse-inscrits-france-travail-t3-2026"
+      ]
+    },
+    {
+      "id": "emploi-inscrits-france-travail-cat-abc-2026-t3",
+      "chemin": "corpus/faits/emploi/emploi-inscrits-france-travail-cat-abc-2026-t3.md",
+      "enonce": "Au troisième trimestre 2026, selon la série France Travail-Dares (STMT), 5 847 500 personnes sont inscrites à France Travail en catégories A, B, C en France hors Mayotte (données CVS-CJO), soit +0,8 % sur le trimestre et +2,4 % sur un an.",
+      "periode": "2026-T3",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-01-28",
+      "date_ajout": "2026-11-01",
+      "date_derniere_verification": null,
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "demandeurs-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-10-28-dreets-normandie-tableaux-inscrits-t3-2026",
+        "2026-10-28-afp-sudradio-inscrits-france-travail-t3-2026",
+        "2026-10-28-afp-sudradio-inscrits-france-travail-t3-2026",
+        "2026-10-28-dreets-normandie-page-inscrits-t3-2026"
+      ]
+    },
+    {
+      "id": "emploi-preambule-1946-alinea-5",
+      "chemin": "corpus/faits/emploi/emploi-preambule-1946-alinea-5.md",
+      "enonce": "Le cinquième alinéa du Préambule de la Constitution du 27 octobre 1946, qui fait partie du bloc de constitutionnalité, dispose : « Chacun a le devoir de travailler et le droit d'obtenir un emploi. »",
+      "periode": "1946-10-27",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": null,
+      "date_validite": "2027-11-01",
+      "date_ajout": "2026-11-01",
+      "date_derniere_verification": null,
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "politiques-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "1946-10-27-conseil-constitutionnel-preambule-1946"
+      ]
+    },
+    {
+      "id": "emploi-salarie-prive-flash-2026-t3",
+      "chemin": "corpus/faits/emploi/emploi-salarie-prive-flash-2026-t3.md",
+      "enonce": "Selon l'estimation flash de l'INSEE, l'emploi salarié du secteur privé est quasi stable au troisième trimestre 2026 (-0,1 %, soit -25 800 emplois entre juin et septembre 2026) et recule de 0,3 % sur un an (-69 800 emplois), en France hors Mayotte (données CVS, fin de trimestre).",
+      "periode": "2026-T3",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2026-11-27",
+      "date_ajout": "2026-11-01",
+      "date_derniere_verification": null,
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "creations-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-10-30-insee-emploi-salarie-prive-flash-t3-2026",
+        "2026-10-30-insee-emploi-salarie-prive-flash-t3-2026",
+        "2026-10-30-insee-emploi-salarie-prive-flash-t3-2026"
+      ]
+    },
+    {
+      "id": "emploi-smic-horaire-brut-2026-06-01",
+      "chemin": "corpus/faits/emploi/emploi-smic-horaire-brut-2026-06-01.md",
+      "enonce": "Depuis le 1er juin 2026, le SMIC horaire brut est de 12,31 € en métropole, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon, et de 9,56 € à Mayotte (arrêté du 22 mai 2026, JORF n° 0121 du 24 mai 2026).",
+      "periode": "2026-06-01",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": null,
+      "date_validite": "2027-01-01",
+      "date_ajout": "2026-11-01",
+      "date_derniere_verification": null,
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "salaires"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-05-24-jorf-arrete-smic-1er-juin-2026",
+        "2026-05-24-jorf-arrete-smic-1er-juin-2026",
+        "2026-05-24-jorf-arrete-smic-1er-juin-2026",
+        "2026-10-26-ministere-travail-smic-1er-juin-2026"
+      ]
+    },
+    {
+      "id": "emploi-taux-emploi-15-64-france-2026-t2",
+      "chemin": "corpus/faits/emploi/emploi-taux-emploi-15-64-france-2026-t2.md",
+      "enonce": "Au deuxième trimestre 2026, le taux d'emploi des 15-64 ans au sens du BIT est de 69,0 % en France (Mayotte incluse), en baisse de 0,3 point sur le trimestre et de 0,5 point sur un an (données CVS, moyenne trimestrielle).",
+      "periode": "2026-T2",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2026-11-10",
+      "date_ajout": "2026-11-01",
+      "date_derniere_verification": null,
+      "themes": [
+        "emploi"
+      ],
+      "sous_themes": [
+        "taux-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-08-07-insee-chomage-t2-2026",
+        "2026-08-07-insee-chomage-t2-2026"
+      ]
+    }
+  ]
 }

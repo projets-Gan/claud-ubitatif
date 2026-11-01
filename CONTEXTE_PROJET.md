@@ -45,7 +45,7 @@ Construire des agents qui s'appuient sur un dépôt GitHub public :
 - **Niveaux de validation, version 2 (31/10/2026)** : niveaux 0 à 4 et bonus, définis dans `config/niveaux.yaml` (référence unique, versionnée, avec historique). Remplace la v1 du 30/10. **Les règles évolueront** après des rencontres avec des journalistes et des personnes relayant l'information avec neutralité ; chaque évolution passe par une Pull Request (niveaux.yaml + section « Évolution de la méthode » de METHODOLOGIE.md).
 - **Chaîne de curation (31/10/2026)** : chercheur-sources → contradicteur → curateur → relecture humaine, orchestrée depuis la conversation principale de Claude Code (`CLAUDE.md`).
 - **Contrôle quotidien des règles (01/11/2026)** : GitHub Actions revalide chaque jour **tout** le corpus avec les règles en vigueur (gratuit, sans IA) et ouvre une Issue `controle-quotidien` en cas de problème. Une fiche ne contient que son type ; son niveau est toujours recalculé, donc un changement de règle s'applique aussi aux fiches déjà fusionnées. Rapport d'impact : `scripts/impact_regles.py` (option `--appliquer` pour repasser en « en-attente »).
-- **Agent veilleur (01/11/2026)** : tâche planifiée Claude dans le cloud (quota de l'abonnement, pas de clé API), quotidienne. Vérifie la fraîcheur des faits : 1re vérification 72 h après l'ajout, puis 7 jours avant la date de validité, et au plus tard tous les 30 jours (`config/veille.yaml`, 15 faits max par passage). Ne modifie que `date_derniere_verification` ; ouvre une Issue `veille` pour chaque mise à jour nécessaire.
+- **Agent veilleur (01/11/2026)** : tâche planifiée Claude dans le cloud (quota de l'abonnement, pas de clé API), quotidienne. Vérifie la fraîcheur des faits : 1re vérification 72 h après l'ajout, puis 7 jours avant la date de validité, et au plus tard tous les 30 jours (`config/veille.yaml`, 15 faits max par passage). Ne modifie que `date_derniere_verification` ; ouvre une Issue `veille` pour chaque mise à jour nécessaire. Tâche planifiée « Veilleur claud-ubitatif » : tous les jours à 5 h 38 (heure de Paris), approbation automatique, notification push ; ne fusionne jamais elle-même ses Pull Requests.
 - **Index** : `corpus/index/index.json` est généré par `scripts/generer_index.py` et versionné ; la validation automatique vérifie qu'il est à jour.
 
 ## 5. Décisions encore ouvertes
@@ -178,8 +178,8 @@ Attention : si la variable d'environnement `ANTHROPIC_API_KEY` est définie, Cla
 - [x] Licence du contenu : Licence Ouverte 2.0 (PR n°1 fusionnée)
 - [x] Étape 3 : squelette complet (Pull Request n°2 fusionnée le 30/10/2026)
 - [x] Niveaux de validation v2 et agents chercheur-sources / contradicteur (Pull Request n°3 fusionnée le 01/11/2026)
-- [ ] Contrôle quotidien des règles + agent veilleur — **en cours** (Pull Request n°4) ; tâche planifiée du veilleur à créer après la fusion
-- [ ] Pilote du premier corpus : thème emploi, une dizaine de faits
+- [x] Contrôle quotidien des règles + agent veilleur (Pull Request n°4 fusionnée le 01/11/2026 ; tâche planifiée créée)
+- [ ] Pilote du premier corpus : thème emploi — **en cours** (Pull Request n°5 : 11 sources, 10 faits dont 7 valides) ; 2 classements à trancher (tableaux DREETS, Préambule de 1946)
 - [ ] Rencontres avec des journalistes et professionnels de l'information : faire évoluer `config/niveaux.yaml` (en continu)
 - [ ] Constituer un premier corpus (30 à 50 sources sur les 3 thèmes)
 - [ ] Agent Vérificateur v1
