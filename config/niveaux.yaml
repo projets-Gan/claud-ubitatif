@@ -18,8 +18,8 @@
 # Les types de sources rattachés à chaque niveau sont dans types-sources.yaml.
 # On classe le DOCUMENT, pas l'organisme qui le publie.
 
-version: 2
-date: 2026-10-31
+version: 3
+date: 2026-11-01
 
 niveaux:
   0:
@@ -34,6 +34,8 @@ niveaux:
       - Déclaration des droits de l'homme et du citoyen de 1789
       - Déclaration universelle des droits de l'homme de 1948
       - Constitution française du 4 octobre 1958
+      - Préambule de la Constitution du 27 octobre 1946 (auquel renvoie le Préambule de 1958)
+      - Charte de l'environnement de 2004 (à laquelle renvoie le Préambule de 1958)
 
   1:
     libelle: Données et textes officiels
@@ -110,3 +112,10 @@ historique:
       Ajout du niveau 0 (textes fondamentaux, primauté) et du niveau bonus.
       Presse de référence, fact-checkers et recherche passent au niveau 2.
       Niveau 3 = soutien uniquement ; niveau 4 = désinformation.
+  - version: 3
+    date: 2026-11-01
+    resume: >
+      Ajout au niveau 0 du Préambule de la Constitution de 1946 et de la Charte de
+      l'environnement, intégrés au bloc de constitutionnalité par le même renvoi du
+      Préambule de 1958 que la Déclaration de 1789. Décision du porteur du projet,
+      à la suite du pilote « emploi ».

@@ -10,7 +10,7 @@ types:
   texte-fondamental:
     niveau: 0
     libelle: Texte fondamental
-    description: Déclaration des droits de l'homme et du citoyen, Déclaration universelle des droits de l'homme, Constitution de 1958.
+    description: Déclaration des droits de l'homme et du citoyen (1789), Déclaration universelle des droits de l'homme (1948), Constitution de 1958, Préambule de la Constitution de 1946, Charte de l'environnement (2004).
     exemples: [Conseil constitutionnel, Légifrance, ONU]
 
   donnees-officielles:
