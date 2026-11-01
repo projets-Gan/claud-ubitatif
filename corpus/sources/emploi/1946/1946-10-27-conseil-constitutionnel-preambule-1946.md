@@ -4,7 +4,7 @@ type_fiche: source
 titre: "Préambule de la Constitution du 27 octobre 1946"
 editeur: "Conseil constitutionnel"
 auteurs: []
-type: texte-officiel
+type: texte-fondamental
 url: "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/preambule-de-la-constitution-du-27-octobre-1946"
 archive: null
 hash_sha256: null
@@ -17,14 +17,13 @@ langue: fr
 depend_de: []
 notes: >
   date_publication = date du texte (la page du Conseil constitutionnel n'est pas datée).
-  CLASSEMENT PROVISOIRE (décision du coordinateur) : texte-officiel (niveau 1) et non
-  texte-fondamental (niveau 0), car config/niveaux.yaml v2 ne liste au niveau 0 que la DDHC
-  de 1789, la DUDH de 1948 et la Constitution de 1958. Le Préambule de 1946 a valeur
-  constitutionnelle par le renvoi du 1er alinéa du Préambule de 1958 (Constitution « à jour
-  de la révision constitutionnelle du 8 mars 2024 », page consultée le 1/11/2026 :
+  CLASSEMENT : texte-fondamental (niveau 0), décision du porteur du projet du 01/11/2026
+  (version 3 de config/niveaux.yaml, qui ajoute au niveau 0 le Préambule de 1946 et la Charte
+  de l'environnement). Le Préambule de 1946 a valeur constitutionnelle par le renvoi du
+  1er alinéa du Préambule de 1958 (Constitution « à jour de la révision constitutionnelle
+  du 8 mars 2024 », page consultée le 1/11/2026 :
   https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur).
-  Question à trancher dans une éventuelle v3 de niveaux.yaml (avec la Charte de
-  l'environnement, intégrée par le même renvoi). Archive non créée ; hash non calculé.
+  Archive non créée ; hash non calculé.
 ---
 
 ## Résumé

@@ -11,13 +11,13 @@ Ce document décrit comment le corpus est constitué et comment les verdicts son
 
 ## 2. Sources
 
-Les niveaux et les règles ci-dessous sont définis dans **`config/niveaux.yaml`**, qui fait référence (version 2 du 31/10/2026). Ils évolueront à la suite d'échanges avec des journalistes et des professionnels de l'information : voir la section 10.
+Les niveaux et les règles ci-dessous sont définis dans **`config/niveaux.yaml`**, qui fait référence (version 3 du 01/11/2026). Ils évolueront à la suite d'échanges avec des journalistes et des professionnels de l'information : voir la section 10.
 
 ### Niveaux de fiabilité
 
 | Niveau | Contenu (types dans `config/types-sources.yaml`) | Règle |
 |---|---|---|
-| **0** | Textes fondamentaux : Déclaration des droits de l'homme et du citoyen (1789), Déclaration universelle des droits de l'homme (1948), Constitution de 1958 (`texte-fondamental`) | Une seule source suffit. Ne peut pas être contredit par une source de niveau inférieur. |
+| **0** | Textes fondamentaux : Déclaration des droits de l'homme et du citoyen (1789), Déclaration universelle des droits de l'homme (1948), Constitution de 1958, Préambule de la Constitution de 1946, Charte de l'environnement (2004) (`texte-fondamental`) | Une seule source suffit. Ne peut pas être contredit par une source de niveau inférieur. |
 | **1** | Données statistiques officielles, textes juridiques officiels, lois (`donnees-officielles`, `texte-officiel`) | Une seule source suffit, mais la **formulation** doit toujours être vérifiée et tout biais signalé. |
 | **2** | Presse de référence, fact-checkers, recherche, AFP et agences (`presse-reference`, `fact-check`, `recherche`, `agence-presse`, `institution-publique`) | Deux sources indépendantes nécessaires. |
 | **3** | Autres sources (`autre`) | Soutien des niveaux 1 et 2 uniquement ; ne valide jamais un fait. |
@@ -143,6 +143,7 @@ Cette méthode est appelée à évoluer, notamment à la suite d'échanges avec 
 |---|---|---|---|
 | 1 | 30/10/2026 | Niveaux 1 à 4 ; valide = 1 source de niveau 1 ou 2 sources de niveau 2 | Décision du porteur de projet |
 | 2 | 31/10/2026 | Ajout des niveaux 0 et bonus ; presse, fact-checkers et recherche au niveau 2 ; niveau 3 en soutien ; niveau 4 = désinformation ; agents chercheur et contradicteur | Décision du porteur de projet |
+| 3 | 01/11/2026 | Ajout au niveau 0 du Préambule de 1946 et de la Charte de l'environnement (même renvoi du Préambule de 1958 que la Déclaration de 1789) | Décision du porteur de projet, à la suite du pilote « emploi » |
 
 ### Questions ouvertes (à discuter lors des prochains échanges)
 

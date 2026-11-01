@@ -4,7 +4,7 @@ type_fiche: source
 titre: "Inscrits à France Travail par catégorie, région Normandie, 3e trimestre 2026 (tableaux)"
 editeur: "DREETS Normandie"
 auteurs: []
-type: institution-publique
+type: donnees-officielles
 url: "https://normandie.dreets.gouv.fr/sites/normandie.dreets.gouv.fr/IMG/pdf/defm_reg_normandie_2026t3.pdf"
 archive: null
 hash_sha256: null
@@ -16,14 +16,12 @@ pays: [FR]
 langue: fr
 depend_de: []
 notes: >
-  CLASSEMENT PROVISOIRE (décision du coordinateur pour le pilote, à trancher par le porteur
-  du projet) : tableau statistique non commenté portant la mention « Source : France
-  Travail-Dares, STMT, traitements Dares. », mais rediffusé par un service déconcentré.
-  En application de la règle « au moindre doute sur le caractère primaire, niveau
-  inférieur » (config/types-sources.yaml), classé institution-publique (niveau 2) et non
-  donnees-officielles (niveau 1). Si le porteur le reclasse en donnees-officielles, les
-  faits emploi-inscrits-france-travail-cat-a-2026-t3 et
-  emploi-inscrits-france-travail-cat-abc-2026-t3 pourront passer en valide.
+  CLASSEMENT (décision du porteur du projet, 01/11/2026) : niveau 1 (donnees-officielles), car il s'agit
+  d'un tableau statistique non commenté reprenant la série officielle « France Travail-Dares, STMT,
+  traitements Dares ». EN ATTENTE DE CONFIRMATION PAR LA PUBLICATION NATIONALE (Dares / France Travail) :
+  la source lue est une rediffusion par un service régional (DREETS Normandie), non la publication
+  nationale elle-même. Dès que la publication nationale est lisible, l'ajouter au corpus et la citer
+  en priorité.
   La publication nationale Dares-France Travail du 28/10/2026 n'a pu être lue ni par le
   chercheur, ni par le contradicteur (pages anti-robot, PDF bloqué) : aucune fiche n'a été
   créée pour elle, faute d'URL et de contenu vérifiés. Archive non créée ; hash non calculé.

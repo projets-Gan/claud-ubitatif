@@ -11,7 +11,7 @@ sous_themes: [demandeurs-emploi]
 pays: [FR]
 biais_formulation: "1) Effets administratifs de la loi pour le plein emploi : inscription de nouveaux publics (bénéficiaires du RSA notamment) et création des catégories F et G. Selon la Dares, rapporté par l'AFP, hors nouveaux publics, la hausse de la catégorie A est ramenée à +0,3 % sur le trimestre et +0,9 % sur un an (au lieu de +0,9 % et +2,1 %). 2) Radiations : selon l'AFP, les radiations administratives sont tombées à 3 700 sorties par mois en moyenne au T3 2026, contre 45 000 début 2025 (nouveau régime de sanctions) ; selon la Dares (rapporté par ABC Bourse), le décret sanctions n'a plus d'impact significatif d'un mois sur l'autre, mais il pèse encore sur l'évolution sur un an. Citer « +2,1 % sur un an » sans ces précisions laisse croire à une dégradation purement conjoncturelle. 3) Inscrits en catégorie A ≠ chômeurs au sens du BIT (2,7 millions au T2 2026, enquête INSEE, champ France avec Mayotte). 4) CVS-CJO ≠ données brutes (les catégories F et G sont en brut). 5) Séries révisées : la valeur du T3 2025 (3 284,0 milliers dans le tableau du T3 2026) diffère de celle annoncée en octobre 2025 (3,26 millions) ; utiliser l'évolution sur un an calculée dans la publication du T3 2026. 6) Le « total des inscrits » toutes catégories est un autre agrégat."
 etat_donnee: provisoire
-statut: en-attente
+statut: valide
 date_validite: 2027-01-28
 date_ajout: 2026-11-01
 date_derniere_verification: null
@@ -30,7 +30,7 @@ sources:
   - source: 2026-10-28-abcbourse-inscrits-france-travail-t3-2026
     extrait: "n'a plus d'impact significatif sur les évolutions du nombre d'inscrits au mois le mois"
 contredit_par: []
-notes: "EN ATTENTE (décision prudente et réversible du coordinateur pour le pilote). Le tableau DREETS est classé institution-publique (niveau 2) en application de la règle « au moindre doute, niveau inférieur » : c'est une rediffusion de la série nationale par un service déconcentré. Toutes les autres sources (AFP, ABC Bourse, page DREETS) dépendent de la même publication Dares-France Travail du 28/10/2026 : elles ne sont pas indépendantes, d'où une seule source de niveau 2. Le fait deviendra VALIDE (a) si le porteur du projet classe ce tableau au niveau 1 (donnees-officielles), ou (b) si la publication nationale Dares-France Travail est lue directement et ajoutée au corpus en donnees-officielles. La date de validité (prochaine publication le 28/01/2027) vient d'une paraphrase de la page statistiques.francetravail.org : à recontrôler. Les nombres de l'extrait DREETS sont des cellules de tableau relevées par le chercheur (lecture recoupée par la dépêche AFP)."
+notes: "VALIDÉ sur décision du porteur du projet (01/11/2026) : le tableau DREETS est classé au niveau 1 (donnees-officielles). EN ATTENTE DE CONFIRMATION PAR UNE ORGANISATION NATIONALE : la source lue est une rediffusion régionale (DREETS Normandie) de la série nationale « France Travail-Dares » ; à remplacer ou compléter par la publication nationale Dares / France Travail dès qu'elle est lisible (sites bloqués lors de la curation). Les chiffres sont recoupés par la dépêche AFP du 28/10/2026, qui reprend la même publication et ne compte donc pas comme source indépendante. La date de validité (prochaine publication le 28/01/2027) vient d'une paraphrase de la page statistiques.francetravail.org : à recontrôler. Les nombres de l'extrait DREETS sont des cellules de tableau relevées par le chercheur (lecture recoupée par la dépêche AFP)."
 ---
 
 ## Contexte

@@ -1,10 +1,10 @@
 {
   "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
-  "version_regles": 2,
+  "version_regles": 3,
   "statistiques": {
     "sources": 11,
     "faits": 10,
-    "faits_valides": 7
+    "faits_valides": 9
   },
   "par_theme": {
     "immigration": {
@@ -49,8 +49,8 @@
       "chemin": "corpus/sources/emploi/1946/1946-10-27-conseil-constitutionnel-preambule-1946.md",
       "titre": "Préambule de la Constitution du 27 octobre 1946",
       "editeur": "Conseil constitutionnel",
-      "type": "texte-officiel",
-      "niveau": 1,
+      "type": "texte-fondamental",
+      "niveau": 0,
       "date_publication": "1946-10-27",
       "themes": [
         "emploi"
@@ -232,8 +232,8 @@
       "chemin": "corpus/sources/emploi/2026/2026-10-28-dreets-normandie-tableaux-inscrits-t3-2026.md",
       "titre": "Inscrits à France Travail par catégorie, région Normandie, 3e trimestre 2026 (tableaux)",
       "editeur": "DREETS Normandie",
-      "type": "institution-publique",
-      "niveau": 2,
+      "type": "donnees-officielles",
+      "niveau": 1,
       "date_publication": "2026-10-28",
       "themes": [
         "emploi"
@@ -429,8 +429,8 @@
       "chemin": "corpus/faits/emploi/emploi-inscrits-france-travail-cat-a-2026-t3.md",
       "enonce": "Au troisième trimestre 2026, selon la série France Travail-Dares (STMT), 3 353 400 personnes sont inscrites à France Travail en catégorie A en France hors Mayotte (données CVS-CJO), soit +0,9 % sur le trimestre et +2,1 % sur un an.",
       "periode": "2026-T3",
-      "statut": "en-attente",
-      "niveau_validation": null,
+      "statut": "valide",
+      "niveau_validation": 1,
       "etat_donnee": "provisoire",
       "date_validite": "2027-01-28",
       "date_ajout": "2026-11-01",
@@ -458,8 +458,8 @@
       "chemin": "corpus/faits/emploi/emploi-inscrits-france-travail-cat-abc-2026-t3.md",
       "enonce": "Au troisième trimestre 2026, selon la série France Travail-Dares (STMT), 5 847 500 personnes sont inscrites à France Travail en catégories A, B, C en France hors Mayotte (données CVS-CJO), soit +0,8 % sur le trimestre et +2,4 % sur un an.",
       "periode": "2026-T3",
-      "statut": "en-attente",
-      "niveau_validation": null,
+      "statut": "valide",
+      "niveau_validation": 1,
       "etat_donnee": "provisoire",
       "date_validite": "2027-01-28",
       "date_ajout": "2026-11-01",
@@ -486,7 +486,7 @@
       "enonce": "Le cinquième alinéa du Préambule de la Constitution du 27 octobre 1946, qui fait partie du bloc de constitutionnalité, dispose : « Chacun a le devoir de travailler et le droit d'obtenir un emploi. »",
       "periode": "1946-10-27",
       "statut": "valide",
-      "niveau_validation": 1,
+      "niveau_validation": 0,
       "etat_donnee": null,
       "date_validite": "2027-11-01",
       "date_ajout": "2026-11-01",

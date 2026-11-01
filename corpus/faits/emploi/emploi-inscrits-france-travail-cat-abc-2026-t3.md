@@ -11,7 +11,7 @@ sous_themes: [demandeurs-emploi]
 pays: [FR]
 biais_formulation: "1) Les catégories B et C regroupent des personnes QUI TRAVAILLENT (activité réduite) : présenter les 5,85 millions d'inscrits en A, B, C comme des « chômeurs » est inexact. 2) Effets administratifs de la loi pour le plein emploi (inscription de nouveaux publics, catégories F et G) et baisse des radiations (3 700 par mois au T3 2026 contre 45 000 début 2025, selon l'AFP) : les évolutions, surtout sur un an, ne reflètent pas seulement la conjoncture. L'effet « hors nouveaux publics » n'a été relevé que pour la catégorie A (+0,3 % sur le trimestre, +0,9 % sur un an, selon la Dares rapportée par l'AFP), pas pour A, B, C. 3) Inscrits ≠ chômeurs BIT (INSEE) ; champ hors Mayotte ≠ champ France de l'INSEE. 4) Séries CVS-CJO révisées à chaque publication : utiliser l'évolution sur un an calculée dans la publication du T3 2026."
 etat_donnee: provisoire
-statut: en-attente
+statut: valide
 date_validite: 2027-01-28
 date_ajout: 2026-11-01
 date_derniere_verification: null
@@ -26,7 +26,7 @@ sources:
   - source: 2026-10-28-dreets-normandie-page-inscrits-t3-2026
     extrait: "la catégorie F à dominante « sociale » pour les personnes les plus éloignées de l'emploi » ; « la catégorie G pour les demandeurs et bénéficiaires du RSA en attente d'orientation"
 contredit_par: []
-notes: "EN ATTENTE pour les mêmes raisons que emploi-inscrits-france-travail-cat-a-2026-t3 : tableau DREETS classé provisoirement au niveau 2 (rediffusion, règle du moindre doute) et aucune source indépendante de la publication Dares du 28/10/2026. Deviendra VALIDE si le porteur classe ce tableau au niveau 1 ou si la publication nationale Dares-France Travail est lue et ajoutée au corpus. Le +2,4 % sur un an vient du tableau DREETS (et d'ABC Bourse, non utilisé ici). Les seuils de 78 heures des catégories B et C relèvent de la définition usuelle Dares, non relue dans un document du corpus : à recontrôler. Date de validité issue d'une paraphrase de la page France Travail (à recontrôler)."
+notes: "VALIDÉ sur décision du porteur du projet (01/11/2026) : le tableau DREETS est classé au niveau 1 (donnees-officielles). EN ATTENTE DE CONFIRMATION PAR UNE ORGANISATION NATIONALE : la source lue est une rediffusion régionale (DREETS Normandie) de la série nationale « France Travail-Dares » ; à remplacer ou compléter par la publication nationale Dares / France Travail dès qu'elle est lisible (sites bloqués lors de la curation). Les chiffres sont recoupés par la dépêche AFP du 28/10/2026, qui reprend la même publication et ne compte donc pas comme source indépendante. Le +2,4 % sur un an vient du tableau DREETS (et d'ABC Bourse, non utilisé ici). Les seuils de 78 heures des catégories B et C relèvent de la définition usuelle Dares, non relue dans un document du corpus : à recontrôler. Date de validité issue d'une paraphrase de la page France Travail (à recontrôler)."
 ---
 
 ## Contexte
