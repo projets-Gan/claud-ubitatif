@@ -54,4 +54,5 @@ Termine par :
 - un premier **bilan** en une ou deux phrases (sans verdict global unique) ;
 - un second **bilan** avec plus de précision et les subtilités, éventuellement éclairé par des sources du niveau bonus (attribuées à leurs auteurs) ;
 - la liste des affirmations **non vérifiables** et du type de source qui permettrait de les vérifier (pour l'agent Curateur) ;
+- la mention de la version des règles utilisée et de la fraîcheur du corpus : « Règles de validation : version N du AAAA-MM-JJ (`config/niveaux.yaml`). » ; si un fait utilisé n'a jamais été vérifié par le veilleur ou si sa dernière vérification date de plus de 30 jours (`date_derniere_verification`), le signaler ;
 - le rappel : « Outil d'aide à la vérification fondé sur un corpus limité ; il ne remplace pas un travail journalistique. »

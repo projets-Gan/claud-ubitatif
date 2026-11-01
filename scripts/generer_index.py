@@ -67,6 +67,8 @@ def construire_index() -> dict:
                 )["niveau"],
                 "etat_donnee": e.get("etat_donnee"),
                 "date_validite": e.get("date_validite"),
+                "date_ajout": e.get("date_ajout"),
+                "date_derniere_verification": e.get("date_derniere_verification"),
                 "themes": e.get("themes") or [],
                 "sous_themes": e.get("sous_themes") or [],
                 "pays": e.get("pays") or [],

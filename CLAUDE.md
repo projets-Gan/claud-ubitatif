@@ -13,6 +13,7 @@ Ce dépôt contient un corpus de sources et de faits vérifiés, et des agents q
 - **chercheur-sources** : cherche les meilleures sources sur un sujet en respectant les niveaux de fiabilité, et produit un dossier de recherche.
 - **contradicteur** : contre-vérifie le dossier du chercheur (information la plus répandue ou information réelle ? source primaire ? indépendance ? définitions ? biais de formulation ?).
 - **curateur** : tranche à partir du dossier et de l'avis contradictoire, écrit les fiches sources et faits, prépare une Pull Request.
+- **veilleur** : vérifie chaque jour la fraîcheur des faits arrivés à échéance (`scripts/faits_a_verifier.py`, rythme dans `config/veille.yaml`) ; ne modifie que `date_derniere_verification` et ouvre une Issue pour chaque mise à jour nécessaire. Lancé par une tâche planifiée.
 
 ### Quand l'utilisateur soumet une information à vérifier
 
@@ -28,6 +29,15 @@ Enchaîner **toujours** les trois agents, dans cet ordre, depuis la conversation
 
 Le dossier `travail/` est ignoré par Git. Exemple de demande : « Ajoute au corpus le taux de chômage du dernier trimestre ».
 
+### Quand l'utilisateur demande de traiter une Issue « Veille »
+
+Même chaîne (chercheur → contradicteur → curateur), en partant de l'Issue ; la Pull Request ferme l'Issue.
+
+### Contrôles automatiques
+
+- À chaque Pull Request : validation, index, rapport d'impact (`.github/workflows/validation.yml`).
+- Chaque jour : contrôle de **tout** le corpus avec les règles en vigueur ; une Issue `controle-quotidien` est ouverte en cas de problème (`.github/workflows/controle-quotidien.yml`).
+
 ## Règles du projet
 
 1. **Pas de source du corpus, pas de verdict.** « Non vérifiable avec le corpus actuel » vaut mieux qu'une improvisation.
@@ -41,6 +51,7 @@ Le dossier `travail/` est ignoré par Git. Exemple de demande : « Ajoute au cor
 ## Où trouver quoi
 
 - Méthodologie complète : `METHODOLOGIE.md`
+- Rythme de la veille : `config/veille.yaml`
 - Niveaux et règles de validation : `config/niveaux.yaml` ; sources classées au niveau 4 : `config/sources-niveau-4.yaml`
 - Vocabulaire contrôlé : `config/taxonomie.yaml` (thèmes, sous-thèmes, pays), `config/types-sources.yaml`, `config/verdicts.yaml`
 - Schémas des fiches : `schemas/source.schema.json`, `schemas/fait.schema.json`
@@ -55,6 +66,8 @@ Le dossier `travail/` est ignoré par Git. Exemple de demande : « Ajoute au cor
 python -m pip install -r requirements.txt   # une seule fois
 python scripts/valider_corpus.py            # contrôle le corpus
 python scripts/generer_index.py             # régénère l'index après toute modification du corpus
+python scripts/impact_regles.py             # effet des règles en vigueur sur les faits existants (--appliquer pour repasser en en-attente)
+python scripts/faits_a_verifier.py          # faits dont la fraîcheur doit être vérifiée
 ```
 
 Toute modification du corpus doit passer `valider_corpus.py` sans erreur et être suivie d'une régénération de l'index.

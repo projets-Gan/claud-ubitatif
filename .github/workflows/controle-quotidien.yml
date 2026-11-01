@@ -1,0 +1,77 @@
+name: Contrôle quotidien du corpus
+
+# Vérifie chaque jour que TOUT le corpus respecte les règles en vigueur
+# (config/niveaux.yaml), y compris les fiches fusionnées il y a longtemps.
+# Gratuit et sans IA. En cas de problème, ouvre (ou complète) une Issue.
+
+on:
+  schedule:
+    - cron: "17 4 * * *"   # tous les jours vers 5 h 17 (heure de Paris en hiver)
+  workflow_dispatch:        # lancement manuel possible depuis l'onglet Actions
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  controler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Installer les dépendances
+        run: python -m pip install -r requirements.txt
+
+      - name: Valider le corpus
+        id: validation
+        continue-on-error: true
+        run: python scripts/valider_corpus.py | tee validation.txt
+
+      - name: Rapport d'impact des règles
+        id: impact
+        continue-on-error: true
+        run: python scripts/impact_regles.py --markdown impact.md
+
+      - name: Vérifier que l'index est à jour
+        id: index
+        continue-on-error: true
+        run: python scripts/generer_index.py --check | tee index.txt
+
+      - name: Faits à vérifier (information)
+        run: python scripts/faits_a_verifier.py --tous | tee veille.txt
+
+      - name: Ouvrir ou compléter une Issue en cas de problème
+        if: steps.validation.outcome == 'failure' || steps.impact.outcome == 'failure' || steps.index.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "Le contrôle quotidien du $(date -u +%Y-%m-%d) a détecté des problèmes."
+            echo
+            echo "## Validation"
+            echo '```'
+            tail -n 60 validation.txt
+            echo '```'
+            echo
+            cat impact.md
+            echo
+            echo "## Index"
+            echo '```'
+            cat index.txt
+            echo '```'
+            echo
+            echo "Pour corriger : lancer les scripts en local (voir CLAUDE.md), ouvrir une Pull Request."
+          } > rapport.md
+          gh label create controle-quotidien --color B60205 --description "Problème détecté par le contrôle quotidien" 2>/dev/null || true
+          numero=$(gh issue list --label controle-quotidien --state open --json number --jq '.[0].number')
+          if [ -n "$numero" ]; then
+            gh issue comment "$numero" --body-file rapport.md
+          else
+            gh issue create --title "Contrôle quotidien : le corpus ne respecte plus toutes les règles" --label controle-quotidien --body-file rapport.md
+          fi
+          exit 1

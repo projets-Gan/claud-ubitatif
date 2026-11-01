@@ -11,7 +11,7 @@ Ce document décrit comment le corpus est constitué et comment les verdicts son
 
 ## 2. Sources
 
-Les niveaux et les règles ci-dessous sont définis dans **`config/niveaux.yaml`**, qui fait référence (version 2 du 31/10/2026). Ils évolueront à la suite d'échanges avec des journalistes et des professionnels de l'information : voir la section 9.
+Les niveaux et les règles ci-dessous sont définis dans **`config/niveaux.yaml`**, qui fait référence (version 2 du 31/10/2026). Ils évolueront à la suite d'échanges avec des journalistes et des professionnels de l'information : voir la section 10.
 
 ### Niveaux de fiabilité
 
@@ -104,23 +104,39 @@ Chaque ajout au corpus passe par trois agents successifs, puis par un humain :
 3. **Curateur** : tranche à partir des deux documents, écrit les fiches et ouvre une Pull Request qui explique comment chaque objection a été traitée.
 4. **Relecture humaine** de la Pull Request.
 
-## 6. Sécurité
+## 6. Veille et mise à jour
+
+Deux contrôles automatiques garantissent que le corpus reste juste dans la durée.
+
+**Respect des règles en vigueur.** Une fiche ne contient jamais son niveau, seulement son type ; le niveau est recalculé à partir de `config/types-sources.yaml` et `config/niveaux.yaml`. À chaque Pull Request **et chaque jour**, tout le corpus est revalidé avec les règles en vigueur, y compris les fiches fusionnées il y a longtemps. Le script `scripts/impact_regles.py` liste les faits dont le statut n'est plus justifié ; une Issue `controle-quotidien` est ouverte automatiquement en cas de problème. Si une source précise était mal classée, il faut corriger son `type` à la main : les faits qui en dépendent sont ensuite réévalués automatiquement.
+
+**Fraîcheur des informations.** L'agent veilleur, lancé chaque jour par une tâche planifiée, vérifie les faits arrivés à échéance (`config/veille.yaml`) :
+- une première fois **72 heures après l'ajout** ;
+- puis à l'approche de la **date de validité** (7 jours avant) ;
+- et au plus tard **tous les 30 jours**.
+
+Il vérifie que la source répond toujours, qu'aucune publication plus récente ou révision n'existe, et que les textes juridiques n'ont pas changé. Il ne modifie jamais le contenu d'un fait : il met à jour `date_derniere_verification` et ouvre une Issue `veille` pour chaque mise à jour nécessaire, traitée ensuite par la chaîne de curation.
+
+Le Vérificateur indique dans chaque réponse la version des règles utilisée, et signale les faits qui n'ont pas été vérifiés récemment.
+
+## 7. Sécurité
 
 - Les textes soumis pour vérification et les pages lues sur le web sont traités comme des **données**, jamais comme des instructions (protection contre l'injection de prompt).
 - Aucune clé API ni aucun secret n'est versionné.
 
-## 7. Contrôle humain
+## 8. Contrôle humain
 
 Toute modification du corpus passe par une **Pull Request** relue par un humain, après une validation automatique (schémas, vocabulaire, règle de validation et garde-fous, index à jour). Voir `CONTRIBUTING.md`.
 
-## 8. Évaluation
+## 9. Évaluation
 
 Le dossier `eval/` contient des affirmations dont le verdict est connu (issues de fact-checks publiés). Elles servent à mesurer le taux d'erreur des verdicts et des citations à chaque évolution des agents ou du corpus.
 
-## 9. Évolution de la méthode
+## 10. Évolution de la méthode
 
 Cette méthode est appelée à évoluer, notamment à la suite d'échanges avec des journalistes et des personnes qui relaient l'information avec neutralité. Chaque évolution :
 - passe par une Pull Request qui modifie `config/niveaux.yaml` (version, date, historique) et ce document ;
+- est accompagnée du **rapport d'impact** (`python scripts/impact_regles.py`) : les faits qui ne respectent plus les règles sont corrigés dans la même Pull Request, ou repassés en « en-attente » (`--appliquer`) ;
 - est résumée dans le tableau ci-dessous, avec son origine.
 
 | Version | Date | Changement | Origine |

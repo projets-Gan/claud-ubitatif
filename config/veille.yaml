@@ -1,0 +1,26 @@
+# Rythme de vérification de la fraîcheur des faits, utilisé par
+# scripts/faits_a_verifier.py et par l'agent veilleur.
+#
+# Un fait est « à vérifier » si l'une de ces conditions est remplie :
+#   1. il n'a jamais été vérifié et a été ajouté il y a plus de
+#      delai_premiere_verification_heures ;
+#   2. sa date de validité approche (moins de anticipation_validite_jours)
+#      ou est dépassée, et il n'a pas été vérifié depuis ;
+#   3. sa dernière vérification date de plus de intervalle_max_jours.
+#
+# Les valeurs par thème (facultatives) remplacent les valeurs par défaut.
+
+defaut:
+  delai_premiere_verification_heures: 72
+  anticipation_validite_jours: 7
+  intervalle_max_jours: 30
+
+par_theme: {}
+# Exemple :
+# par_theme:
+#   immigration:
+#     intervalle_max_jours: 7
+
+# Nombre maximal de faits traités par passage du veilleur (pour maîtriser
+# la consommation du quota) ; les plus en retard passent en premier.
+max_faits_par_passage: 15
