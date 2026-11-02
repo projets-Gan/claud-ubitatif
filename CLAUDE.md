@@ -19,6 +19,14 @@ Ce dépôt contient un corpus de sources et de faits vérifiés, et des agents q
 
 Déléguer à `verificateur`.
 
+### Quand l'utilisateur fournit un document à analyser (PDF : livre, rapport…)
+
+1. **Ne jamais copier le document dans le dépôt** ni en reproduire de longs passages. Travailler à partir du chemin donné par l'utilisateur (le fichier peut rester n'importe où sur son poste). Les PDF sont ignorés par Git.
+2. Repérer la table des matières et proposer un **découpage par chapitre** (20 pages au plus par lecture). Pour un livre entier, commencer par le chapitre demandé ou le premier chapitre en lien avec un thème du corpus, et demander avant de continuer : un livre complet consomme beaucoup de quota.
+3. Pour chaque partie, déléguer à `verificateur` en mode « analyse de document » (chemin du fichier + pages).
+4. Assembler les résultats dans `analyses/<id>.md` selon `modeles/analyse-document.md` (créer le rapport ou le compléter), sur une branche, puis ouvrir une Pull Request.
+5. Ce rapport n'est **pas** une fiche du corpus : ne jamais créer de fiche source ou fait à partir du document dans ce mode. Si l'utilisateur veut ensuite enrichir le corpus avec les affirmations non vérifiables, c'est une demande d'enrichissement (chaîne ci-dessous), qui remonte aux sources primaires.
+
 ### Quand l'utilisateur propose une source, un sujet ou demande d'enrichir le corpus
 
 Enchaîner **toujours** les trois agents, dans cet ordre, depuis la conversation principale :
@@ -55,7 +63,8 @@ Même chaîne (chercheur → contradicteur → curateur), en partant de l'Issue 
 - Niveaux et règles de validation : `config/niveaux.yaml` ; sources classées au niveau 4 : `config/sources-niveau-4.yaml`
 - Vocabulaire contrôlé : `config/taxonomie.yaml` (thèmes, sous-thèmes, pays), `config/types-sources.yaml`, `config/verdicts.yaml`
 - Schémas des fiches : `schemas/source.schema.json`, `schemas/fait.schema.json`
-- Modèles de fiches : `modeles/source.md`, `modeles/fait.md`
+- Modèles de fiches : `modeles/source.md`, `modeles/fait.md` ; modèle de rapport d'analyse de document : `modeles/analyse-document.md`
+- Rapports d'analyse de documents (hors corpus, jamais utilisés comme preuve) : `analyses/`
 - Corpus : `corpus/sources/<theme>/<annee>/<id>.md`, `corpus/faits/<theme>/<id>.md`
 - Index (généré, ne pas modifier à la main) : `corpus/index/index.json`
 - Contexte, décisions et avancement du projet : `CONTEXTE_PROJET.md`

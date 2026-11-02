@@ -221,3 +221,8 @@ __marimo__/
 
 # Dossiers de travail des agents (recherche, contradiction), non versionnés
 travail/
+
+# Documents analysés (livres, rapports) : jamais versionnés, seul le rapport dans analyses/ l'est
+*.pdf
+*.PDF
+*.epub

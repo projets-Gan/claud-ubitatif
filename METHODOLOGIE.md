@@ -95,6 +95,15 @@ Rendus **par affirmation**, jamais un verdict global unique (`config/verdicts.ya
 
 Chaque verdict cite les fiches utilisées avec un court extrait et le lien vers la source. Les citations sont contrôlées : elles doivent exister mot pour mot dans le corpus.
 
+### Analyse de documents longs
+
+Un livre, un rapport ou une tribune (souvent un PDF) peut être soumis au vérificateur, chapitre par chapitre. Ses affirmations vérifiables (chiffres, dates, comparaisons, références à des lois ou des statistiques) sont relevées avec leur page, reformulées, puis vérifiées comme toute autre affirmation. Les opinions et prévisions sont ignorées et comptées.
+
+- Le document **n'est jamais copié dans le dépôt** ; seul le rapport d'analyse est versionné, dans `analyses/` (modèle `modeles/analyse-document.md`).
+- Le rapport **n'est pas une fiche du corpus** : les affirmations du document sont ce qu'on vérifie, jamais ce qui prouve.
+- Pas de verdict global sur le document ni sur son auteur.
+- Droit d'auteur : reformulations, numéros de page et au plus un extrait de 15 mots par affirmation.
+
 ## 5. Chaîne de curation
 
 Chaque ajout au corpus passe par trois agents successifs, puis par un humain :

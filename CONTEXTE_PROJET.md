@@ -1,6 +1,6 @@
 # Contexte du projet : agents de vérification d'actualité
 
-> Dernière mise à jour : 1er novembre 2026 (synchronisé avec le tableau Trello « Claud-Ubitatif » : https://trello.com/b/1TJ2eZpp/claud-ubitatif)
+> Dernière mise à jour : 2 novembre 2026 (synchronisé avec le tableau Trello « Claud-Ubitatif » : https://trello.com/b/1TJ2eZpp/claud-ubitatif)
 > Ce fichier résume le projet, les décisions prises et l'avancement, afin de reprendre le travail sans rien perdre. Il est à la racine du dépôt et sert aussi de connaissance au projet Claude « claud-ubitatif ».
 
 ## 1. Consignes pour Claude
@@ -47,6 +47,7 @@ Construire des agents qui s'appuient sur un dépôt GitHub public :
 - **Chaîne de curation (31/10/2026)** : chercheur-sources → contradicteur → curateur → relecture humaine, orchestrée depuis la conversation principale de Claude Code (`CLAUDE.md`).
 - **Contrôle quotidien des règles (01/11/2026)** : GitHub Actions revalide chaque jour **tout** le corpus avec les règles en vigueur (gratuit, sans IA) et ouvre une Issue `controle-quotidien` en cas de problème. Une fiche ne contient que son type ; son niveau est toujours recalculé, donc un changement de règle s'applique aussi aux fiches déjà fusionnées. Rapport d'impact : `scripts/impact_regles.py` (option `--appliquer` pour repasser en « en-attente »).
 - **Agent veilleur (01/11/2026)** : tâche planifiée Claude dans le cloud (quota de l'abonnement, pas de clé API), quotidienne. Vérifie la fraîcheur des faits : 1re vérification 72 h après l'ajout, puis 7 jours avant la date de validité, et au plus tard tous les 30 jours (`config/veille.yaml`, 15 faits max par passage). Ne modifie que `date_derniere_verification` ; ouvre une Issue `veille` pour chaque mise à jour nécessaire. Tâche planifiée « Veilleur claud-ubitatif » : tous les jours à 5 h 38 (heure de Paris), approbation automatique, notification push ; ne fusionne jamais elle-même ses Pull Requests.
+- **Analyse de documents longs (02/11/2026)** : un livre ou un rapport en PDF peut être soumis au Vérificateur, chapitre par chapitre (mode « analyse de document »). Choix 1-A : le document est **uniquement vérifié**, il n'alimente pas le corpus (pas de fiche source ou fait tirée du document ; un enrichissement ultérieur passe par la chaîne de curation et les sources primaires). Choix 2 : le **PDF n'est jamais conservé** dans le dépôt (`*.pdf` ignoré, contrôle automatique) ; les affirmations relevées (reformulées, page, extrait de 15 mots max) et leurs verdicts sont gardés dans un rapport versionné `analyses/<id>.md` (modèle `modeles/analyse-document.md`), hors corpus, jamais utilisé comme preuve, relançable quand le corpus grandit.
 - **Index** : `corpus/index/index.json` est généré par `scripts/generer_index.py` et versionné ; la validation automatique vérifie qu'il est à jour.
 
 ## 5. Décisions encore ouvertes
@@ -116,13 +117,14 @@ config/
 schemas/
   source.schema.json
   fait.schema.json
-modeles/                   # modèles de fiches source et fait
+modeles/                   # modèles de fiches source et fait, et de rapport d'analyse
 corpus/
   sources/<theme>/<annee>/<id>.md
   faits/<theme>/<id>.md
   index/index.json         # généré par script, jamais à la main
 scripts/                   # valider_corpus.py, generer_index.py, impact_regles.py, faits_a_verifier.py
 eval/                      # affirmations de test avec verdict attendu
+analyses/                  # rapports d'analyse de documents (hors corpus, jamais une preuve)
 .github/
   workflows/validation.yml # validation automatique à chaque PR
   workflows/controle-quotidien.yml # contrôle de tout le corpus chaque jour
@@ -181,7 +183,9 @@ Attention : si la variable d'environnement `ANTHROPIC_API_KEY` est définie, Cla
 - [x] Étape 3 : squelette complet (Pull Request n°2 fusionnée le 30/10/2026)
 - [x] Niveaux de validation v2 et agents chercheur-sources / contradicteur (Pull Request n°3 fusionnée le 01/11/2026)
 - [x] Contrôle quotidien des règles + agent veilleur (Pull Request n°4 fusionnée le 01/11/2026 ; tâche planifiée créée)
-- [ ] Pilote du premier corpus : thème emploi — **en cours** (Pull Request n°5 : 11 sources, 10 faits dont 9 valides ; décisions du 01/11 appliquées : tableaux DREETS au niveau 1 en attente de confirmation nationale, règles v3)
+- [x] Pilote du premier corpus : thème emploi (Pull Request n°5 fusionnée le 01/11/2026 : 11 sources, 10 faits dont 9 valides ; tableaux DREETS au niveau 1 en attente de confirmation nationale ; règles v3)
+- [x] Premier test de l'agent Vérificateur sur le corpus du pilote (fait par l'utilisateur dans une autre conversation, 02/11/2026)
+- [ ] Mode « analyse de document » du Vérificateur (PDF, chapitre par chapitre) : Pull Request à relire ; ensuite, premier essai sur un chapitre lié à l'emploi
 - [ ] Archiver les sources du pilote sur la Wayback Machine (depuis le PC de l'utilisateur)
 - [ ] Mettre à jour les 4 faits INSEE du T2 2026 après la publication du T3 (10/11/2026) : premier test réel du cycle de veille
 - [ ] Rencontres avec des journalistes et professionnels de l'information : faire évoluer `config/niveaux.yaml` (en continu)
