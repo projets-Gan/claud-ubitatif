@@ -2,14 +2,27 @@
   "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
   "version_regles": 3,
   "statistiques": {
-    "sources": 11,
-    "faits": 10,
-    "faits_valides": 9
+    "sources": 18,
+    "faits": 14,
+    "faits_valides": 13
   },
   "par_theme": {
     "immigration": {
-      "sources": [],
-      "faits": []
+      "sources": [
+        "2020-12-07-insee-definition-etranger",
+        "2023-04-19-insee-definition-immigre",
+        "2025-10-07-insee-ip2076-etrangers-2024",
+        "2026-01-13-insee-ip2087-bilan-demographique-2025",
+        "2026-06-04-insee-note-rupture-serie-immigration",
+        "2026-06-04-insee-population-immigree-etrangere-1921-2025",
+        "2026-06-25-insee-essentiel-immigres-etrangers"
+      ],
+      "faits": [
+        "immigration-etrangers-nes-en-france-2025",
+        "immigration-etrangers-part-population-2025",
+        "immigration-immigres-nationalite-2025",
+        "immigration-immigres-part-population-2025"
+      ]
     },
     "emploi": {
       "sources": [
@@ -66,6 +79,97 @@
       ]
     },
     {
+      "id": "2020-12-07-insee-definition-etranger",
+      "chemin": "corpus/sources/immigration/2020/2020-12-07-insee-definition-etranger.md",
+      "titre": "Définition : Étranger",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2020-12-07",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/metadonnees/definition/c1198",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-etrangers-nes-en-france-2025",
+        "immigration-etrangers-part-population-2025"
+      ]
+    },
+    {
+      "id": "2023-04-19-insee-definition-immigre",
+      "chemin": "corpus/sources/immigration/2023/2023-04-19-insee-definition-immigre.md",
+      "titre": "Définition : Immigré",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2023-04-19",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/metadonnees/definition/c1328",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-immigres-part-population-2025"
+      ]
+    },
+    {
+      "id": "2025-10-07-insee-ip2076-etrangers-2024",
+      "chemin": "corpus/sources/immigration/2025/2025-10-07-insee-ip2076-etrangers-2024.md",
+      "titre": "En 2024, 6,0 millions d'étrangers vivent en France, 0,9 million y sont nés (Insee Première n° 2076)",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2025-10-07",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/statistiques/8651304",
+      "depend_de": [],
+      "cite_par": []
+    },
+    {
+      "id": "2026-01-13-insee-ip2087-bilan-demographique-2025",
+      "chemin": "corpus/sources/immigration/2026/2026-01-13-insee-ip2087-bilan-demographique-2025.md",
+      "titre": "Bilan démographique 2025 (Insee Première n° 2087)",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-01-13",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/statistiques/8719824",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-etrangers-part-population-2025"
+      ]
+    },
+    {
       "id": "2026-05-24-jorf-arrete-smic-1er-juin-2026",
       "chemin": "corpus/sources/emploi/2026/2026-05-24-jorf-arrete-smic-1er-juin-2026.md",
       "titre": "Arrêté du 22 mai 2026 relatif au relèvement du salaire minimum de croissance",
@@ -88,6 +192,85 @@
         "emploi-smic-horaire-brut-2026-06-01",
         "emploi-smic-horaire-brut-2026-06-01",
         "emploi-smic-horaire-brut-2026-06-01"
+      ]
+    },
+    {
+      "id": "2026-06-04-insee-note-rupture-serie-immigration",
+      "chemin": "corpus/sources/immigration/2026/2026-06-04-insee-note-rupture-serie-immigration.md",
+      "titre": "Rupture de série dans la mesure des populations immigrées dans les enquêtes annuelles de recensement récentes (note méthodologique)",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-06-04",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/statistiques/fichier/2383177/Note_methodo_rupture_serie_immigration.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-immigres-part-population-2025"
+      ]
+    },
+    {
+      "id": "2026-06-04-insee-population-immigree-etrangere-1921-2025",
+      "chemin": "corpus/sources/immigration/2026/2026-06-04-insee-population-immigree-etrangere-1921-2025.md",
+      "titre": "Population immigrée et étrangère en France. Données annuelles de 1921 à 2025 (Chiffres-clés)",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-06-04",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/statistiques/2381757",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-etrangers-part-population-2025",
+        "immigration-etrangers-part-population-2025",
+        "immigration-immigres-part-population-2025",
+        "immigration-immigres-part-population-2025"
+      ]
+    },
+    {
+      "id": "2026-06-25-insee-essentiel-immigres-etrangers",
+      "chemin": "corpus/sources/immigration/2026/2026-06-25-insee-essentiel-immigres-etrangers.md",
+      "titre": "L'essentiel sur... les immigrés et les étrangers",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-06-25",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://insee.fr/fr/statistiques/3633212",
+      "depend_de": [
+        "2026-06-04-insee-population-immigree-etrangere-1921-2025"
+      ],
+      "cite_par": [
+        "immigration-etrangers-nes-en-france-2025",
+        "immigration-etrangers-nes-en-france-2025",
+        "immigration-etrangers-part-population-2025",
+        "immigration-immigres-nationalite-2025",
+        "immigration-immigres-nationalite-2025",
+        "immigration-immigres-nationalite-2025"
       ]
     },
     {
@@ -580,6 +763,114 @@
       "sources": [
         "2026-08-07-insee-chomage-t2-2026",
         "2026-08-07-insee-chomage-t2-2026"
+      ]
+    },
+    {
+      "id": "immigration-etrangers-nes-en-france-2025",
+      "chemin": "corpus/faits/immigration/immigration-etrangers-nes-en-france-2025.md",
+      "enonce": "Au 1er janvier 2025, 953 milliers de personnes nées en France et de nationalité étrangère (environ 1,0 million) résident en France, soit 1,4 % de la population totale ; elles sont étrangères sans être immigrées (INSEE, données provisoires, Mayotte incluse).",
+      "periode": "2025-01-01",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-01-15",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-25-insee-essentiel-immigres-etrangers",
+        "2026-06-25-insee-essentiel-immigres-etrangers",
+        "2020-12-07-insee-definition-etranger"
+      ]
+    },
+    {
+      "id": "immigration-etrangers-part-population-2025",
+      "chemin": "corpus/faits/immigration/immigration-etrangers-part-population-2025.md",
+      "enonce": "Au 1er janvier 2025, 6 297 milliers d'étrangers (environ 6,3 millions) résident en France, soit 9,1 % de la population totale (68 852 milliers), selon les estimations de population de l'INSEE (données provisoires, Mayotte incluse).",
+      "periode": "2025-01-01",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-01-15",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-04-insee-population-immigree-etrangere-1921-2025",
+        "2026-06-04-insee-population-immigree-etrangere-1921-2025",
+        "2026-06-25-insee-essentiel-immigres-etrangers",
+        "2026-01-13-insee-ip2087-bilan-demographique-2025",
+        "2020-12-07-insee-definition-etranger"
+      ]
+    },
+    {
+      "id": "immigration-immigres-nationalite-2025",
+      "chemin": "corpus/faits/immigration/immigration-immigres-nationalite-2025.md",
+      "enonce": "Au 1er janvier 2025, parmi les 7 970 milliers d'immigrés résidant en France, 2 625 milliers (2,6 millions, soit 33 %) ont acquis la nationalité française et 5 345 milliers (5,3 millions) sont de nationalité étrangère (INSEE, données provisoires, Mayotte incluse).",
+      "periode": "2025-01-01",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-01-15",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree",
+        "naturalisation"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-25-insee-essentiel-immigres-etrangers",
+        "2026-06-25-insee-essentiel-immigres-etrangers",
+        "2026-06-25-insee-essentiel-immigres-etrangers"
+      ]
+    },
+    {
+      "id": "immigration-immigres-part-population-2025",
+      "chemin": "corpus/faits/immigration/immigration-immigres-part-population-2025.md",
+      "enonce": "Au 1er janvier 2025, 7 970 milliers d'immigrés (environ 8,0 millions) résident en France, soit 11,6 % de la population totale (68 852 milliers), selon les estimations de population de l'INSEE (données provisoires, Mayotte incluse).",
+      "periode": "2025-01-01",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-01-15",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-04-insee-population-immigree-etrangere-1921-2025",
+        "2026-06-04-insee-population-immigree-etrangere-1921-2025",
+        "2026-06-04-insee-note-rupture-serie-immigration",
+        "2023-04-19-insee-definition-immigre"
       ]
     }
   ]
