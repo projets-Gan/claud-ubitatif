@@ -2,19 +2,32 @@
   "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
   "version_regles": 3,
   "statistiques": {
-    "sources": 11,
-    "faits": 10,
-    "faits_valides": 9
+    "sources": 15,
+    "faits": 16,
+    "faits_valides": 13
   },
   "par_theme": {
     "immigration": {
-      "sources": [],
-      "faits": []
+      "sources": [
+        "2025-11-18-insee-portrait-social-immigres-descendants",
+        "2026-06-22-insee-chomage-immigres-descendants-2025",
+        "2026-10-30-eurostat-lfsa-urgacob-chomage-pays-naissance",
+        "2026-10-30-eurostat-lfsa-urganedm-chomage-statut-migratoire"
+      ],
+      "faits": [
+        "immigration-chomage-descendants-immigres-insee-2025",
+        "immigration-chomage-descendants-par-origine-insee-2025",
+        "immigration-chomage-immigres-insee-2025",
+        "immigration-chomage-immigres-par-origine-insee-2025",
+        "immigration-chomage-nes-hors-ue-eurostat-2025",
+        "immigration-chomage-seconde-generation-eurostat-2025"
+      ]
     },
     "emploi": {
       "sources": [
         "1946-10-27-conseil-constitutionnel-preambule-1946",
         "2026-05-24-jorf-arrete-smic-1er-juin-2026",
+        "2026-06-22-insee-chomage-immigres-descendants-2025",
         "2026-08-07-insee-chomage-t2-2026",
         "2026-10-26-ministere-travail-smic-1er-juin-2026",
         "2026-10-28-abcbourse-inscrits-france-travail-t3-2026",
@@ -23,6 +36,8 @@
         "2026-10-28-dreets-normandie-tableaux-inscrits-t3-2026",
         "2026-10-30-bta-chomage-ue-septembre-2026",
         "2026-10-30-eurostat-chomage-septembre-2026",
+        "2026-10-30-eurostat-lfsa-urgacob-chomage-pays-naissance",
+        "2026-10-30-eurostat-lfsa-urganedm-chomage-statut-migratoire",
         "2026-10-30-insee-emploi-salarie-prive-flash-t3-2026"
       ],
       "faits": [
@@ -35,7 +50,13 @@
         "emploi-preambule-1946-alinea-5",
         "emploi-salarie-prive-flash-2026-t3",
         "emploi-smic-horaire-brut-2026-06-01",
-        "emploi-taux-emploi-15-64-france-2026-t2"
+        "emploi-taux-emploi-15-64-france-2026-t2",
+        "immigration-chomage-descendants-immigres-insee-2025",
+        "immigration-chomage-descendants-par-origine-insee-2025",
+        "immigration-chomage-immigres-insee-2025",
+        "immigration-chomage-immigres-par-origine-insee-2025",
+        "immigration-chomage-nes-hors-ue-eurostat-2025",
+        "immigration-chomage-seconde-generation-eurostat-2025"
       ]
     },
     "finances-publiques": {
@@ -66,6 +87,30 @@
       ]
     },
     {
+      "id": "2025-11-18-insee-portrait-social-immigres-descendants",
+      "chemin": "corpus/sources/immigration/2025/2025-11-18-insee-portrait-social-immigres-descendants.md",
+      "titre": "Immigrés et descendants d'immigrés (France, portrait social, Insee Références, édition 2025)",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2025-11-18",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/statistiques/8612512",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-chomage-descendants-immigres-insee-2025",
+        "immigration-chomage-immigres-insee-2025"
+      ]
+    },
+    {
       "id": "2026-05-24-jorf-arrete-smic-1er-juin-2026",
       "chemin": "corpus/sources/emploi/2026/2026-05-24-jorf-arrete-smic-1er-juin-2026.md",
       "titre": "Arrêté du 22 mai 2026 relatif au relèvement du salaire minimum de croissance",
@@ -88,6 +133,35 @@
         "emploi-smic-horaire-brut-2026-06-01",
         "emploi-smic-horaire-brut-2026-06-01",
         "emploi-smic-horaire-brut-2026-06-01"
+      ]
+    },
+    {
+      "id": "2026-06-22-insee-chomage-immigres-descendants-2025",
+      "chemin": "corpus/sources/immigration/2026/2026-06-22-insee-chomage-immigres-descendants-2025.md",
+      "titre": "Inactivité, chômage et emploi des immigrés et des descendants d'immigrés par origine géographique (données annuelles 2025)",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-06-22",
+      "themes": [
+        "immigration",
+        "emploi"
+      ],
+      "sous_themes": [
+        "immigration-emploi",
+        "chomage",
+        "taux-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/statistiques/4195420",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-chomage-descendants-immigres-insee-2025",
+        "immigration-chomage-descendants-par-origine-insee-2025",
+        "immigration-chomage-immigres-insee-2025",
+        "immigration-chomage-immigres-par-origine-insee-2025"
       ]
     },
     {
@@ -296,6 +370,58 @@
       "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/3-30102026-bp",
       "depend_de": [],
       "cite_par": []
+    },
+    {
+      "id": "2026-10-30-eurostat-lfsa-urgacob-chomage-pays-naissance",
+      "chemin": "corpus/sources/immigration/2026/2026-10-30-eurostat-lfsa-urgacob-chomage-pays-naissance.md",
+      "titre": "Unemployment rates by sex, age and country of birth (%) [lfsa_urgacob]",
+      "editeur": "Eurostat",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-10-30",
+      "themes": [
+        "immigration",
+        "emploi"
+      ],
+      "sous_themes": [
+        "immigration-emploi",
+        "chomage"
+      ],
+      "pays": [
+        "FR",
+        "UE"
+      ],
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_urgacob?geo=FR&age=Y15-74&sex=T&unit=PC&sinceTimePeriod=2023&lang=EN",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-chomage-nes-hors-ue-eurostat-2025"
+      ]
+    },
+    {
+      "id": "2026-10-30-eurostat-lfsa-urganedm-chomage-statut-migratoire",
+      "chemin": "corpus/sources/immigration/2026/2026-10-30-eurostat-lfsa-urganedm-chomage-statut-migratoire.md",
+      "titre": "Unemployment rates by sex, age, migration status, citizenship and educational attainment level [lfsa_urganedm]",
+      "editeur": "Eurostat",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-10-30",
+      "themes": [
+        "immigration",
+        "emploi"
+      ],
+      "sous_themes": [
+        "immigration-emploi",
+        "chomage"
+      ],
+      "pays": [
+        "FR",
+        "UE"
+      ],
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_urganedm?geo=FR&age=Y15-74&sex=T&isced11=TOTAL&citizen=TOTAL&sinceTimePeriod=2021&lang=EN",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-chomage-seconde-generation-eurostat-2025"
+      ]
     },
     {
       "id": "2026-10-30-insee-emploi-salarie-prive-flash-t3-2026",
@@ -580,6 +706,164 @@
       "sources": [
         "2026-08-07-insee-chomage-t2-2026",
         "2026-08-07-insee-chomage-t2-2026"
+      ]
+    },
+    {
+      "id": "immigration-chomage-descendants-immigres-insee-2025",
+      "chemin": "corpus/faits/immigration/immigration-chomage-descendants-immigres-insee-2025.md",
+      "enonce": "En 2025, en France hors Mayotte, le taux de chômage au sens du BIT des descendants d'immigrés de 15 à 64 ans est de 11,7 %, contre 6,5 % pour les personnes sans ascendance migratoire et 7,7 % pour l'ensemble de la population du même âge (INSEE, enquête Emploi).",
+      "periode": "2025",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration",
+        "emploi"
+      ],
+      "sous_themes": [
+        "immigration-emploi",
+        "chomage"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-22-insee-chomage-immigres-descendants-2025",
+        "2025-11-18-insee-portrait-social-immigres-descendants"
+      ]
+    },
+    {
+      "id": "immigration-chomage-descendants-par-origine-insee-2025",
+      "chemin": "corpus/faits/immigration/immigration-chomage-descendants-par-origine-insee-2025.md",
+      "enonce": "En 2025, en France hors Mayotte, le taux de chômage au sens du BIT des descendants d'immigrés de 15 à 64 ans varie fortement selon l'origine du parent immigré : 16,1 % pour les descendants d'immigrés originaires d'Afrique, 12,9 % d'Asie, 6,7 % d'Europe et 11,6 % d'Amérique ou d'Océanie, contre 6,5 % pour les personnes sans ascendance migratoire (INSEE, enquête Emploi).",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration",
+        "emploi"
+      ],
+      "sous_themes": [
+        "immigration-emploi",
+        "chomage"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-22-insee-chomage-immigres-descendants-2025"
+      ]
+    },
+    {
+      "id": "immigration-chomage-immigres-insee-2025",
+      "chemin": "corpus/faits/immigration/immigration-chomage-immigres-insee-2025.md",
+      "enonce": "En 2025, en France hors Mayotte, le taux de chômage au sens du BIT des immigrés de 15 à 64 ans est de 12,4 %, contre 6,5 % pour les personnes sans ascendance migratoire et 7,7 % pour l'ensemble de la population du même âge (INSEE, enquête Emploi).",
+      "periode": "2025",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration",
+        "emploi"
+      ],
+      "sous_themes": [
+        "immigration-emploi",
+        "chomage"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-22-insee-chomage-immigres-descendants-2025",
+        "2025-11-18-insee-portrait-social-immigres-descendants"
+      ]
+    },
+    {
+      "id": "immigration-chomage-immigres-par-origine-insee-2025",
+      "chemin": "corpus/faits/immigration/immigration-chomage-immigres-par-origine-insee-2025.md",
+      "enonce": "En 2025, en France hors Mayotte, le taux de chômage au sens du BIT des immigrés de 15 à 64 ans varie selon l'origine géographique : 13,8 % pour les immigrés originaires d'Afrique, 11,1 % d'Asie, 10,4 % d'Europe et 13,9 % d'Amérique ou d'Océanie, contre 6,5 % pour les personnes sans ascendance migratoire (INSEE, enquête Emploi).",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration",
+        "emploi"
+      ],
+      "sous_themes": [
+        "immigration-emploi",
+        "chomage"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-22-insee-chomage-immigres-descendants-2025"
+      ]
+    },
+    {
+      "id": "immigration-chomage-nes-hors-ue-eurostat-2025",
+      "chemin": "corpus/faits/immigration/immigration-chomage-nes-hors-ue-eurostat-2025.md",
+      "enonce": "En 2025, en France, le taux de chômage des personnes de 15 à 74 ans nées hors de l'Union européenne à 27 est de 13,1 %, contre 7,8 % pour les personnes nées dans un autre pays de l'UE, 7,0 % pour les personnes nées en France et 7,7 % pour l'ensemble (Eurostat, enquête sur les forces de travail, jeu lfsa_urgacob).",
+      "periode": "2025",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-05-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration",
+        "emploi"
+      ],
+      "sous_themes": [
+        "immigration-emploi",
+        "chomage"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-10-30-eurostat-lfsa-urgacob-chomage-pays-naissance"
+      ]
+    },
+    {
+      "id": "immigration-chomage-seconde-generation-eurostat-2025",
+      "chemin": "corpus/faits/immigration/immigration-chomage-seconde-generation-eurostat-2025.md",
+      "enonce": "En 2025, en France, le taux de chômage des personnes de 15 à 74 ans nées en France d'au moins un parent né à l'étranger (« seconde génération » au sens d'Eurostat) est de 10,1 %, contre 6,3 % pour les personnes nées en France de deux parents nés en France (Eurostat, jeu lfsa_urganedm).",
+      "periode": "2025",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-05-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration",
+        "emploi"
+      ],
+      "sous_themes": [
+        "immigration-emploi",
+        "chomage"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-10-30-eurostat-lfsa-urganedm-chomage-statut-migratoire"
       ]
     }
   ]
