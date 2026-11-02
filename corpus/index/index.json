@@ -2,14 +2,32 @@
   "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
   "version_regles": 3,
   "statistiques": {
-    "sources": 11,
-    "faits": 10,
-    "faits_valides": 9
+    "sources": 19,
+    "faits": 18,
+    "faits_valides": 11
   },
   "par_theme": {
     "immigration": {
-      "sources": [],
-      "faits": []
+      "sources": [
+        "2020-10-30-legifrance-casf-article-r251-3",
+        "2021-12-01-legifrance-casf-article-l251-2",
+        "2024-02-29-ministere-sante-presentation-ame",
+        "2025-10-14-gouvernement-pap-2026-sante",
+        "2025-11-24-senat-cf-plf-2026-sante",
+        "2026-04-22-gouvernement-rap-2025-immigration-asile-integration",
+        "2026-06-17-senat-cf-execution-2025-immigration-asile",
+        "2026-06-17-senat-cf-execution-2025-sante"
+      ],
+      "faits": [
+        "finances-publiques-ada-execution-2025",
+        "finances-publiques-ame-cout-total-2025",
+        "finances-publiques-ame-credits-executes-2025",
+        "finances-publiques-ame-credits-lfi-2025",
+        "finances-publiques-ame-delai-soins-programmes",
+        "finances-publiques-ame-participation-beneficiaires",
+        "finances-publiques-hebergement-asile-taux-2025",
+        "finances-publiques-programme-303-execution-2025"
+      ]
     },
     "emploi": {
       "sources": [
@@ -39,8 +57,26 @@
       ]
     },
     "finances-publiques": {
-      "sources": [],
-      "faits": []
+      "sources": [
+        "2020-10-30-legifrance-casf-article-r251-3",
+        "2021-12-01-legifrance-casf-article-l251-2",
+        "2024-02-29-ministere-sante-presentation-ame",
+        "2025-10-14-gouvernement-pap-2026-sante",
+        "2025-11-24-senat-cf-plf-2026-sante",
+        "2026-04-22-gouvernement-rap-2025-immigration-asile-integration",
+        "2026-06-17-senat-cf-execution-2025-immigration-asile",
+        "2026-06-17-senat-cf-execution-2025-sante"
+      ],
+      "faits": [
+        "finances-publiques-ada-execution-2025",
+        "finances-publiques-ame-cout-total-2025",
+        "finances-publiques-ame-credits-executes-2025",
+        "finances-publiques-ame-credits-lfi-2025",
+        "finances-publiques-ame-delai-soins-programmes",
+        "finances-publiques-ame-participation-beneficiaires",
+        "finances-publiques-hebergement-asile-taux-2025",
+        "finances-publiques-programme-303-execution-2025"
+      ]
     }
   },
   "sources": [
@@ -66,6 +102,165 @@
       ]
     },
     {
+      "id": "2020-10-30-legifrance-casf-article-r251-3",
+      "chemin": "corpus/sources/finances-publiques/2020/2020-10-30-legifrance-casf-article-r251-3.md",
+      "titre": "Code de l'action sociale et des familles, article R251-3 (version en vigueur depuis le 1er janvier 2021)",
+      "editeur": "Légifrance",
+      "type": "texte-officiel",
+      "niveau": 1,
+      "date_publication": "2020-10-30",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042485535",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-ame-delai-soins-programmes",
+        "finances-publiques-ame-delai-soins-programmes"
+      ]
+    },
+    {
+      "id": "2021-12-01-legifrance-casf-article-l251-2",
+      "chemin": "corpus/sources/finances-publiques/2021/2021-12-01-legifrance-casf-article-l251-2.md",
+      "titre": "Code de l'action sociale et des familles, article L251-2 (version en vigueur depuis le 14 mai 2022)",
+      "editeur": "Légifrance",
+      "type": "texte-officiel",
+      "niveau": 1,
+      "date_publication": "2021-12-01",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044404516",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-ame-delai-soins-programmes",
+        "finances-publiques-ame-participation-beneficiaires",
+        "finances-publiques-ame-participation-beneficiaires"
+      ]
+    },
+    {
+      "id": "2024-02-29-ministere-sante-presentation-ame",
+      "chemin": "corpus/sources/finances-publiques/2024/2024-02-29-ministere-sante-presentation-ame.md",
+      "titre": "Présentation de l'Aide Médicale d'État (AME)",
+      "editeur": "Ministère chargé de la santé (Santé.fr)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2024-02-29",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.sante.fr/node/4994717",
+      "depend_de": [
+        "2021-12-01-legifrance-casf-article-l251-2"
+      ],
+      "cite_par": [
+        "finances-publiques-ame-participation-beneficiaires"
+      ]
+    },
+    {
+      "id": "2025-10-14-gouvernement-pap-2026-sante",
+      "chemin": "corpus/sources/finances-publiques/2025/2025-10-14-gouvernement-pap-2026-sante.md",
+      "titre": "Projet annuel de performances 2026, mission « Santé » (annexe au projet de loi de finances pour 2026)",
+      "editeur": "Gouvernement (annexe au projet de loi de finances pour 2026)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2025-10-14",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.assemblee-nationale.fr/dyn/contenu/visualisation/1088032/file/PAP2026_BG_Sante_SA.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-ame-credits-lfi-2025"
+      ]
+    },
+    {
+      "id": "2025-11-24-senat-cf-plf-2026-sante",
+      "chemin": "corpus/sources/finances-publiques/2025/2025-11-24-senat-cf-plf-2026-sante.md",
+      "titre": "Rapport général n° 139 (2025-2026), tome III, annexe 27 « Santé » : projet de loi de finances pour 2026",
+      "editeur": "Sénat, commission des finances",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2025-11-24",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.senat.fr/rap/l25-139-327/l25-139-3272.html",
+      "depend_de": [
+        "2025-10-14-gouvernement-pap-2026-sante"
+      ],
+      "cite_par": [
+        "finances-publiques-ame-credits-lfi-2025"
+      ]
+    },
+    {
+      "id": "2026-04-22-gouvernement-rap-2025-immigration-asile-integration",
+      "chemin": "corpus/sources/finances-publiques/2026/2026-04-22-gouvernement-rap-2025-immigration-asile-integration.md",
+      "titre": "Rapport annuel de performances 2025, mission « Immigration, asile et intégration » (annexe au projet de loi relatif aux résultats de la gestion et portant approbation des comptes de l'année 2025)",
+      "editeur": "Gouvernement (annexe budgétaire au projet de loi relatif aux résultats de la gestion 2025)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-04-22",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances",
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.assemblee-nationale.fr/dyn/contenu/visualisation/1109864/file/Immigration_asile_integration_IA.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-ada-execution-2025",
+        "finances-publiques-ada-execution-2025",
+        "finances-publiques-hebergement-asile-taux-2025",
+        "finances-publiques-programme-303-execution-2025",
+        "finances-publiques-programme-303-execution-2025"
+      ]
+    },
+    {
       "id": "2026-05-24-jorf-arrete-smic-1er-juin-2026",
       "chemin": "corpus/sources/emploi/2026/2026-05-24-jorf-arrete-smic-1er-juin-2026.md",
       "titre": "Arrêté du 22 mai 2026 relatif au relèvement du salaire minimum de croissance",
@@ -88,6 +283,65 @@
         "emploi-smic-horaire-brut-2026-06-01",
         "emploi-smic-horaire-brut-2026-06-01",
         "emploi-smic-horaire-brut-2026-06-01"
+      ]
+    },
+    {
+      "id": "2026-06-17-senat-cf-execution-2025-immigration-asile",
+      "chemin": "corpus/sources/finances-publiques/2026/2026-06-17-senat-cf-execution-2025-immigration-asile.md",
+      "titre": "Rapport n° 736 (2025-2026), tome II, annexe 16 « Immigration, asile et intégration » : résultats de la gestion et approbation des comptes de l'année 2025",
+      "editeur": "Sénat, commission des finances",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-06-17",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances",
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.senat.fr/rap/l25-736-216/l25-736-2161.pdf",
+      "depend_de": [
+        "2026-04-22-gouvernement-rap-2025-immigration-asile-integration"
+      ],
+      "cite_par": [
+        "finances-publiques-ada-execution-2025",
+        "finances-publiques-hebergement-asile-taux-2025",
+        "finances-publiques-hebergement-asile-taux-2025",
+        "finances-publiques-programme-303-execution-2025"
+      ]
+    },
+    {
+      "id": "2026-06-17-senat-cf-execution-2025-sante",
+      "chemin": "corpus/sources/finances-publiques/2026/2026-06-17-senat-cf-execution-2025-sante.md",
+      "titre": "Rapport n° 736 (2025-2026), tome II, annexe 28 « Santé » : résultats de la gestion et approbation des comptes de l'année 2025",
+      "editeur": "Sénat, commission des finances",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-06-17",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances",
+        "securite-sociale"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.senat.fr/rap/l25-736-228/l25-736-2281.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-ame-cout-total-2025",
+        "finances-publiques-ame-cout-total-2025",
+        "finances-publiques-ame-credits-executes-2025"
       ]
     },
     {
@@ -580,6 +834,225 @@
       "sources": [
         "2026-08-07-insee-chomage-t2-2026",
         "2026-08-07-insee-chomage-t2-2026"
+      ]
+    },
+    {
+      "id": "finances-publiques-ada-execution-2025",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-ada-execution-2025.md",
+      "enonce": "En 2025, environ 315 millions d'euros ont été exécutés pour l'allocation pour demandeur d'asile (ADA), pour 353 millions prévus en loi de finances : 212,8 M€ versés à l'OFII pour l'ADA des demandeurs d'asile et 101,6 M€ pour l'allocation des bénéficiaires de la protection temporaire.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-04-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-17-senat-cf-execution-2025-immigration-asile",
+        "2026-04-22-gouvernement-rap-2025-immigration-asile-integration",
+        "2026-04-22-gouvernement-rap-2025-immigration-asile-integration"
+      ]
+    },
+    {
+      "id": "finances-publiques-ame-cout-total-2025",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-ame-cout-total-2025.md",
+      "enonce": "Selon la commission des finances du Sénat, le coût total réel de l'aide médicale de l'État, tous dispositifs confondus (AME de droit commun, soins urgents, autres), est de 1 470 millions d'euros en 2025, contre 1 386,8 millions en 2024.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-04-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "securite-sociale"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-17-senat-cf-execution-2025-sante",
+        "2026-06-17-senat-cf-execution-2025-sante"
+      ]
+    },
+    {
+      "id": "finances-publiques-ame-credits-executes-2025",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-ame-credits-executes-2025.md",
+      "enonce": "En 2025, l'exécution des crédits de l'État consacrés à l'aide médicale de l'État (programme 183, mission « Santé ») s'élève à 1 208,7 millions d'euros, soit 49,7 millions de plus qu'en 2024, selon la commission des finances du Sénat.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-04-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-17-senat-cf-execution-2025-sante"
+      ]
+    },
+    {
+      "id": "finances-publiques-ame-credits-lfi-2025",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-ame-credits-lfi-2025.md",
+      "enonce": "En loi de finances initiale pour 2025, l'action 02 « Aide médicale de l'État » du programme 183 « Protection maladie » (mission « Santé ») était dotée de 1 208,3 millions d'euros en autorisations d'engagement et en crédits de paiement ; le projet de loi de finances pour 2026 demandait le même montant.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": null,
+      "date_validite": "2027-04-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2025-10-14-gouvernement-pap-2026-sante",
+        "2025-11-24-senat-cf-plf-2026-sante"
+      ]
+    },
+    {
+      "id": "finances-publiques-ame-delai-soins-programmes",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-ame-delai-soins-programmes.md",
+      "enonce": "Le code de l'action sociale et des familles permet de subordonner la prise en charge par l'AME de certaines prestations programmées et non urgentes, pour les bénéficiaires majeurs, à un délai d'ancienneté dans l'AME qui ne peut excéder neuf mois (article L251-2) ; l'article R251-3 dresse la liste de ces prestations : seize interventions en établissement de santé et les transports et séances de kinésithérapie de ville qui leur sont liés.",
+      "periode": "2026-11-02",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": null,
+      "date_validite": "2027-01-01",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2021-12-01-legifrance-casf-article-l251-2",
+        "2020-10-30-legifrance-casf-article-r251-3",
+        "2020-10-30-legifrance-casf-article-r251-3"
+      ]
+    },
+    {
+      "id": "finances-publiques-ame-participation-beneficiaires",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-ame-participation-beneficiaires.md",
+      "enonce": "L'article L251-2 du code de l'action sociale et des familles prévoit, sauf pour les mineurs et certains cas énumérés à l'article L160-14 du code de la sécurité sociale, une participation des bénéficiaires de l'AME fixée dans les conditions de l'article L160-13 de ce code, et une dispense d'avance des frais pour la part ne relevant pas de cette participation.",
+      "periode": "2026-11-02",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": null,
+      "date_validite": "2027-01-01",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2021-12-01-legifrance-casf-article-l251-2",
+        "2021-12-01-legifrance-casf-article-l251-2",
+        "2024-02-29-ministere-sante-presentation-ame"
+      ]
+    },
+    {
+      "id": "finances-publiques-hebergement-asile-taux-2025",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-hebergement-asile-taux-2025.md",
+      "enonce": "En 2025, 72 % des demandeurs d'asile éligibles sont hébergés dans le dispositif national d'accueil (DNA), qui compte 113 258 places annoncées en 2025 contre 119 437 places au 31 décembre 2024.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-04-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-04-22-gouvernement-rap-2025-immigration-asile-integration",
+        "2026-06-17-senat-cf-execution-2025-immigration-asile",
+        "2026-06-17-senat-cf-execution-2025-immigration-asile"
+      ]
+    },
+    {
+      "id": "finances-publiques-programme-303-execution-2025",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-programme-303-execution-2025.md",
+      "enonce": "En 2025, le programme 303 « Immigration et asile » a consommé 1 532,06 millions d'euros en autorisations d'engagement et 1 712,08 millions d'euros en crédits de paiement, pour 1 419,41 M€ (AE) et 1 715,10 M€ (CP) votés en loi de finances initiale.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-04-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances",
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-04-22-gouvernement-rap-2025-immigration-asile-integration",
+        "2026-04-22-gouvernement-rap-2025-immigration-asile-integration",
+        "2026-06-17-senat-cf-execution-2025-immigration-asile"
       ]
     }
   ]
