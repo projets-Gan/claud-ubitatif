@@ -187,7 +187,8 @@ Attention : si la variable d'environnement `ANTHROPIC_API_KEY` est définie, Cla
 - [x] Contrôle quotidien des règles + agent veilleur (Pull Request n°4 fusionnée le 01/11/2026 ; tâche planifiée créée)
 - [x] Pilote du premier corpus : thème emploi (Pull Request n°5 fusionnée le 01/11/2026 : 11 sources, 10 faits dont 9 valides ; tableaux DREETS au niveau 1 en attente de confirmation nationale ; règles v3)
 - [x] Premier test de l'agent Vérificateur sur le corpus du pilote (fait par l'utilisateur dans une autre conversation, 02/11/2026)
-- [ ] Mode « analyse de document » du Vérificateur (PDF) et recherche déclenchée par une vérification : Pull Request n°6 à relire ; ensuite, premier essai sur un chapitre mixte (ou un chapitre emploi + un hors corpus)
+- [x] Mode « analyse de document » du Vérificateur (PDF) et recherche déclenchée par une vérification (Pull Request n°6 fusionnée le 02/11/2026)
+- [ ] Premier essai : « Le casse du siècle » (S. Knafo, Fayard, 2026), p. 122-129 et 55-60 : 73 affirmations, 1 « Incomplet » (chômage ~8 %), 72 non vérifiables ; rapport `analyses/knafo-casse-du-siecle-2026.md` en Pull Request ; 22 recherches proposées, à choisir. Le livre porte une réserve de fouille de textes (art. 4(3) directive 2019/790) : analyse limitée à 14 pages sur décision du porteur de projet (02/11/2026) ; pas de règle générale, décision au cas par cas.
 - [ ] Archiver les sources du pilote sur la Wayback Machine (depuis le PC de l'utilisateur)
 - [ ] Mettre à jour les 4 faits INSEE du T2 2026 après la publication du T3 (10/11/2026) : premier test réel du cycle de veille
 - [ ] Rencontres avec des journalistes et professionnels de l'information : faire évoluer `config/niveaux.yaml` (en continu)
