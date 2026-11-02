@@ -33,6 +33,8 @@ Puis, dans Claude Code :
 - « Analyse le chapitre 2 (pages 30 à 52) du PDF *C:\…\livre.pdf* » (rapport dans `analyses/` ; le PDF n'est jamais copié dans le dépôt)
 - « Ajoute au corpus cette source : *https://…* » (Claude Code enchaîne alors les agents chercheur, contradicteur et curateur)
 
+Quand une affirmation n'est pas vérifiable avec le corpus, Claude lance la recherche de sources pour les 3 premiers sujets concernés (au-delà, il demande) ; le résultat est une Pull Request à relire, après laquelle on peut redemander la vérification.
+
 Aucune clé API n'est nécessaire. Si la variable d'environnement `ANTHROPIC_API_KEY` est définie sur votre poste, Claude Code facture l'usage à l'API au lieu de votre abonnement.
 
 ## Organisation du dépôt
@@ -41,7 +43,7 @@ Aucune clé API n'est nécessaire. Si la variable d'environnement `ANTHROPIC_API
 |---|---|
 | `.claude/agents/` | Définition des agents Vérificateur et Curateur |
 | `corpus/` | Fiches sources, fiches faits et index généré |
-| `config/` | Thèmes, pays, types de sources, verdicts |
+| `config/` | Thèmes, pays, types de sources, verdicts, niveaux, veille, recherche déclenchée |
 | `schemas/` | Schémas JSON des fiches |
 | `modeles/` | Modèles de fiches et de rapport d'analyse à copier |
 | `analyses/` | Rapports d'analyse de documents (livres, rapports) ; hors corpus, jamais utilisés comme preuve |

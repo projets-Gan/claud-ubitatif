@@ -49,9 +49,15 @@ au format de réponse de l'agent vérificateur. Extrait du document : 15 mots ma
 - Premier bilan : …
 - Second bilan (subtilités, définitions, périodes) : …
 
-## À vérifier quand le corpus aura grandi
+## Recherches proposées
 
-Affirmations non vérifiables et type de source qui permettrait de les vérifier
-(ex. « INSEE, comptes nationaux annuels »). Les relancer avec la version des règles en vigueur.
+Affirmations non vérifiables, regroupées par sujet et classées du plus utile au moins utile.
+Pour un document, aucune recherche n'est lancée automatiquement (`config/recherche.yaml`) :
+l'utilisateur coche celles à lancer ; la colonne « Suivi » reçoit le lien de la Pull Request
+de recherche. Une fois celle-ci fusionnée, relancer la vérification des affirmations concernées.
+
+| Sujet | Affirmations | Thème (ou nouveau thème proposé) | Source primaire attendue | Suivi |
+|---|---|---|---|---|
+| … | 1, 4 | emploi | INSEE, enquête Emploi | — |
 
 > Outil d'aide à la vérification fondé sur un corpus limité ; il ne remplace pas un travail journalistique.

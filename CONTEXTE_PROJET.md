@@ -47,7 +47,8 @@ Construire des agents qui s'appuient sur un dépôt GitHub public :
 - **Chaîne de curation (31/10/2026)** : chercheur-sources → contradicteur → curateur → relecture humaine, orchestrée depuis la conversation principale de Claude Code (`CLAUDE.md`).
 - **Contrôle quotidien des règles (01/11/2026)** : GitHub Actions revalide chaque jour **tout** le corpus avec les règles en vigueur (gratuit, sans IA) et ouvre une Issue `controle-quotidien` en cas de problème. Une fiche ne contient que son type ; son niveau est toujours recalculé, donc un changement de règle s'applique aussi aux fiches déjà fusionnées. Rapport d'impact : `scripts/impact_regles.py` (option `--appliquer` pour repasser en « en-attente »).
 - **Agent veilleur (01/11/2026)** : tâche planifiée Claude dans le cloud (quota de l'abonnement, pas de clé API), quotidienne. Vérifie la fraîcheur des faits : 1re vérification 72 h après l'ajout, puis 7 jours avant la date de validité, et au plus tard tous les 30 jours (`config/veille.yaml`, 15 faits max par passage). Ne modifie que `date_derniere_verification` ; ouvre une Issue `veille` pour chaque mise à jour nécessaire. Tâche planifiée « Veilleur claud-ubitatif » : tous les jours à 5 h 38 (heure de Paris), approbation automatique, notification push ; ne fusionne jamais elle-même ses Pull Requests.
-- **Analyse de documents longs (02/11/2026)** : un livre ou un rapport en PDF peut être soumis au Vérificateur, chapitre par chapitre (mode « analyse de document »). Choix 1-A : le document est **uniquement vérifié**, il n'alimente pas le corpus (pas de fiche source ou fait tirée du document ; un enrichissement ultérieur passe par la chaîne de curation et les sources primaires). Choix 2 : le **PDF n'est jamais conservé** dans le dépôt (`*.pdf` ignoré, contrôle automatique) ; les affirmations relevées (reformulées, page, extrait de 15 mots max) et leurs verdicts sont gardés dans un rapport versionné `analyses/<id>.md` (modèle `modeles/analyse-document.md`), hors corpus, jamais utilisé comme preuve, relançable quand le corpus grandit (Pull Request n°6).
+- **Analyse de documents longs (02/11/2026)** : un livre ou un rapport en PDF peut être soumis au Vérificateur, chapitre par chapitre (mode « analyse de document »). Choix 1-A : le document est **uniquement vérifié**, il n'alimente pas le corpus (pas de fiche source ou fait tirée du document ; un enrichissement ultérieur passe par la chaîne de curation et les sources primaires). Choix 2 : le **PDF n'est jamais conservé** dans le dépôt (`*.pdf` ignoré, contrôle automatique) ; les affirmations relevées (reformulées, page, extrait de 15 mots max) et leurs verdicts sont gardés dans un rapport versionné `analyses/<id>.md` (modèle `modeles/analyse-document.md`), hors corpus, jamais utilisé comme preuve, relançable quand le corpus grandit (Pull Request n°6). Premier essai (choix 1-C) : un chapitre mixte, ou un chapitre sur l'emploi et un hors corpus.
+- **Recherche déclenchée par une vérification (02/11/2026, d'après le schéma de l'utilisateur)** : si le corpus ne permet pas de répondre, le Vérificateur répond « non vérifiable » et propose des recherches regroupées par sujet ; Claude lance la chaîne de curation **automatiquement pour 3 sujets au plus par demande**, puis demande pour les suivants (choix 1-C, `config/recherche.yaml`). **Sujets hors taxonomie** : le curateur propose le nouveau thème dans la même Pull Request que les fiches (choix 2-A ; tableau « Évolution de la taxonomie » de METHODOLOGIE.md). **Documents longs** : aucune recherche automatique, l'utilisateur choisit dans la liste du rapport (choix 3-B). **Après la recherche** : la réponse donne le lien de la Pull Request ; l'utilisateur redemande la vérification après la fusion (choix 4-A). Pull Request n°6.
 - **Index** : `corpus/index/index.json` est généré par `scripts/generer_index.py` et versionné ; la validation automatique vérifie qu'il est à jour.
 
 ## 5. Décisions encore ouvertes
@@ -85,7 +86,7 @@ Construire des agents qui s'appuient sur un dépôt GitHub public :
 
 ## 7. Pipelines prévus
 
-**Vérificateur :** réception de l'information → découpage en affirmations vérifiables → recherche dans l'index puis lecture des fichiers pertinents → comparaison → verdict par affirmation avec éléments manquants et citations → contrôle que chaque citation existe réellement dans le corpus.
+**Vérificateur :** réception de l'information → découpage en affirmations vérifiables → recherche dans l'index puis lecture des fichiers pertinents → comparaison → verdict par affirmation avec éléments manquants et citations → contrôle que chaque citation existe réellement dans le corpus → pour les affirmations non vérifiables : recherches proposées par sujet, chaîne de curation lancée pour 3 sujets au plus (au-delà, sur choix ; jamais automatique pour un document), lien de la Pull Request de recherche dans la réponse.
 
 **Veille (quotidienne) :** `scripts/faits_a_verifier.py` → agent **veilleur** (source accessible ? publication plus récente ? révision ? texte juridique modifié ?) → Pull Request « Veille du AAAA-MM-JJ » (dates de vérification) + Issues `veille` → traitement des Issues par la chaîne de curation.
 
@@ -113,6 +114,7 @@ config/
   taxonomie.yaml           # thèmes, sous-thèmes et pays autorisés
   types-sources.yaml       # types de sources et niveau de chacun
   veille.yaml              # rythme de vérification de la fraîcheur
+  recherche.yaml           # recherche déclenchée par une vérification (plafond, documents, nouveaux thèmes)
   verdicts.yaml
 schemas/
   source.schema.json
@@ -185,7 +187,7 @@ Attention : si la variable d'environnement `ANTHROPIC_API_KEY` est définie, Cla
 - [x] Contrôle quotidien des règles + agent veilleur (Pull Request n°4 fusionnée le 01/11/2026 ; tâche planifiée créée)
 - [x] Pilote du premier corpus : thème emploi (Pull Request n°5 fusionnée le 01/11/2026 : 11 sources, 10 faits dont 9 valides ; tableaux DREETS au niveau 1 en attente de confirmation nationale ; règles v3)
 - [x] Premier test de l'agent Vérificateur sur le corpus du pilote (fait par l'utilisateur dans une autre conversation, 02/11/2026)
-- [ ] Mode « analyse de document » du Vérificateur (PDF, chapitre par chapitre) : Pull Request n°6 à relire ; ensuite, premier essai sur un chapitre lié à l'emploi
+- [ ] Mode « analyse de document » du Vérificateur (PDF) et recherche déclenchée par une vérification : Pull Request n°6 à relire ; ensuite, premier essai sur un chapitre mixte (ou un chapitre emploi + un hors corpus)
 - [ ] Archiver les sources du pilote sur la Wayback Machine (depuis le PC de l'utilisateur)
 - [ ] Mettre à jour les 4 faits INSEE du T2 2026 après la publication du T3 (10/11/2026) : premier test réel du cycle de veille
 - [ ] Rencontres avec des journalistes et professionnels de l'information : faire évoluer `config/niveaux.yaml` (en continu)
@@ -199,7 +201,7 @@ Suivi détaillé : tableau Trello « Claud-Ubitatif » (colonnes À faire / En c
 
 ## 12. Risques à garder en tête
 
-- **Biais de sélection du corpus** : critères publics, sources diversifiées, contributions externes bienvenues, agent contradicteur. Vigilance particulière sur l'immigration, sujet très polarisé.
+- **Biais de sélection du corpus** : critères publics, sources diversifiées, contributions externes bienvenues, agent contradicteur. Vigilance particulière sur l'immigration, sujet très polarisé. La recherche déclenchée par les demandes accentue ce risque (le corpus suit les sujets les plus discutés) : plafond, recherche à partir des sources primaires et corpus de base par thème.
 - **Classement au niveau 4** : sujet sensible ; critères publics, preuves exigées, jamais l'orientation politique comme critère.
 - **Information périmée** : dates de validité, agent veilleur quotidien.
 - **Changement de règles** : niveaux recalculés à chaque contrôle, rapport d'impact, contrôle quotidien de tout le corpus. Limite : les verdicts déjà rendus par le Vérificateur ne sont pas conservés ; chaque réponse indique la version des règles utilisée.

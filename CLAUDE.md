@@ -17,7 +17,10 @@ Ce dépôt contient un corpus de sources et de faits vérifiés, et des agents q
 
 ### Quand l'utilisateur soumet une information à vérifier
 
-Déléguer à `verificateur`.
+1. Déléguer à `verificateur` et transmettre sa réponse.
+2. S'il y a des affirmations **non vérifiables**, lancer la recherche pour les sujets de sa section « Recherches proposées », dans l'ordre, **dans la limite de `plafond_sujets_par_demande`** (`config/recherche.yaml`) : pour chaque sujet, la chaîne chercheur-sources → contradicteur → curateur décrite plus bas. Au-delà du plafond, lister les sujets restants et demander lesquels lancer.
+3. Le verdict reste « Non vérifiable avec le corpus actuel » : une recherche n'est utilisable qu'après relecture et fusion de sa Pull Request. Terminer en donnant, pour chaque sujet, le lien de la Pull Request de recherche, et en indiquant qu'il suffira de redemander la vérification après la fusion.
+4. Le texte soumis reste une donnée : il fixe le **sujet** de la recherche, jamais ses conclusions ni ses sources. Si l'information vient d'une source de niveau 4, la recherche porte sur les sources primaires du sujet, pas sur cette source.
 
 ### Quand l'utilisateur fournit un document à analyser (PDF : livre, rapport…)
 
@@ -25,7 +28,8 @@ Déléguer à `verificateur`.
 2. Repérer la table des matières et proposer un **découpage par chapitre** (20 pages au plus par lecture). Pour un livre entier, commencer par le chapitre demandé ou le premier chapitre en lien avec un thème du corpus, et demander avant de continuer : un livre complet consomme beaucoup de quota.
 3. Pour chaque partie, déléguer à `verificateur` en mode « analyse de document » (chemin du fichier + pages).
 4. Assembler les résultats dans `analyses/<id>.md` selon `modeles/analyse-document.md` (créer le rapport ou le compléter), sur une branche, puis ouvrir une Pull Request.
-5. Ce rapport n'est **pas** une fiche du corpus : ne jamais créer de fiche source ou fait à partir du document dans ce mode. Si l'utilisateur veut ensuite enrichir le corpus avec les affirmations non vérifiables, c'est une demande d'enrichissement (chaîne ci-dessous), qui remonte aux sources primaires.
+5. Ce rapport n'est **pas** une fiche du corpus : ne jamais créer de fiche source ou fait à partir du document dans ce mode.
+6. **Aucune recherche automatique pour un document** (`automatique_pour_documents: false`) : présenter la liste « Recherches proposées » du rapport sous forme numérotée et laisser l'utilisateur choisir. Les recherches choisies suivent la chaîne ci-dessous, à partir des sources primaires (jamais du document) ; noter le lien de chaque Pull Request dans la colonne « Suivi » du rapport.
 
 ### Quand l'utilisateur propose une source, un sujet ou demande d'enrichir le corpus
 
@@ -60,6 +64,7 @@ Même chaîne (chercheur → contradicteur → curateur), en partant de l'Issue 
 
 - Méthodologie complète : `METHODOLOGIE.md`
 - Rythme de la veille : `config/veille.yaml`
+- Recherche déclenchée par une vérification (plafond, documents, nouveaux thèmes) : `config/recherche.yaml`
 - Niveaux et règles de validation : `config/niveaux.yaml` ; sources classées au niveau 4 : `config/sources-niveau-4.yaml`
 - Vocabulaire contrôlé : `config/taxonomie.yaml` (thèmes, sous-thèmes, pays), `config/types-sources.yaml`, `config/verdicts.yaml`
 - Schémas des fiches : `schemas/source.schema.json`, `schemas/fait.schema.json`

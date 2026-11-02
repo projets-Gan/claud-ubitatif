@@ -1,0 +1,20 @@
+# Recherche déclenchée par une vérification (décision du 02/11/2026).
+#
+# Quand le vérificateur rend « Non vérifiable avec le corpus actuel », il propose
+# des recherches, regroupées par sujet. La conversation principale (CLAUDE.md)
+# lance alors la chaîne chercheur-sources → contradicteur → curateur, dans
+# la limite ci-dessous. Le résultat est une Pull Request : tant qu'elle n'est pas
+# relue et fusionnée, la réponse reste « non vérifiable ».
+
+# Nombre maximal de sujets recherchés automatiquement pour une même demande.
+# Au-delà, Claude liste les sujets restants et demande lesquels lancer.
+plafond_sujets_par_demande: 3
+
+# Pour un document long (PDF : livre, rapport…), aucune recherche n'est lancée
+# automatiquement : le rapport d'analyse liste les recherches proposées et
+# l'utilisateur choisit lesquelles lancer.
+automatique_pour_documents: false
+
+# Un sujet hors de config/taxonomie.yaml peut être recherché : le curateur
+# propose alors le nouveau thème dans la même Pull Request que les fiches.
+nouveaux_themes_autorises: true

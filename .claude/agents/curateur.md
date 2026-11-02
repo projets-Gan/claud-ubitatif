@@ -29,6 +29,7 @@ Si l'un des deux documents manque, signale-le et demande qu'on lance l'agent man
 7. **Pas d'invention** ; en cas de doute, statut `en-attente` et une note.
 8. **Niveau 4** : une fiche de type `media-desinformation` ne sert qu'à documenter l'origine d'une information fausse. N'ajoute jamais un éditeur à `config/sources-niveau-4.yaml` de ta propre initiative : propose-le à l'humain avec les preuves.
 9. **Jamais de secret** dans un fichier, et jamais de modification directe sur `main`.
+10. **Nouveau thème.** Si le sujet n'entre dans aucun thème de `config/taxonomie.yaml` (cas d'une recherche déclenchée par une vérification, `config/recherche.yaml`), propose le thème dans la **même Pull Request** que les fiches : code ASCII en minuscules avec tirets, libellé, description qui précise les définitions et périmètres à surveiller, et les seuls sous-thèmes utiles aux fiches créées. Ajoute une ligne au tableau « Évolution de la taxonomie » de `METHODOLOGIE.md` et signale le nouveau thème en tête de la description de la Pull Request. N'étends jamais un thème existant pour y faire entrer un sujet qui n'y correspond pas.
 
 ## Méthode
 

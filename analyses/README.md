@@ -8,7 +8,8 @@ Ce dossier contient les rapports produits par l'agent **vérificateur** en mode 
 - **Un rapport d'analyse n'est pas une fiche du corpus.** Les affirmations qu'il contient sont ce qu'on vérifie, jamais ce qui prouve : le vérificateur ne s'appuie jamais sur ce dossier pour rendre un verdict.
 - **Droit d'auteur** : affirmations reformulées, numéro de page, et au plus un extrait de 15 mots par affirmation.
 - **Pas de verdict global** sur le document ni sur son auteur : des verdicts par affirmation uniquement.
-- Chaque rapport indique la **version des règles** utilisée. Quand le corpus a grandi, les affirmations « non vérifiables » peuvent être relancées et le rapport mis à jour par Pull Request.
+- Chaque rapport indique la **version des règles** utilisée.
+- **Recherches proposées** : les affirmations non vérifiables sont regroupées par sujet. Pour un document, aucune recherche n'est lancée automatiquement (`config/recherche.yaml`) : l'utilisateur choisit, et le lien de chaque Pull Request de recherche est noté dans le rapport. Après sa fusion, les affirmations concernées sont revérifiées et le rapport mis à jour.
 
 ## Utilisation
 

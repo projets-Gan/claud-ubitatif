@@ -103,6 +103,7 @@ Un livre, un rapport ou une tribune (souvent un PDF) peut être soumis au vérif
 - Le rapport **n'est pas une fiche du corpus** : les affirmations du document sont ce qu'on vérifie, jamais ce qui prouve.
 - Pas de verdict global sur le document ni sur son auteur.
 - Droit d'auteur : reformulations, numéros de page et au plus un extrait de 15 mots par affirmation.
+- Les affirmations non vérifiables sont regroupées en « recherches proposées » ; aucune n'est lancée automatiquement pour un document, l'utilisateur choisit (section 5).
 
 ## 5. Chaîne de curation
 
@@ -112,6 +113,15 @@ Chaque ajout au corpus passe par trois agents successifs, puis par un humain :
 2. **Contradicteur** : joue l'avocat du diable. Il vérifie que le chercheur n'a pas retenu l'information la plus répandue au lieu de l'information réelle, contrôle la chaîne des reprises, le classement, l'indépendance, les définitions et les biais de formulation, et cherche des contre-sources sérieuses.
 3. **Curateur** : tranche à partir des deux documents, écrit les fiches et ouvre une Pull Request qui explique comment chaque objection a été traitée.
 4. **Relecture humaine** de la Pull Request.
+
+### Recherche déclenchée par une vérification
+
+Quand le vérificateur rend « non vérifiable », il propose des recherches regroupées par sujet. Claude lance la chaîne ci-dessus pour les premiers sujets, **3 au plus par demande** (`config/recherche.yaml`) ; au-delà, l'utilisateur choisit. Pour un document long, rien n'est lancé automatiquement.
+
+- La réponse reste « non vérifiable » tant que la Pull Request de recherche n'est pas relue et fusionnée ; elle indique le lien de cette Pull Request, et l'utilisateur redemande la vérification après la fusion.
+- Le texte soumis fixe seulement le **sujet** : la recherche part des sources primaires, jamais de l'affirmation ni de sa source d'origine.
+- **Risque de biais de sélection** : un corpus qui grandit au gré des demandes suit les sujets les plus discutés. Le contradicteur, la relecture humaine et la constitution d'un corpus de base par thème compensent ce risque.
+- Si le sujet n'entre dans aucun thème, le curateur propose un **nouveau thème** dans la même Pull Request (section 10).
 
 ## 6. Veille et mise à jour
 
@@ -153,6 +163,14 @@ Cette méthode est appelée à évoluer, notamment à la suite d'échanges avec 
 | 1 | 30/10/2026 | Niveaux 1 à 4 ; valide = 1 source de niveau 1 ou 2 sources de niveau 2 | Décision du porteur de projet |
 | 2 | 31/10/2026 | Ajout des niveaux 0 et bonus ; presse, fact-checkers et recherche au niveau 2 ; niveau 3 en soutien ; niveau 4 = désinformation ; agents chercheur et contradicteur | Décision du porteur de projet |
 | 3 | 01/11/2026 | Ajout au niveau 0 du Préambule de 1946 et de la Charte de l'environnement (même renvoi du Préambule de 1958 que la Déclaration de 1789) | Décision du porteur de projet, à la suite du pilote « emploi » |
+
+### Évolution de la taxonomie
+
+Les thèmes autorisés sont dans `config/taxonomie.yaml`. Un nouveau thème est proposé par le curateur, avec ses premières fiches, dans une Pull Request relue par un humain ; il est consigné ci-dessous.
+
+| Date | Thème | Origine |
+|---|---|---|
+| 30/10/2026 | immigration, emploi, finances-publiques | Thèmes de départ, décision du porteur de projet |
 
 ### Questions ouvertes (à discuter lors des prochains échanges)
 
