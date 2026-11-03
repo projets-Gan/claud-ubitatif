@@ -335,7 +335,7 @@
       "etat_donnee": "provisoire",
       "date_validite": "2026-11-10",
       "date_ajout": "2026-11-01",
-      "date_derniere_verification": null,
+      "date_derniere_verification": "2026-11-03",
       "themes": [
         "emploi"
       ],
@@ -359,7 +359,7 @@
       "etat_donnee": "provisoire",
       "date_validite": "2026-11-10",
       "date_ajout": "2026-11-01",
-      "date_derniere_verification": null,
+      "date_derniere_verification": "2026-11-03",
       "themes": [
         "emploi"
       ],
@@ -409,7 +409,7 @@
       "etat_donnee": "provisoire",
       "date_validite": "2026-11-10",
       "date_ajout": "2026-11-01",
-      "date_derniere_verification": null,
+      "date_derniere_verification": "2026-11-03",
       "themes": [
         "emploi"
       ],
@@ -567,7 +567,7 @@
       "etat_donnee": "provisoire",
       "date_validite": "2026-11-10",
       "date_ajout": "2026-11-01",
-      "date_derniere_verification": null,
+      "date_derniere_verification": "2026-11-03",
       "themes": [
         "emploi"
       ],
