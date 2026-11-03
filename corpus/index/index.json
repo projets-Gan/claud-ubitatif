@@ -1291,7 +1291,9 @@
       "themes": [
         "immigration"
       ],
-      "sous_themes": [],
+      "sous_themes": [
+        "flux-migratoires"
+      ],
       "pays": [
         "FR"
       ],
@@ -1335,7 +1337,9 @@
       "themes": [
         "immigration"
       ],
-      "sous_themes": [],
+      "sous_themes": [
+        "flux-migratoires"
+      ],
       "pays": [
         "FR"
       ],
@@ -3336,7 +3340,9 @@
       "themes": [
         "immigration"
       ],
-      "sous_themes": [],
+      "sous_themes": [
+        "flux-migratoires"
+      ],
       "pays": [
         "FR"
       ],

@@ -11,7 +11,7 @@ hash_sha256: null
 date_publication: 2026-06-04
 date_consultation: 2026-11-02
 themes: [immigration]
-sous_themes: []
+sous_themes: [flux-migratoires]
 pays: [FR]
 langue: fr
 depend_de: []
