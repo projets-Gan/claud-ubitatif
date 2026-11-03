@@ -2,22 +2,32 @@
   "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
   "version_regles": 3,
   "statistiques": {
-    "sources": 22,
-    "faits": 20,
-    "faits_valides": 17
+    "sources": 32,
+    "faits": 26,
+    "faits_valides": 22
   },
   "par_theme": {
     "immigration": {
       "sources": [
         "2020-12-07-insee-definition-etranger",
         "2023-04-19-insee-definition-immigre",
+        "2024-07-30-ministere-interieur-notice-titres-de-sejour",
         "2025-10-07-insee-ip2076-etrangers-2024",
         "2025-11-18-insee-portrait-social-immigres-descendants",
         "2026-01-13-insee-ip2087-bilan-demographique-2025",
+        "2026-01-27-afp-immigration-bilan-2025",
+        "2026-01-27-dgef-titres-de-sejour-2025",
+        "2026-04-07-courrier-atlas-immigration-legale",
+        "2026-04-21-dsed-calendrier-diffusions-2026",
+        "2026-06-04-insee-ip2107-flux-migratoires-2024",
         "2026-06-04-insee-note-rupture-serie-immigration",
+        "2026-06-04-insee-origine-immigres-arrives-2024",
         "2026-06-04-insee-population-immigree-etrangere-1921-2025",
         "2026-06-22-insee-chomage-immigres-descendants-2025",
         "2026-06-25-insee-essentiel-immigres-etrangers",
+        "2026-10-22-eurostat-premiers-permis-france",
+        "2026-10-22-eurostat-premiers-permis-italie",
+        "2026-10-22-eurostat-premiers-permis-ue27",
         "2026-10-30-eurostat-lfsa-urgacob-chomage-pays-naissance",
         "2026-10-30-eurostat-lfsa-urganedm-chomage-statut-migratoire"
       ],
@@ -28,10 +38,16 @@
         "immigration-chomage-immigres-par-origine-insee-2025",
         "immigration-chomage-nes-hors-ue-eurostat-2025",
         "immigration-chomage-seconde-generation-eurostat-2025",
+        "immigration-entrees-immigres-insee-2024",
         "immigration-etrangers-nes-en-france-2025",
         "immigration-etrangers-part-population-2025",
         "immigration-immigres-nationalite-2025",
-        "immigration-immigres-part-population-2025"
+        "immigration-immigres-part-population-2025",
+        "immigration-premiers-permis-eurostat-france-2024",
+        "immigration-premiers-permis-eurostat-france-2025",
+        "immigration-premiers-permis-motif-emploi-fr-it-ue-2024",
+        "immigration-premiers-permis-motif-emploi-fr-it-ue-2025",
+        "immigration-premiers-titres-dgef-france-2025"
       ]
     },
     "emploi": {
@@ -145,6 +161,29 @@
       ]
     },
     {
+      "id": "2024-07-30-ministere-interieur-notice-titres-de-sejour",
+      "chemin": "corpus/sources/immigration/2024/2024-07-30-ministere-interieur-notice-titres-de-sejour.md",
+      "titre": "Titres de séjour, publication du 27 juin 2024",
+      "editeur": "Ministère de l'Intérieur (data.gouv.fr)",
+      "type": "autre",
+      "niveau": 3,
+      "date_publication": "2024-07-30",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.data.gouv.fr/datasets/66a8cc809b4750710f18920c",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-premiers-titres-dgef-france-2025"
+      ]
+    },
+    {
       "id": "2025-10-07-insee-ip2076-etrangers-2024",
       "chemin": "corpus/sources/immigration/2025/2025-10-07-insee-ip2076-etrangers-2024.md",
       "titre": "En 2024, 6,0 millions d'étrangers vivent en France, 0,9 million y sont nés (Insee Première n° 2076)",
@@ -213,6 +252,100 @@
       ]
     },
     {
+      "id": "2026-01-27-afp-immigration-bilan-2025",
+      "chemin": "corpus/sources/immigration/2026/2026-01-27-afp-immigration-bilan-2025.md",
+      "titre": "Immigration: plus de titres de séjour et moins de régularisations en France en 2025",
+      "editeur": "AFP",
+      "type": "agence-presse",
+      "niveau": 2,
+      "date_publication": "2026-01-27",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://lepetitjournal.com/fil-afp/immigration-plus-de-titres-de-sejour-et-moins-de-regularisations-en-france-en-2025-433266",
+      "depend_de": [
+        "2026-01-27-dgef-titres-de-sejour-2025"
+      ],
+      "cite_par": [
+        "immigration-premiers-titres-dgef-france-2025"
+      ]
+    },
+    {
+      "id": "2026-01-27-dgef-titres-de-sejour-2025",
+      "chemin": "corpus/sources/immigration/2026/2026-01-27-dgef-titres-de-sejour-2025.md",
+      "titre": "Les titres de séjour en 2025 : les protections subsidiaires ont plus que doublé",
+      "editeur": "Ministère de l'Intérieur – DGEF, département des statistiques, des études et de la documentation (DSED)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-01-27",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.immigration.interieur.gouv.fr/documentation/etudes-et-statistiques/titres-de-sejour-en-2025-protections-subsidiaires-ont-plus-que-double.html",
+      "depend_de": [],
+      "cite_par": []
+    },
+    {
+      "id": "2026-04-07-courrier-atlas-immigration-legale",
+      "chemin": "corpus/sources/immigration/2026/2026-04-07-courrier-atlas-immigration-legale.md",
+      "titre": "Immigration légale : Stop aux fantasmes",
+      "editeur": "Le Courrier de l'Atlas",
+      "type": "autre",
+      "niveau": 3,
+      "date_publication": "2026-04-07",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.lecourrierdelatlas.com/?p=211514",
+      "depend_de": [
+        "2026-01-27-dgef-titres-de-sejour-2025"
+      ],
+      "cite_par": [
+        "immigration-premiers-titres-dgef-france-2025"
+      ]
+    },
+    {
+      "id": "2026-04-21-dsed-calendrier-diffusions-2026",
+      "chemin": "corpus/sources/immigration/2026/2026-04-21-dsed-calendrier-diffusions-2026.md",
+      "titre": "Calendrier 2026 des diffusions des données statistiques (indicateurs du 2e trimestre 2026)",
+      "editeur": "Ministère de l'Intérieur – DGEF, DSED",
+      "type": "autre",
+      "niveau": 3,
+      "date_publication": "2026-04-21",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.immigration.interieur.gouv.fr/sites/dgef/files/medias/documents/2026-04/260421-%20calendrier%20publications%20indicateurs%20T2%202026.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-premiers-titres-dgef-france-2025"
+      ]
+    },
+    {
       "id": "2026-05-24-jorf-arrete-smic-1er-juin-2026",
       "chemin": "corpus/sources/emploi/2026/2026-05-24-jorf-arrete-smic-1er-juin-2026.md",
       "titre": "Arrêté du 22 mai 2026 relatif au relèvement du salaire minimum de croissance",
@@ -238,6 +371,27 @@
       ]
     },
     {
+      "id": "2026-06-04-insee-ip2107-flux-migratoires-2024",
+      "chemin": "corpus/sources/immigration/2026/2026-06-04-insee-ip2107-flux-migratoires-2024.md",
+      "titre": "Flux migratoires – Les entrées sur le territoire diminuent en 2024 et retrouvent leur niveau d'avant-crise sanitaire (Insee Première n° 2107)",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-06-04",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/statistiques/8998082",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-entrees-immigres-insee-2024"
+      ]
+    },
+    {
       "id": "2026-06-04-insee-note-rupture-serie-immigration",
       "chemin": "corpus/sources/immigration/2026/2026-06-04-insee-note-rupture-serie-immigration.md",
       "titre": "Rupture de série dans la mesure des populations immigrées dans les enquêtes annuelles de recensement récentes (note méthodologique)",
@@ -258,6 +412,27 @@
       "depend_de": [],
       "cite_par": [
         "immigration-immigres-part-population-2025"
+      ]
+    },
+    {
+      "id": "2026-06-04-insee-origine-immigres-arrives-2024",
+      "chemin": "corpus/sources/immigration/2026/2026-06-04-insee-origine-immigres-arrives-2024.md",
+      "titre": "Origine géographique des immigrés et des étrangers arrivés en France (Chiffres-clés, données 2024)",
+      "editeur": "INSEE",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-06-04",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.insee.fr/fr/statistiques/2861345",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-entrees-immigres-insee-2024"
       ]
     },
     {
@@ -374,6 +549,80 @@
         "emploi-halo-chomage-france-2026-t2",
         "emploi-taux-emploi-15-64-france-2026-t2",
         "emploi-taux-emploi-15-64-france-2026-t2"
+      ]
+    },
+    {
+      "id": "2026-10-22-eurostat-premiers-permis-france",
+      "chemin": "corpus/sources/immigration/2026/2026-10-22-eurostat-premiers-permis-france.md",
+      "titre": "First permits by reason, length of validity and citizenship (migr_resfirst) – France",
+      "editeur": "Eurostat",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-10-22",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/migr_resfirst?geo=FR&duration=TOTAL&citizen=TOTAL&lang=EN&sinceTimePeriod=2010",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-premiers-permis-eurostat-france-2024",
+        "immigration-premiers-permis-eurostat-france-2025",
+        "immigration-premiers-permis-motif-emploi-fr-it-ue-2024",
+        "immigration-premiers-permis-motif-emploi-fr-it-ue-2025"
+      ]
+    },
+    {
+      "id": "2026-10-22-eurostat-premiers-permis-italie",
+      "chemin": "corpus/sources/immigration/2026/2026-10-22-eurostat-premiers-permis-italie.md",
+      "titre": "First permits by reason, length of validity and citizenship (migr_resfirst) – Italie",
+      "editeur": "Eurostat",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-10-22",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour"
+      ],
+      "pays": [
+        "IT"
+      ],
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/migr_resfirst?geo=IT&duration=TOTAL&citizen=TOTAL&lang=EN&sinceTimePeriod=2010",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-premiers-permis-motif-emploi-fr-it-ue-2024",
+        "immigration-premiers-permis-motif-emploi-fr-it-ue-2025"
+      ]
+    },
+    {
+      "id": "2026-10-22-eurostat-premiers-permis-ue27",
+      "chemin": "corpus/sources/immigration/2026/2026-10-22-eurostat-premiers-permis-ue27.md",
+      "titre": "First permits by reason, length of validity and citizenship (migr_resfirst) – Union européenne (UE-27, 2020)",
+      "editeur": "Eurostat",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-10-22",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour"
+      ],
+      "pays": [
+        "UE"
+      ],
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/migr_resfirst?geo=EU27_2020&duration=TOTAL&citizen=TOTAL&lang=EN&sinceTimePeriod=2023",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-premiers-permis-motif-emploi-fr-it-ue-2024",
+        "immigration-premiers-permis-motif-emploi-fr-it-ue-2025"
       ]
     },
     {
@@ -1048,6 +1297,29 @@
       ]
     },
     {
+      "id": "immigration-entrees-immigres-insee-2024",
+      "chemin": "corpus/faits/immigration/immigration-entrees-immigres-insee-2024.md",
+      "enonce": "Selon l'INSEE (Insee Première n° 2107, juin 2026), 313 000 personnes immigrées, c'est-à-dire nées étrangères à l'étranger, sont entrées en France en 2024 pour s'y installer pour au moins un an, sur 438 000 entrées au total (dont 85 000 personnes nées en France et 40 000 nées françaises à l'étranger) ; le nombre d'entrées d'immigrés diminue de 10 % entre 2023 et 2024.",
+      "periode": "2024",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-04-insee-ip2107-flux-migratoires-2024",
+        "2026-06-04-insee-origine-immigres-arrives-2024"
+      ]
+    },
+    {
       "id": "immigration-etrangers-nes-en-france-2025",
       "chemin": "corpus/faits/immigration/immigration-etrangers-nes-en-france-2025.md",
       "enonce": "Au 1er janvier 2025, 953 milliers de personnes nées en France et de nationalité étrangère (environ 1,0 million) résident en France, soit 1,4 % de la population totale ; elles sont étrangères sans être immigrées (INSEE, données provisoires, Mayotte incluse).",
@@ -1153,6 +1425,139 @@
         "2026-06-04-insee-population-immigree-etrangere-1921-2025",
         "2026-06-04-insee-note-rupture-serie-immigration",
         "2023-04-19-insee-definition-immigre"
+      ]
+    },
+    {
+      "id": "immigration-premiers-permis-eurostat-france-2024",
+      "chemin": "corpus/faits/immigration/immigration-premiers-permis-eurostat-france-2024.md",
+      "enonce": "Selon Eurostat (série migr_resfirst, données mises à jour le 22 octobre 2026), la France a délivré 345 587 premiers titres de séjour à des ressortissants de pays tiers en 2024 : 112 594 pour études, 91 030 pour motifs familiaux, 58 603 pour emploi et 83 360 pour autres motifs (dont la protection internationale et les motifs humanitaires).",
+      "periode": "2024",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-09-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-10-22-eurostat-premiers-permis-france"
+      ]
+    },
+    {
+      "id": "immigration-premiers-permis-eurostat-france-2025",
+      "chemin": "corpus/faits/immigration/immigration-premiers-permis-eurostat-france-2025.md",
+      "enonce": "Selon Eurostat (série migr_resfirst, données provisoires mises à jour le 22 octobre 2026), la France a délivré 377 462 premiers titres de séjour à des ressortissants de pays tiers en 2025 : 118 404 pour études, 90 959 pour motifs familiaux, 50 848 pour emploi et 117 251 pour autres motifs (dont la protection internationale et les motifs humanitaires).",
+      "periode": "2025",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-01-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-10-22-eurostat-premiers-permis-france"
+      ]
+    },
+    {
+      "id": "immigration-premiers-permis-motif-emploi-fr-it-ue-2024",
+      "chemin": "corpus/faits/immigration/immigration-premiers-permis-motif-emploi-fr-it-ue-2024.md",
+      "enonce": "Selon Eurostat (série migr_resfirst, mise à jour du 22 octobre 2026), en 2024, 58 603 des 345 587 premiers titres de séjour délivrés par la France l'ont été pour emploi, contre 39 090 sur 346 411 en Italie et 1 115 986 sur 3 504 650 dans l'UE à 27 ; soit, par un calcul qui n'est pas publié par Eurostat, environ 17,0 % en France, 11,3 % en Italie et 31,8 % dans l'UE.",
+      "periode": "2024",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-09-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour",
+        "immigration-emploi"
+      ],
+      "pays": [
+        "FR",
+        "IT",
+        "UE"
+      ],
+      "sources": [
+        "2026-10-22-eurostat-premiers-permis-france",
+        "2026-10-22-eurostat-premiers-permis-italie",
+        "2026-10-22-eurostat-premiers-permis-ue27"
+      ]
+    },
+    {
+      "id": "immigration-premiers-permis-motif-emploi-fr-it-ue-2025",
+      "chemin": "corpus/faits/immigration/immigration-premiers-permis-motif-emploi-fr-it-ue-2025.md",
+      "enonce": "Selon Eurostat (série migr_resfirst, données provisoires mises à jour le 22 octobre 2026), en 2025, 50 848 des 377 462 premiers titres de séjour délivrés par la France l'ont été pour emploi, contre 57 362 sur 433 099 en Italie et 1 295 687 sur 3 860 000 dans l'UE à 27 ; soit, par un calcul qui n'est pas publié par Eurostat, environ 13,5 % en France, 13,2 % en Italie et un tiers dans l'UE.",
+      "periode": "2025",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-01-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour",
+        "immigration-emploi"
+      ],
+      "pays": [
+        "FR",
+        "IT",
+        "UE"
+      ],
+      "sources": [
+        "2026-10-22-eurostat-premiers-permis-france",
+        "2026-10-22-eurostat-premiers-permis-italie",
+        "2026-10-22-eurostat-premiers-permis-ue27"
+      ]
+    },
+    {
+      "id": "immigration-premiers-titres-dgef-france-2025",
+      "chemin": "corpus/faits/immigration/immigration-premiers-titres-dgef-france-2025.md",
+      "enonce": "Selon les chiffres provisoires de la DGEF rendus publics le 27 janvier 2026, tels que rapportés par l'AFP et Le Courrier de l'Atlas, 384 230 premiers titres de séjour ont été délivrés en France en 2025 (376 364 hors Britanniques) : 117 970 pour motif étudiant, 92 610 pour motif humanitaire, 91 100 pour motif familial, 51 190 pour motif économique et 31 360 pour motifs divers.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-01-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "titres-de-sejour"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-01-27-afp-immigration-bilan-2025",
+        "2026-04-07-courrier-atlas-immigration-legale",
+        "2026-04-21-dsed-calendrier-diffusions-2026",
+        "2024-07-30-ministere-interieur-notice-titres-de-sejour"
       ]
     }
   ]
