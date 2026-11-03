@@ -2,9 +2,9 @@
   "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
   "version_regles": 3,
   "statistiques": {
-    "sources": 75,
+    "sources": 76,
     "faits": 66,
-    "faits_valides": 30
+    "faits_valides": 31
   },
   "par_theme": {
     "immigration": {
@@ -59,6 +59,7 @@
         "2026-06-19-eurostat-retours-trimestriels-statistics-explained",
         "2026-06-22-insee-chomage-immigres-descendants-2025",
         "2026-06-25-insee-essentiel-immigres-etrangers",
+        "2026-07-01-legifrance-cch-article-l822-2-consolide",
         "2026-07-01-service-public-apl-etudiants-extra-europeens",
         "2026-07-08-senat-rapport-874-couts-asile",
         "2026-07-27-ofpra-rapport-activite-2025-annonce",
@@ -184,6 +185,7 @@
         "2026-06-17-senat-cf-execution-2025-sante",
         "2026-06-17-senat-rapport-736-justice-comptes-2025",
         "2026-06-17-senat-rapport-736-mires-comptes-2025",
+        "2026-07-01-legifrance-cch-article-l822-2-consolide",
         "2026-07-01-service-public-apl-etudiants-extra-europeens"
       ],
       "faits": [
@@ -1566,6 +1568,32 @@
       ]
     },
     {
+      "id": "2026-07-01-legifrance-cch-article-l822-2-consolide",
+      "chemin": "corpus/sources/finances-publiques/2026/2026-07-01-legifrance-cch-article-l822-2-consolide.md",
+      "titre": "Code de la construction et de l'habitation, article L822-2 (version en vigueur depuis le 1er juillet 2026)",
+      "editeur": "Légifrance",
+      "type": "texte-officiel",
+      "niveau": 1,
+      "date_publication": "2026-07-01",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038814944",
+      "depend_de": [
+        "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants"
+      ],
+      "cite_par": [
+        "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers"
+      ]
+    },
+    {
       "id": "2026-07-01-service-public-apl-etudiants-extra-europeens",
       "chemin": "corpus/sources/finances-publiques/2026/2026-07-01-service-public-apl-etudiants-extra-europeens.md",
       "titre": "Suppression des APL pour les étudiants extra-européens non boursiers à compter du 1er juillet 2026",
@@ -2667,7 +2695,7 @@
     {
       "id": "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers",
       "chemin": "corpus/faits/finances-publiques/finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers.md",
-      "enonce": "L'article 179 de la loi n° 2026-103 du 19 février 2026 de finances pour 2026 modifie l'article L. 822-2 du code de la construction et de l'habitation : à compter du 1er juillet 2026, les aides personnelles au logement sont ouvertes aux personnes de nationalité étrangère remplissant les conditions prévues au deuxième alinéa de l'article L. 512-2, à l'exception des étrangers titulaires d'un visa de long séjour ou d'un titre de séjour « étudiant » (articles L. 422-1 à L. 422-7 du CESEDA) qui ne remplissent pas les conditions pour être titulaires d'une bourse d'enseignement supérieur sur critères sociaux.",
+      "enonce": "L'article 179 de la loi n° 2026-103 du 19 février 2026 de finances pour 2026 modifie l'article L. 822-2 du code de la construction et de l'habitation : à compter du 1er juillet 2026, les aides personnelles au logement sont ouvertes aux personnes de nationalité étrangère remplissant les conditions prévues au deuxième alinéa de l'article L. 512-2, à l'exception des étrangers titulaires d'un visa de long séjour ou d'un titre de séjour mentionnés aux articles L. 422-1 à L. 422-7 du CESEDA qui ne remplissent pas les conditions pour être titulaires d'une bourse d'enseignement supérieur sur critères sociaux.",
       "periode": "2026-07-01",
       "statut": "valide",
       "niveau_validation": 1,
@@ -2690,6 +2718,7 @@
         "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
         "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
         "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
+        "2026-07-01-legifrance-cch-article-l822-2-consolide",
         "2026-07-01-service-public-apl-etudiants-extra-europeens"
       ]
     },
@@ -3229,7 +3258,7 @@
       "chemin": "corpus/faits/immigration/immigration-chomage-immigres-par-origine-insee-2025.md",
       "enonce": "En 2025, en France hors Mayotte, le taux de chômage au sens du BIT des immigrés de 15 à 64 ans varie selon l'origine géographique : 13,8 % pour les immigrés originaires d'Afrique, 11,1 % d'Asie, 10,4 % d'Europe et 13,9 % d'Amérique ou d'Océanie, contre 6,5 % pour les personnes sans ascendance migratoire (INSEE, enquête Emploi).",
       "periode": "2025",
-      "statut": "en-attente",
+      "statut": "valide",
       "niveau_validation": 1,
       "etat_donnee": "provisoire",
       "date_validite": "2027-06-30",

@@ -23,7 +23,7 @@ sources:
     extrait: "Un descendant d'immigré (de deuxième génération) est une personne née en France et ayant au moins un parent immigré."
     localisation: "Fiche « Immigrés et descendants d'immigrés », France, portrait social 2025, définitions"
 contredit_par: []
-notes: "Validé par une seule source de niveau 1 (tableau statistique primaire de l'INSEE). Valeur lue de façon concordante par trois agents via des outils de restitution de page ; cohérence interne : (67,4 − 59,5) / 67,4 = 11,7 %, avec activité = 100 − inactivité (32,6). État : non précisé par l'INSEE, « provisoire » retenu par prudence. Le chiffre 6,5 % de comparaison figure dans le tableau des immigrés ; sa présence dans le tableau des descendants est indiquée par le chercheur, à confirmer par le relecteur."
+notes: "Validé par une seule source de niveau 1 (tableau statistique primaire de l'INSEE). Contrôle humain du 03/11/2026 : la ligne « Ensemble des descendants d'immigrés » du tableau des immigrés (taux de chômage 11,7, emploi 59,5, inactivité 32,6) est conforme. Valeur lue de façon concordante par trois agents via des outils de restitution de page ; cohérence interne : (67,4 − 59,5) / 67,4 = 11,7 %, avec activité = 100 − inactivité (32,6). État : non précisé par l'INSEE, « provisoire » retenu par prudence. Le chiffre 6,5 % de comparaison figure dans le tableau des immigrés ; sa présence dans le tableau des descendants est indiquée par le chercheur, à confirmer par le relecteur."
 ---
 
 ## Contexte

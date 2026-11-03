@@ -18,12 +18,12 @@ date_derniere_verification: null
 sources:
   - source: 2026-06-22-insee-chomage-immigres-descendants-2025
     extrait: "12,4"
-    localisation: "Tableau « Inactivité, chômage et emploi des immigrés par origine géographique en 2025 », ligne de l'ensemble des immigrés, colonne « Taux de chômage » (en %). Même colonne : personnes sans ascendance migratoire 6,5 ; ensemble de la population 7,7."
+    localisation: "Tableau « Inactivité, chômage et emploi des immigrés par origine géographique en 2025 », ligne 26 « Ensemble des immigrés », colonne « Taux de chômage » (en %). Même colonne : personnes sans ascendance migratoire 6,5 ; ensemble de la population 7,7."
   - source: 2025-11-18-insee-portrait-social-immigres-descendants
     extrait: "Un immigré est une personne née étrangère à l'étranger et résidant en France."
     localisation: "Fiche « Immigrés et descendants d'immigrés », France, portrait social 2025, définitions"
 contredit_par: []
-notes: "Validé par une seule source de niveau 1 (tableau statistique primaire de l'INSEE). Valeurs lues de façon concordante par trois agents (chercheur, contradicteur, curateur) via des outils de restitution de page ; cohérence interne vérifiée : (70,7 − 61,9) / 70,7 = 12,4 %, avec activité = 100 − inactivité (29,3). Le libellé exact de la ligne d'ensemble varie selon les lectures (« Ensemble des immigrés » / « Immigrés (ensemble) ») : à confirmer par le relecteur. État de la donnée : la page ne précise ni provisoire ni définitif ; « provisoire » retenu par prudence (résultats de l'enquête Emploi révisables), à requalifier si la documentation de l'INSEE l'indique. Prochaine édition annuelle attendue vers juin 2027."
+notes: "Validé par une seule source de niveau 1 (tableau statistique primaire de l'INSEE). Valeurs lues de façon concordante par trois agents (chercheur, contradicteur, curateur) via des outils de restitution de page ; cohérence interne vérifiée : (70,7 − 61,9) / 70,7 = 12,4 %, avec activité = 100 − inactivité (29,3). Contrôle humain du fichier xlsx le 03/11/2026 (capture fournie par le porteur de projet) : lignes « Ensemble des immigrés » 12,4, « Personnes sans ascendance migratoire » 6,5, « Ensemble de la population » 7,7, inactivité 29,3 et emploi 61,9 conformes. État de la donnée : la page ne précise ni provisoire ni définitif ; « provisoire » retenu par prudence (résultats de l'enquête Emploi révisables), à requalifier si la documentation de l'INSEE l'indique. Prochaine édition annuelle attendue vers juin 2027."
 ---
 
 ## Contexte

@@ -20,7 +20,7 @@ sources:
     extrait: "6,7"
     localisation: "Tableau « Inactivité, chômage et emploi des descendants d'immigrés par origine géographique en 2025 », ligne « Europe », colonne « Taux de chômage » (en %). Autres lignes : Afrique 16,1 ; Asie 12,9 ; Amérique, Océanie 11,6 ; Afrique sahélienne 23,0 ; Europe du Sud 6,2 (valeurs à contrôler sur le fichier xlsx)."
 contredit_par: []
-notes: "EN ATTENTE : objection bloquante n° 1 du contradicteur non levée. Seules « Afrique sahélienne » 23,0 et « Europe du Sud » 6,2 ont été confirmées par le contradicteur ; les autres valeurs ont été lues de façon concordante par le chercheur et le curateur, mais via des outils qui résument. Fichier xlsx non ouvert. Pour passer en « valide » : contrôle humain des valeurs et des libellés sur le fichier."
+notes: "EN ATTENTE : objection bloquante n° 1 du contradicteur non levée. Le contrôle humain du 03/11/2026 n'a porté que sur le tableau des immigrés ; le tableau des descendants par origine (autre onglet du même fichier xlsx) reste à contrôler. Seules « Afrique sahélienne » 23,0 et « Europe du Sud » 6,2 ont été confirmées par le contradicteur ; les autres valeurs ont été lues de façon concordante par le chercheur et le curateur, mais via des outils qui résument. Fichier xlsx non ouvert. Pour passer en « valide » : contrôle humain des valeurs et des libellés sur le fichier."
 ---
 
 ## Contexte

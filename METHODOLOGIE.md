@@ -63,6 +63,8 @@ Le classement d'un média au niveau 4 est sensible. Il figure dans `config/sourc
 
 Pour chaque source : lien, métadonnées, résumé rédigé par le contributeur, courts extraits localisés, lien d'archive (Wayback Machine ou archive.today) et, si possible, empreinte SHA-256 du document. **Jamais** d'article complet.
 
+Une source sans archive reste utilisable : l'archive ne rend pas une information plus ou moins exacte, elle prouve ce que disait la page à la date de consultation. Le vérificateur signale toutefois, dans sa réponse, chaque source citée qui n'est pas archivée (risque que la page ait changé ou disparu), et le veilleur vérifie régulièrement que les pages répondent toujours. Les archives manquantes sont ajoutées dès que possible (décision du 03/11/2026).
+
 ## 3. Faits
 
 Un fait est une affirmation précise et vérifiable : une valeur, une unité, une période, un périmètre, une définition.
