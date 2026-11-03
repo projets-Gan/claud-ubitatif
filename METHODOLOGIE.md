@@ -63,6 +63,8 @@ Le classement d'un média au niveau 4 est sensible. Il figure dans `config/sourc
 
 Pour chaque source : lien, métadonnées, résumé rédigé par le contributeur, courts extraits localisés, lien d'archive (Wayback Machine ou archive.today) et, si possible, empreinte SHA-256 du document. **Jamais** d'article complet.
 
+Une source sans archive reste utilisable : l'archive ne rend pas une information plus ou moins exacte, elle prouve ce que disait la page à la date de consultation. Le vérificateur signale toutefois, dans sa réponse, chaque source citée qui n'est pas archivée (risque que la page ait changé ou disparu), et le veilleur vérifie régulièrement que les pages répondent toujours. Les archives manquantes sont ajoutées dès que possible (décision du 03/11/2026).
+
 ## 3. Faits
 
 Un fait est une affirmation précise et vérifiable : une valeur, une unité, une période, un périmètre, une définition.
@@ -171,6 +173,7 @@ Les thèmes autorisés sont dans `config/taxonomie.yaml`. Un nouveau thème est 
 | Date | Thème | Origine |
 |---|---|---|
 | 30/10/2026 | immigration, emploi, finances-publiques | Thèmes de départ, décision du porteur de projet |
+| 03/11/2026 | sous-thème `flux-migratoires` (immigration) | Recherche R5 : les entrées d'immigrés estimées par l'INSEE n'avaient pas de sous-thème ; décision du porteur de projet |
 
 ### Questions ouvertes (à discuter lors des prochains échanges)
 
@@ -178,3 +181,5 @@ Les thèmes autorisés sont dans `config/taxonomie.yaml`. Un nouveau thème est 
 - La Déclaration universelle des droits de l'homme n'a pas en droit français la même valeur juridique que la Constitution ou la Déclaration de 1789 : son niveau 0 doit-il porter sur les principes qu'elle énonce ou sur leur portée juridique ?
 - Une source de niveau 1 peut-elle être contestée par deux sources de niveau 2 concordantes (aujourd'hui : oui, le fait passe en `conteste`) ?
 - Quels critères et quelles preuves retenir pour classer un média au niveau 4, et qui les valide ?
+- **Documents budgétaires** (projets et rapports annuels de performances, documents de politique transversale) : leurs tableaux de crédits sont produits par l'administration et la direction du budget, ni par un service statistique public ni sous forme de texte en vigueur ; ils sont donc classés `institution-publique` (niveau 2). Faut-il un type « document budgétaire » au niveau 1 ? (Question soulevée par les recherches R6 et R7 du 02/11/2026 ; décision du 03/11/2026 : niveau 2 maintenu en attendant les échanges avec des journalistes.)
+- **Séries à éditeur unique** : seuls l'OFPRA publie ses demandes d'asile et la CNDA ses délais ; les rapports qui les reprennent ne sont pas indépendants. Comment valider un fait quand aucun second éditeur n'existe ? (Recherche R4 du 02/11/2026.)

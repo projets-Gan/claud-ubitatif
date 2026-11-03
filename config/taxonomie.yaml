@@ -11,6 +11,7 @@ themes:
       Toujours préciser la définition utilisée (immigré, étranger, demandeur d'asile…).
     sous_themes:
       population-immigree: Population immigrée et étrangère (stocks)
+      flux-migratoires: Entrées et sorties d'immigrés (flux annuels estimés par l'INSEE)
       titres-de-sejour: Premiers titres et renouvellements
       asile: Demandes d'asile, décisions, protections accordées
       naturalisation: Acquisitions de la nationalité française
