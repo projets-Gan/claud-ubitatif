@@ -14,7 +14,7 @@ etat_donnee: provisoire
 statut: valide
 date_validite: 2026-11-10
 date_ajout: 2026-11-01
-date_derniere_verification: null
+date_derniere_verification: 2026-11-03
 sources:
   - source: 2026-08-07-insee-chomage-t2-2026
     extrait: "Sur le trimestre, le taux de chômage des 15-24 ans rebondit : +0,4 point, à 21,6 %."

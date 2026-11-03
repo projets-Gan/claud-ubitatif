@@ -14,7 +14,7 @@ etat_donnee: provisoire
 statut: valide
 date_validite: 2026-11-10
 date_ajout: 2026-11-01
-date_derniere_verification: null
+date_derniere_verification: 2026-11-03
 sources:
   - source: 2026-08-07-insee-chomage-t2-2026
     extrait: "Le taux de chômage s'établit à 8,3 % de la population active"
