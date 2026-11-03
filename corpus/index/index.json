@@ -2,23 +2,29 @@
   "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
   "version_regles": 3,
   "statistiques": {
-    "sources": 52,
-    "faits": 46,
-    "faits_valides": 24
+    "sources": 62,
+    "faits": 55,
+    "faits_valides": 25
   },
   "par_theme": {
     "immigration": {
       "sources": [
         "2002-04-18-ofpra-rapport-activite-2001",
+        "2018-12-01-cepii-lettre-394-finances-publiques-immigration",
+        "2020-05-05-cour-des-comptes-entree-sejour-etrangers",
         "2020-10-30-legifrance-casf-article-r251-3",
         "2020-12-07-insee-definition-etranger",
+        "2021-10-28-ocde-impact-budgetaire-immigration-chap4",
         "2021-12-01-legifrance-casf-article-l251-2",
         "2023-04-19-insee-definition-immigre",
+        "2023-06-20-an-reponse-qe-5157-rsa-nationalite",
         "2024-02-29-ministere-sante-presentation-ame",
         "2024-07-30-ministere-interieur-notice-titres-de-sejour",
         "2025-01-01-cnda-chiffres-cles-2024",
+        "2025-02-07-oid-cout-net-immigration",
         "2025-03-20-eurostat-premiers-demandeurs-asile-2024",
         "2025-06-20-ofpra-rapport-activite-2024",
+        "2025-06-23-oid-impact-immigration-economie-emploi",
         "2025-10-07-insee-ip2076-etrangers-2024",
         "2025-10-14-gouvernement-pap-2026-sante",
         "2025-11-18-insee-portrait-social-immigres-descendants",
@@ -30,6 +36,7 @@
         "2026-01-27-dgef-titres-de-sejour-2025",
         "2026-01-27-ministere-interieur-demandes-asile-2025",
         "2026-01-27-ofpra-bilan-provisoire-2025",
+        "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
         "2026-03-24-cnda-bilan-2025",
         "2026-03-25-eurostat-premiers-demandeurs-asile-2025",
         "2026-04-07-courrier-atlas-immigration-legale",
@@ -43,6 +50,7 @@
         "2026-06-17-senat-cf-execution-2025-sante",
         "2026-06-22-insee-chomage-immigres-descendants-2025",
         "2026-06-25-insee-essentiel-immigres-etrangers",
+        "2026-07-01-service-public-apl-etudiants-extra-europeens",
         "2026-07-08-senat-rapport-874-couts-asile",
         "2026-07-27-ofpra-rapport-activite-2025-annonce",
         "2026-10-22-eurostat-premiers-permis-france",
@@ -58,8 +66,15 @@
         "finances-publiques-ame-credits-lfi-2025",
         "finances-publiques-ame-delai-soins-programmes",
         "finances-publiques-ame-participation-beneficiaires",
+        "finances-publiques-cepii-contribution-nette-immigres-france-1979-2011",
+        "finances-publiques-cour-comptes-depenses-etat-immigration-2019",
         "finances-publiques-hebergement-asile-taux-2025",
+        "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers",
+        "finances-publiques-ocde-contribution-nette-nes-etranger-france-2006-2018",
+        "finances-publiques-oid-cout-net-etrangers-2023",
+        "finances-publiques-oid-ecart-pib-emploi-immigres-2024",
         "finances-publiques-programme-303-execution-2025",
+        "finances-publiques-rsa-foyers-responsable-hors-ue-2022-06-30",
         "immigration-asile-cnda-delai-moyen-constate-2025",
         "immigration-asile-cnda-delai-previsible-moyen-2025",
         "immigration-asile-cnda-recours-affaires-jugees-2025",
@@ -128,14 +143,24 @@
     },
     "finances-publiques": {
       "sources": [
+        "2018-12-01-cepii-lettre-394-finances-publiques-immigration",
+        "2020-05-05-cour-des-comptes-entree-sejour-etrangers",
         "2020-10-30-legifrance-casf-article-r251-3",
+        "2021-10-28-ocde-impact-budgetaire-immigration-chap4",
         "2021-12-01-legifrance-casf-article-l251-2",
+        "2023-06-20-an-reponse-qe-5157-rsa-nationalite",
         "2024-02-29-ministere-sante-presentation-ame",
+        "2025-02-07-oid-cout-net-immigration",
+        "2025-06-23-oid-impact-immigration-economie-emploi",
         "2025-10-14-gouvernement-pap-2026-sante",
         "2025-11-24-senat-cf-plf-2026-sante",
+        "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
         "2026-04-22-gouvernement-rap-2025-immigration-asile-integration",
         "2026-06-17-senat-cf-execution-2025-immigration-asile",
-        "2026-06-17-senat-cf-execution-2025-sante"
+        "2026-06-17-senat-cf-execution-2025-sante",
+        "2026-06-17-senat-rapport-736-justice-comptes-2025",
+        "2026-06-17-senat-rapport-736-mires-comptes-2025",
+        "2026-07-01-service-public-apl-etudiants-extra-europeens"
       ],
       "faits": [
         "finances-publiques-ada-execution-2025",
@@ -144,8 +169,17 @@
         "finances-publiques-ame-credits-lfi-2025",
         "finances-publiques-ame-delai-soins-programmes",
         "finances-publiques-ame-participation-beneficiaires",
+        "finances-publiques-cepii-contribution-nette-immigres-france-1979-2011",
+        "finances-publiques-cour-comptes-depenses-etat-immigration-2019",
+        "finances-publiques-credits-mission-justice-2025",
+        "finances-publiques-credits-mission-mires-2025",
         "finances-publiques-hebergement-asile-taux-2025",
-        "finances-publiques-programme-303-execution-2025"
+        "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers",
+        "finances-publiques-ocde-contribution-nette-nes-etranger-france-2006-2018",
+        "finances-publiques-oid-cout-net-etrangers-2023",
+        "finances-publiques-oid-ecart-pib-emploi-immigres-2024",
+        "finances-publiques-programme-303-execution-2025",
+        "finances-publiques-rsa-foyers-responsable-hors-ue-2022-06-30"
       ]
     }
   },
@@ -193,6 +227,63 @@
       "cite_par": [
         "immigration-asile-ofpra-comptage-mineurs-2001",
         "immigration-asile-ofpra-comptage-mineurs-2001"
+      ]
+    },
+    {
+      "id": "2018-12-01-cepii-lettre-394-finances-publiques-immigration",
+      "chemin": "corpus/sources/finances-publiques/2018/2018-12-01-cepii-lettre-394-finances-publiques-immigration.md",
+      "titre": "L'impact sur les finances publiques de 30 ans d'immigration en France (La Lettre du CEPII n° 394)",
+      "editeur": "CEPII",
+      "type": "recherche",
+      "niveau": 2,
+      "date_publication": "2018-12-01",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "deficit",
+        "depenses-publiques",
+        "recettes-fiscales",
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://imap.cepii.fr/PDF_PUB/lettre/2018/let394.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-cepii-contribution-nette-immigres-france-1979-2011",
+        "finances-publiques-cepii-contribution-nette-immigres-france-1979-2011",
+        "finances-publiques-cepii-contribution-nette-immigres-france-1979-2011",
+        "finances-publiques-cepii-contribution-nette-immigres-france-1979-2011"
+      ]
+    },
+    {
+      "id": "2020-05-05-cour-des-comptes-entree-sejour-etrangers",
+      "chemin": "corpus/sources/finances-publiques/2020/2020-05-05-cour-des-comptes-entree-sejour-etrangers.md",
+      "titre": "L'entrée, le séjour et le premier accueil des personnes étrangères (rapport public thématique)",
+      "editeur": "Cour des comptes",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2020-05-05",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "titres-de-sejour",
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.ccomptes.fr/system/files/2020-05/20200505-rapport-entree-sejour-premier-accueil-personnes-etrangeres_0.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-cour-comptes-depenses-etat-immigration-2019",
+        "finances-publiques-cour-comptes-depenses-etat-immigration-2019"
       ]
     },
     {
@@ -245,6 +336,36 @@
       ]
     },
     {
+      "id": "2021-10-28-ocde-impact-budgetaire-immigration-chap4",
+      "chemin": "corpus/sources/finances-publiques/2021/2021-10-28-ocde-impact-budgetaire-immigration-chap4.md",
+      "titre": "The fiscal impact of immigration in OECD countries since the mid-2000s (International Migration Outlook 2021, chapitre 4)",
+      "editeur": "OCDE",
+      "type": "recherche",
+      "niveau": 2,
+      "date_publication": "2021-10-28",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "recettes-fiscales",
+        "population-immigree"
+      ],
+      "pays": [
+        "FR",
+        "INT"
+      ],
+      "url": "https://oecd.org/en/publications/international-migration-outlook-2021_29f23e9d-en/full-report/component-8",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-ocde-contribution-nette-nes-etranger-france-2006-2018",
+        "finances-publiques-ocde-contribution-nette-nes-etranger-france-2006-2018",
+        "finances-publiques-ocde-contribution-nette-nes-etranger-france-2006-2018",
+        "finances-publiques-ocde-contribution-nette-nes-etranger-france-2006-2018"
+      ]
+    },
+    {
       "id": "2021-12-01-legifrance-casf-article-l251-2",
       "chemin": "corpus/sources/finances-publiques/2021/2021-12-01-legifrance-casf-article-l251-2.md",
       "titre": "Code de l'action sociale et des familles, article L251-2 (version en vigueur depuis le 14 mai 2022)",
@@ -291,6 +412,33 @@
       "depend_de": [],
       "cite_par": [
         "immigration-immigres-part-population-2025"
+      ]
+    },
+    {
+      "id": "2023-06-20-an-reponse-qe-5157-rsa-nationalite",
+      "chemin": "corpus/sources/finances-publiques/2023/2023-06-20-an-reponse-qe-5157-rsa-nationalite.md",
+      "titre": "Question écrite n° 5157 (16e législature) et réponse du ministère des Solidarités, de l'Autonomie et des Personnes handicapées",
+      "editeur": "Assemblée nationale / Gouvernement (ministère des Solidarités)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2023-06-20",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.assemblee-nationale.fr/dyn/16/questions/QANR5L16QE5157.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-rsa-foyers-responsable-hors-ue-2022-06-30",
+        "finances-publiques-rsa-foyers-responsable-hors-ue-2022-06-30",
+        "finances-publiques-rsa-foyers-responsable-hors-ue-2022-06-30"
       ]
     },
     {
@@ -368,6 +516,35 @@
       ]
     },
     {
+      "id": "2025-02-07-oid-cout-net-immigration",
+      "chemin": "corpus/sources/finances-publiques/2025/2025-02-07-oid-cout-net-immigration.md",
+      "titre": "Réduire le coût net de l'immigration : 7 milliards d'euros d'économies annuelles",
+      "editeur": "Observatoire de l'immigration et de la démographie (OID)",
+      "type": "autre",
+      "niveau": 3,
+      "date_publication": "2025-02-07",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://observatoire-immigration.fr/cout-immigration-economies/",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-oid-cout-net-etrangers-2023",
+        "finances-publiques-oid-cout-net-etrangers-2023",
+        "finances-publiques-oid-cout-net-etrangers-2023",
+        "finances-publiques-oid-cout-net-etrangers-2023",
+        "finances-publiques-oid-cout-net-etrangers-2023"
+      ]
+    },
+    {
       "id": "2025-03-20-eurostat-premiers-demandeurs-asile-2024",
       "chemin": "corpus/sources/immigration/2025/2025-03-20-eurostat-premiers-demandeurs-asile-2024.md",
       "titre": "First-time asylum applications down 13% in 2024",
@@ -414,6 +591,33 @@
         "immigration-asile-demandes-ofpra-2024",
         "immigration-asile-premieres-demandes-ofpra-2024",
         "immigration-asile-reexamens-ofpra-2025"
+      ]
+    },
+    {
+      "id": "2025-06-23-oid-impact-immigration-economie-emploi",
+      "chemin": "corpus/sources/finances-publiques/2025/2025-06-23-oid-impact-immigration-economie-emploi.md",
+      "titre": "L'impact de l'immigration sur l'économie française : sortir du « cercle vicieux » et prioriser l'emploi",
+      "editeur": "Observatoire de l'immigration et de la démographie (OID)",
+      "type": "autre",
+      "niveau": 3,
+      "date_publication": "2025-06-23",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "deficit",
+        "immigration-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://observatoire-immigration.fr/limpact-de-limmigration-sur-leconomie-francaise/",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-oid-ecart-pib-emploi-immigres-2024",
+        "finances-publiques-oid-ecart-pib-emploi-immigres-2024",
+        "finances-publiques-oid-ecart-pib-emploi-immigres-2024"
       ]
     },
     {
@@ -685,6 +889,33 @@
       "cite_par": [
         "immigration-asile-demandes-ofpra-2025",
         "immigration-asile-premieres-demandes-ofpra-2025"
+      ]
+    },
+    {
+      "id": "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
+      "chemin": "corpus/sources/finances-publiques/2026/2026-02-20-jorf-lfi-2026-article-179-apl-etudiants.md",
+      "titre": "Loi n° 2026-103 du 19 février 2026 de finances pour 2026, article 179",
+      "editeur": "Journal officiel de la République française (Légifrance)",
+      "type": "texte-officiel",
+      "niveau": 1,
+      "date_publication": "2026-02-20",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000053509383",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers",
+        "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers",
+        "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers",
+        "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers"
       ]
     },
     {
@@ -989,6 +1220,55 @@
       ]
     },
     {
+      "id": "2026-06-17-senat-rapport-736-justice-comptes-2025",
+      "chemin": "corpus/sources/finances-publiques/2026/2026-06-17-senat-rapport-736-justice-comptes-2025.md",
+      "titre": "Rapport n° 736 (2025-2026) sur le projet de loi relatif aux résultats de la gestion et portant approbation des comptes de l'année 2025, tome II, annexe n° 18 « Justice »",
+      "editeur": "Sénat, commission des finances",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-06-17",
+      "themes": [
+        "finances-publiques"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.senat.fr/rap/l25-736-218/l25-736-2181.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-credits-mission-justice-2025"
+      ]
+    },
+    {
+      "id": "2026-06-17-senat-rapport-736-mires-comptes-2025",
+      "chemin": "corpus/sources/finances-publiques/2026/2026-06-17-senat-rapport-736-mires-comptes-2025.md",
+      "titre": "Rapport n° 736 (2025-2026) sur le projet de loi relatif aux résultats de la gestion et portant approbation des comptes de l'année 2025, tome II, annexe n° 24 « Recherche et enseignement supérieur »",
+      "editeur": "Sénat, commission des finances",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-06-17",
+      "themes": [
+        "finances-publiques"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.senat.fr/rap/l25-736-224/l25-736-2241.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "finances-publiques-credits-mission-mires-2025",
+        "finances-publiques-credits-mission-mires-2025"
+      ]
+    },
+    {
       "id": "2026-06-22-insee-chomage-immigres-descendants-2025",
       "chemin": "corpus/sources/immigration/2026/2026-06-22-insee-chomage-immigres-descendants-2025.md",
       "titre": "Inactivité, chômage et emploi des immigrés et des descendants d'immigrés par origine géographique (données annuelles 2025)",
@@ -1045,6 +1325,32 @@
         "immigration-immigres-nationalite-2025",
         "immigration-immigres-nationalite-2025",
         "immigration-immigres-nationalite-2025"
+      ]
+    },
+    {
+      "id": "2026-07-01-service-public-apl-etudiants-extra-europeens",
+      "chemin": "corpus/sources/finances-publiques/2026/2026-07-01-service-public-apl-etudiants-extra-europeens.md",
+      "titre": "Suppression des APL pour les étudiants extra-européens non boursiers à compter du 1er juillet 2026",
+      "editeur": "Service-public.gouv.fr (DILA)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-07-01",
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.service-public.gouv.fr/particuliers/actualites/A18981",
+      "depend_de": [
+        "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants"
+      ],
+      "cite_par": [
+        "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers"
       ]
     },
     {
@@ -1881,6 +2187,114 @@
       ]
     },
     {
+      "id": "finances-publiques-cepii-contribution-nette-immigres-france-1979-2011",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-cepii-contribution-nette-immigres-france-1979-2011.md",
+      "enonce": "Selon l'étude de Chojnicki, Ragot et Sokhna (La Lettre du CEPII n° 394, décembre 2018), la contribution nette des immigrés au solde budgétaire primaire de la France a été comprise entre -0,5 % et +0,05 % du PIB chaque année de 1979 à 2011 (scénario de référence), avec un minimum de -8,8 milliards d'euros en 2011 et une seule année positive, 1989 (+0,62 milliard d'euros).",
+      "periode": "2011",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": null,
+      "date_validite": "2027-11-02",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "deficit",
+        "depenses-publiques",
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2018-12-01-cepii-lettre-394-finances-publiques-immigration",
+        "2018-12-01-cepii-lettre-394-finances-publiques-immigration",
+        "2018-12-01-cepii-lettre-394-finances-publiques-immigration",
+        "2018-12-01-cepii-lettre-394-finances-publiques-immigration"
+      ]
+    },
+    {
+      "id": "finances-publiques-cour-comptes-depenses-etat-immigration-2019",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-cour-comptes-depenses-etat-immigration-2019.md",
+      "enonce": "Selon la Cour des comptes (rapport public thématique de mai 2020), les dépenses de l'État liées aux politiques d'immigration et d'intégration sont estimées à 6,57 milliards d'euros en 2019, soit 1,41 % des dépenses brutes du budget général.",
+      "periode": "2019",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": null,
+      "date_validite": "2027-11-02",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2020-05-05-cour-des-comptes-entree-sejour-etrangers",
+        "2020-05-05-cour-des-comptes-entree-sejour-etrangers"
+      ]
+    },
+    {
+      "id": "finances-publiques-credits-mission-justice-2025",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-credits-mission-justice-2025.md",
+      "enonce": "En 2025, les crédits de paiement exécutés de la mission budgétaire « Justice » de l'État se sont élevés à 12 380,3 millions d'euros, pour une prévision en loi de finances initiale de 12 691,1 millions d'euros, selon le rapport de la commission des finances du Sénat sur l'exécution 2025.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": null,
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-17-senat-rapport-736-justice-comptes-2025"
+      ]
+    },
+    {
+      "id": "finances-publiques-credits-mission-mires-2025",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-credits-mission-mires-2025.md",
+      "enonce": "En 2025, les crédits de paiement exécutés de la mission interministérielle « Recherche et enseignement supérieur » (MIRES) se sont élevés à 30 587 millions d'euros (prévision 2025 : 30 646 millions), dont 18,5 milliards d'euros pour les programmes 150 et 231 (enseignement supérieur et vie étudiante), selon le rapport de la commission des finances du Sénat sur l'exécution 2025.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": null,
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-06-17-senat-rapport-736-mires-comptes-2025",
+        "2026-06-17-senat-rapport-736-mires-comptes-2025"
+      ]
+    },
+    {
       "id": "finances-publiques-hebergement-asile-taux-2025",
       "chemin": "corpus/faits/finances-publiques/finances-publiques-hebergement-asile-taux-2025.md",
       "enonce": "En 2025, 72 % des demandeurs d'asile éligibles sont hébergés dans le dispositif national d'accueil (DNA), qui compte 113 258 places annoncées en 2025 contre 119 437 places au 31 décembre 2024.",
@@ -1906,6 +2320,123 @@
         "2026-04-22-gouvernement-rap-2025-immigration-asile-integration",
         "2026-06-17-senat-cf-execution-2025-immigration-asile",
         "2026-06-17-senat-cf-execution-2025-immigration-asile"
+      ]
+    },
+    {
+      "id": "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers.md",
+      "enonce": "L'article 179 de la loi n° 2026-103 du 19 février 2026 de finances pour 2026 modifie l'article L. 822-2 du code de la construction et de l'habitation : à compter du 1er juillet 2026, les aides personnelles au logement sont ouvertes aux personnes de nationalité étrangère remplissant les conditions prévues au deuxième alinéa de l'article L. 512-2, à l'exception des étrangers titulaires d'un visa de long séjour ou d'un titre de séjour « étudiant » (articles L. 422-1 à L. 422-7 du CESEDA) qui ne remplissent pas les conditions pour être titulaires d'une bourse d'enseignement supérieur sur critères sociaux.",
+      "periode": "2026-07-01",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": null,
+      "date_validite": "2026-12-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "lois-de-finances"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
+        "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
+        "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
+        "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
+        "2026-07-01-service-public-apl-etudiants-extra-europeens"
+      ]
+    },
+    {
+      "id": "finances-publiques-ocde-contribution-nette-nes-etranger-france-2006-2018",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-ocde-contribution-nette-nes-etranger-france-2006-2018.md",
+      "enonce": "Selon l'OCDE (Perspectives des migrations internationales 2021, chapitre 4, tableau 4.1), la contribution budgétaire nette des personnes nées à l'étranger en France était, en moyenne sur 2006-2018, de +1,02 % du PIB (postes attribuables individuellement seulement), +0,25 % (tous postes sauf biens publics purs) et -0,85 % (biens publics purs, dont défense et intérêts de la dette, répartis par tête) ; dans cette dernière spécification, celle des natifs était de -3,25 % du PIB.",
+      "periode": "2018",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": null,
+      "date_validite": "2027-11-02",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "recettes-fiscales",
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2021-10-28-ocde-impact-budgetaire-immigration-chap4",
+        "2021-10-28-ocde-impact-budgetaire-immigration-chap4",
+        "2021-10-28-ocde-impact-budgetaire-immigration-chap4",
+        "2021-10-28-ocde-impact-budgetaire-immigration-chap4"
+      ]
+    },
+    {
+      "id": "finances-publiques-oid-cout-net-etrangers-2023",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-oid-cout-net-etrangers-2023.md",
+      "enonce": "L'Observatoire de l'immigration et de la démographie (OID) a publié le 7 février 2025 une estimation, attribuée à Pierre Danon, selon laquelle les coûts publics imputables aux personnes de nationalité étrangère en France en 2023 représentaient 75,1 milliards d'euros bruts et 41 milliards d'euros par an nets des impôts directs, cotisations sociales et contributions de ces personnes (34,4 milliards sur un périmètre restreint).",
+      "periode": "2023",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": null,
+      "date_validite": "2027-11-02",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2025-02-07-oid-cout-net-immigration",
+        "2025-02-07-oid-cout-net-immigration",
+        "2025-02-07-oid-cout-net-immigration",
+        "2025-02-07-oid-cout-net-immigration",
+        "2025-02-07-oid-cout-net-immigration"
+      ]
+    },
+    {
+      "id": "finances-publiques-oid-ecart-pib-emploi-immigres-2024",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-oid-ecart-pib-emploi-immigres-2024.md",
+      "enonce": "Dans une note du 23 juin 2025, l'Observatoire de l'immigration et de la démographie (OID) calcule que si les immigrés et descendants d'immigrés avaient le même taux d'emploi que les personnes sans ascendance migratoire, le PIB de 2024 aurait été plus élevé de 98 milliards d'euros (3,4 % du PIB) et les recettes fiscales et sociales de 1,5 point de PIB.",
+      "periode": "2024",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": null,
+      "date_validite": "2027-11-02",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "deficit",
+        "immigration-emploi"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2025-06-23-oid-impact-immigration-economie-emploi",
+        "2025-06-23-oid-impact-immigration-economie-emploi",
+        "2025-06-23-oid-impact-immigration-economie-emploi"
       ]
     },
     {
@@ -1935,6 +2466,34 @@
         "2026-04-22-gouvernement-rap-2025-immigration-asile-integration",
         "2026-04-22-gouvernement-rap-2025-immigration-asile-integration",
         "2026-06-17-senat-cf-execution-2025-immigration-asile"
+      ]
+    },
+    {
+      "id": "finances-publiques-rsa-foyers-responsable-hors-ue-2022-06-30",
+      "chemin": "corpus/faits/finances-publiques/finances-publiques-rsa-foyers-responsable-hors-ue-2022-06-30.md",
+      "enonce": "Au 30 juin 2022, selon les données de la CNAF et de la CCMSA citées par le Gouvernement (réponse publiée au JO du 20 juin 2023), moins de 300 000 foyers bénéficiaires du RSA avaient un responsable de dossier ressortissant d'un pays hors Union européenne et Espace économique européen, soit 15,6 % des foyers bénéficiaires et 88,4 % des foyers dont le responsable de dossier n'a pas la nationalité française.",
+      "periode": "2022-06-30",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": null,
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "finances-publiques",
+        "immigration"
+      ],
+      "sous_themes": [
+        "depenses-publiques",
+        "population-immigree"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2023-06-20-an-reponse-qe-5157-rsa-nationalite",
+        "2023-06-20-an-reponse-qe-5157-rsa-nationalite",
+        "2023-06-20-an-reponse-qe-5157-rsa-nationalite"
       ]
     },
     {
