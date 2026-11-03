@@ -4,7 +4,7 @@
   "statistiques": {
     "sources": 76,
     "faits": 66,
-    "faits_valides": 31
+    "faits_valides": 32
   },
   "par_theme": {
     "immigration": {
@@ -3205,7 +3205,7 @@
       "chemin": "corpus/faits/immigration/immigration-chomage-descendants-par-origine-insee-2025.md",
       "enonce": "En 2025, en France hors Mayotte, le taux de chômage au sens du BIT des descendants d'immigrés de 15 à 64 ans varie fortement selon l'origine du parent immigré : 16,1 % pour les descendants d'immigrés originaires d'Afrique, 12,9 % d'Asie, 6,7 % d'Europe et 11,6 % d'Amérique ou d'Océanie, contre 6,5 % pour les personnes sans ascendance migratoire (INSEE, enquête Emploi).",
       "periode": "2025",
-      "statut": "en-attente",
+      "statut": "valide",
       "niveau_validation": 1,
       "etat_donnee": "provisoire",
       "date_validite": "2027-06-30",
