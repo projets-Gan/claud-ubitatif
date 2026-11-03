@@ -2,9 +2,9 @@
   "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
   "version_regles": 3,
   "statistiques": {
-    "sources": 62,
-    "faits": 55,
-    "faits_valides": 25
+    "sources": 75,
+    "faits": 66,
+    "faits_valides": 30
   },
   "par_theme": {
     "immigration": {
@@ -18,25 +18,33 @@
         "2021-12-01-legifrance-casf-article-l251-2",
         "2023-04-19-insee-definition-immigre",
         "2023-06-20-an-reponse-qe-5157-rsa-nationalite",
+        "2024-01-01-cour-des-comptes-immigration-irreguliere",
+        "2024-02-21-eurostat-metadonnees-migr-eil-esms",
         "2024-02-29-ministere-sante-presentation-ame",
         "2024-07-30-ministere-interieur-notice-titres-de-sejour",
         "2025-01-01-cnda-chiffres-cles-2024",
         "2025-02-07-oid-cout-net-immigration",
         "2025-03-20-eurostat-premiers-demandeurs-asile-2024",
+        "2025-06-01-assemblee-nationale-lois-controle-oqtf",
         "2025-06-20-ofpra-rapport-activite-2024",
         "2025-06-23-oid-impact-immigration-economie-emploi",
         "2025-10-07-insee-ip2076-etrangers-2024",
         "2025-10-14-gouvernement-pap-2026-sante",
         "2025-11-18-insee-portrait-social-immigres-descendants",
+        "2025-11-24-senat-avis-lois-plf-2026-immigration",
         "2025-11-24-senat-cf-plf-2026-sante",
+        "2025-11-24-senat-rapport-finances-plf-2026-immigration",
         "2026-01-01-cnda-chiffres-cles-2025",
         "2026-01-01-dgef-rap-2025-immigration-asile",
         "2026-01-13-insee-ip2087-bilan-demographique-2025",
         "2026-01-27-afp-immigration-bilan-2025",
+        "2026-01-27-dgef-eloignements-2025",
         "2026-01-27-dgef-titres-de-sejour-2025",
         "2026-01-27-ministere-interieur-demandes-asile-2025",
         "2026-01-27-ofpra-bilan-provisoire-2025",
+        "2026-01-28-public-senat-nunez-reconduites-forcees",
         "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
+        "2026-03-23-eurostat-metadonnees-france-migr-eil-sims-fr",
         "2026-03-24-cnda-bilan-2025",
         "2026-03-25-eurostat-premiers-demandeurs-asile-2025",
         "2026-04-07-courrier-atlas-immigration-legale",
@@ -48,11 +56,16 @@
         "2026-06-04-insee-population-immigree-etrangere-1921-2025",
         "2026-06-17-senat-cf-execution-2025-immigration-asile",
         "2026-06-17-senat-cf-execution-2025-sante",
+        "2026-06-19-eurostat-retours-trimestriels-statistics-explained",
         "2026-06-22-insee-chomage-immigres-descendants-2025",
         "2026-06-25-insee-essentiel-immigres-etrangers",
         "2026-07-01-service-public-apl-etudiants-extra-europeens",
         "2026-07-08-senat-rapport-874-couts-asile",
         "2026-07-27-ofpra-rapport-activite-2025-annonce",
+        "2026-09-16-assemblee-nationale-rapport-rodwell-immigration-irreguliere",
+        "2026-09-25-eurostat-retours-migr-eirtn",
+        "2026-09-30-eurostat-ordres-quitter-territoire-migr-eiord",
+        "2026-09-30-eurostat-retours-par-type-migr-eirtn1",
         "2026-10-22-eurostat-premiers-permis-france",
         "2026-10-22-eurostat-premiers-permis-italie",
         "2026-10-22-eurostat-premiers-permis-ue27",
@@ -93,16 +106,27 @@
         "immigration-chomage-immigres-par-origine-insee-2025",
         "immigration-chomage-nes-hors-ue-eurostat-2025",
         "immigration-chomage-seconde-generation-eurostat-2025",
+        "immigration-eloignements-dgef-2025",
         "immigration-entrees-immigres-insee-2024",
         "immigration-etrangers-nes-en-france-2025",
         "immigration-etrangers-part-population-2025",
+        "immigration-eurostat-retours-ordres-methode",
         "immigration-immigres-nationalite-2025",
         "immigration-immigres-part-population-2025",
+        "immigration-laissez-passer-consulaires-2023",
+        "immigration-oqtf-annulations-contentieux-2023",
+        "immigration-oqtf-prononcees-ministere-2025",
+        "immigration-ordres-quitter-eurostat-france-2024",
+        "immigration-ordres-quitter-eurostat-france-2025",
         "immigration-premiers-permis-eurostat-france-2024",
         "immigration-premiers-permis-eurostat-france-2025",
         "immigration-premiers-permis-motif-emploi-fr-it-ue-2024",
         "immigration-premiers-permis-motif-emploi-fr-it-ue-2025",
-        "immigration-premiers-titres-dgef-france-2025"
+        "immigration-premiers-titres-dgef-france-2025",
+        "immigration-retours-eurostat-france-2025",
+        "immigration-retours-forces-pays-tiers-eurostat-2025",
+        "immigration-taux-execution-oqtf-2024",
+        "immigration-taux-execution-oqtf-2025"
       ]
     },
     "emploi": {
@@ -442,6 +466,54 @@
       ]
     },
     {
+      "id": "2024-01-01-cour-des-comptes-immigration-irreguliere",
+      "chemin": "corpus/sources/immigration/2024/2024-01-01-cour-des-comptes-immigration-irreguliere.md",
+      "titre": "La politique de lutte contre l'immigration irrégulière (rapport public thématique)",
+      "editeur": "Cour des comptes",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2024-01-01",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.vie-publique.fr/files/rapport/pdf/292560.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-laissez-passer-consulaires-2023",
+        "immigration-oqtf-annulations-contentieux-2023"
+      ]
+    },
+    {
+      "id": "2024-02-21-eurostat-metadonnees-migr-eil-esms",
+      "chemin": "corpus/sources/immigration/2024/2024-02-21-eurostat-metadonnees-migr-eil-esms.md",
+      "titre": "Enforcement of Immigration Legislation (migr_eil) - Reference Metadata in Euro SDMX Metadata Structure (ESMS)",
+      "editeur": "Eurostat",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2024-02-21",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "UE"
+      ],
+      "url": "https://ec.europa.eu/eurostat/cache/metadata/en/migr_eil_esms.htm",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-eurostat-retours-ordres-methode",
+        "immigration-eurostat-retours-ordres-methode"
+      ]
+    },
+    {
       "id": "2024-02-29-ministere-sante-presentation-ame",
       "chemin": "corpus/sources/finances-publiques/2024/2024-02-29-ministere-sante-presentation-ame.md",
       "titre": "Présentation de l'Aide Médicale d'État (AME)",
@@ -569,6 +641,32 @@
       ]
     },
     {
+      "id": "2025-06-01-assemblee-nationale-lois-controle-oqtf",
+      "chemin": "corpus/sources/immigration/2025/2025-06-01-assemblee-nationale-lois-controle-oqtf.md",
+      "titre": "Séance thématique de contrôle : Les résultats de la politique d'éloignement des personnes sous obligation de quitter le territoire français (OQTF)",
+      "editeur": "Assemblée nationale, commission des lois",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2025-06-01",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.assemblee-nationale.fr/dyn/17/documents/cion_lois/l17n813203444_document",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-laissez-passer-consulaires-2023",
+        "immigration-oqtf-annulations-contentieux-2023",
+        "immigration-oqtf-prononcees-ministere-2025",
+        "immigration-taux-execution-oqtf-2024"
+      ]
+    },
+    {
       "id": "2025-06-20-ofpra-rapport-activite-2024",
       "chemin": "corpus/sources/immigration/2025/2025-06-20-ofpra-rapport-activite-2024.md",
       "titre": "Rapport d'activité 2024 – « À l'écoute du monde »",
@@ -691,6 +789,31 @@
       ]
     },
     {
+      "id": "2025-11-24-senat-avis-lois-plf-2026-immigration",
+      "chemin": "corpus/sources/immigration/2025/2025-11-24-senat-avis-lois-plf-2026-immigration.md",
+      "titre": "Avis n° 145 (2025-2026), tome II : Immigration, asile et intégration (projet de loi de finances pour 2026)",
+      "editeur": "Sénat, commission des lois",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2025-11-24",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.senat.fr/rap/a25-145-2/a25-145-21.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-laissez-passer-consulaires-2023",
+        "immigration-taux-execution-oqtf-2024",
+        "immigration-taux-execution-oqtf-2025"
+      ]
+    },
+    {
       "id": "2025-11-24-senat-cf-plf-2026-sante",
       "chemin": "corpus/sources/finances-publiques/2025/2025-11-24-senat-cf-plf-2026-sante.md",
       "titre": "Rapport général n° 139 (2025-2026), tome III, annexe 27 « Santé » : projet de loi de finances pour 2026",
@@ -715,6 +838,30 @@
       ],
       "cite_par": [
         "finances-publiques-ame-credits-lfi-2025"
+      ]
+    },
+    {
+      "id": "2025-11-24-senat-rapport-finances-plf-2026-immigration",
+      "chemin": "corpus/sources/immigration/2025/2025-11-24-senat-rapport-finances-plf-2026-immigration.md",
+      "titre": "Rapport général n° 139 (2025-2026), tome III, annexe 15 : Immigration, asile et intégration (projet de loi de finances pour 2026)",
+      "editeur": "Sénat, commission des finances",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2025-11-24",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.senat.fr/rap/l25-139-315/l25-139-3152.html",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-taux-execution-oqtf-2024",
+        "immigration-taux-execution-oqtf-2025"
       ]
     },
     {
@@ -822,8 +969,30 @@
       ],
       "cite_par": [
         "immigration-asile-demandes-guichet-unique-2025",
+        "immigration-eloignements-dgef-2025",
         "immigration-premiers-titres-dgef-france-2025"
       ]
+    },
+    {
+      "id": "2026-01-27-dgef-eloignements-2025",
+      "chemin": "corpus/sources/immigration/2026/2026-01-27-dgef-eloignements-2025.md",
+      "titre": "Les éloignements d'étrangers en situation irrégulière en 2025 : une dynamique ascendante",
+      "editeur": "Ministère de l'Intérieur, Direction générale des étrangers en France (DGEF)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-01-27",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.immigration.interieur.gouv.fr/chiffres-de-limmigration-en-france/eloignements-detrangers-en-situation-irreguliere-en-2025-dynamique-ascendante",
+      "depend_de": [],
+      "cite_par": []
     },
     {
       "id": "2026-01-27-dgef-titres-de-sejour-2025",
@@ -892,6 +1061,27 @@
       ]
     },
     {
+      "id": "2026-01-28-public-senat-nunez-reconduites-forcees",
+      "chemin": "corpus/sources/immigration/2026/2026-01-28-public-senat-nunez-reconduites-forcees.md",
+      "titre": "Immigration : « Nous sommes le pays, en Europe, qui reconduit le plus de manière forcée vers les pays tiers », assure Laurent Nunez",
+      "editeur": "Public Sénat",
+      "type": "presse-reference",
+      "niveau": 2,
+      "date_publication": "2026-01-28",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.publicsenat.fr/actualites/politique/immigration-nous-sommes-le-pays-en-europe-qui-reconduit-le-plus-de-maniere-forcee-vers-les-pays-tiers-assure-laurent-nunez",
+      "depend_de": [],
+      "cite_par": []
+    },
+    {
       "id": "2026-02-20-jorf-lfi-2026-article-179-apl-etudiants",
       "chemin": "corpus/sources/finances-publiques/2026/2026-02-20-jorf-lfi-2026-article-179-apl-etudiants.md",
       "titre": "Loi n° 2026-103 du 19 février 2026 de finances pour 2026, article 179",
@@ -917,6 +1107,27 @@
         "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers",
         "finances-publiques-lfi-2026-art-179-apl-etudiants-etrangers"
       ]
+    },
+    {
+      "id": "2026-03-23-eurostat-metadonnees-france-migr-eil-sims-fr",
+      "chemin": "corpus/sources/immigration/2026/2026-03-23-eurostat-metadonnees-france-migr-eil-sims-fr.md",
+      "titre": "Enforcement of immigration legislation - National reference metadata (France) [migr_eil_sims_fr]",
+      "editeur": "Eurostat",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-03-23",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://ec.europa.eu/eurostat/cache/metadata/en/migr_eil_sims_fr.htm",
+      "depend_de": [],
+      "cite_par": []
     },
     {
       "id": "2026-03-24-cnda-bilan-2025",
@@ -1269,6 +1480,29 @@
       ]
     },
     {
+      "id": "2026-06-19-eurostat-retours-trimestriels-statistics-explained",
+      "chemin": "corpus/sources/immigration/2026/2026-06-19-eurostat-retours-trimestriels-statistics-explained.md",
+      "titre": "Returns of irregular migrants - quarterly statistics (Statistics Explained)",
+      "editeur": "Eurostat",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-06-19",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "UE"
+      ],
+      "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Returns_of_irregular_migrants_-_quarterly_statistics",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-eurostat-retours-ordres-methode"
+      ]
+    },
+    {
       "id": "2026-06-22-insee-chomage-immigres-descendants-2025",
       "chemin": "corpus/sources/immigration/2026/2026-06-22-insee-chomage-immigres-descendants-2025.md",
       "titre": "Inactivité, chômage et emploi des immigrés et des descendants d'immigrés par origine géographique (données annuelles 2025)",
@@ -1435,6 +1669,110 @@
         "emploi-halo-chomage-france-2026-t2",
         "emploi-taux-emploi-15-64-france-2026-t2",
         "emploi-taux-emploi-15-64-france-2026-t2"
+      ]
+    },
+    {
+      "id": "2026-09-16-assemblee-nationale-rapport-rodwell-immigration-irreguliere",
+      "chemin": "corpus/sources/immigration/2026/2026-09-16-assemblee-nationale-rapport-rodwell-immigration-irreguliere.md",
+      "titre": "Rapport d'information n° 3178 sur le coût budgétaire de la lutte contre l'immigration irrégulière",
+      "editeur": "Assemblée nationale, commission des finances",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-09-16",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.assemblee-nationale.fr/dyn/opendata/RINFANR5L17B3178.html",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-oqtf-prononcees-ministere-2025",
+        "immigration-taux-execution-oqtf-2025",
+        "immigration-taux-execution-oqtf-2025"
+      ]
+    },
+    {
+      "id": "2026-09-25-eurostat-retours-migr-eirtn",
+      "chemin": "corpus/sources/immigration/2026/2026-09-25-eurostat-retours-migr-eirtn.md",
+      "titre": "Third country nationals returned following an order to leave - annual data (rounded) [migr_eirtn]",
+      "editeur": "Eurostat",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-09-25",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR",
+        "UE",
+        "DE"
+      ],
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/migr_eirtn?geo=FR&citizen=TOTAL&age=TOTAL&sex=T&sinceTimePeriod=2019",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-retours-eurostat-france-2025",
+        "immigration-retours-eurostat-france-2025"
+      ]
+    },
+    {
+      "id": "2026-09-30-eurostat-ordres-quitter-territoire-migr-eiord",
+      "chemin": "corpus/sources/immigration/2026/2026-09-30-eurostat-ordres-quitter-territoire-migr-eiord.md",
+      "titre": "Third country nationals ordered to leave - annual data (rounded) [migr_eiord]",
+      "editeur": "Eurostat",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-09-30",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR",
+        "UE",
+        "DE",
+        "ES"
+      ],
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/migr_eiord?citizen=TOTAL&age=TOTAL&sex=T&sinceTimePeriod=2019",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-ordres-quitter-eurostat-france-2024",
+        "immigration-ordres-quitter-eurostat-france-2025"
+      ]
+    },
+    {
+      "id": "2026-09-30-eurostat-retours-par-type-migr-eirtn1",
+      "chemin": "corpus/sources/immigration/2026/2026-09-30-eurostat-retours-par-type-migr-eirtn1.md",
+      "titre": "Third-country nationals returned following an order to leave, by type of return, citizenship, country of destination, age and sex - quarterly data [migr_eirtn1]",
+      "editeur": "Eurostat",
+      "type": "donnees-officielles",
+      "niveau": 1,
+      "date_publication": "2026-09-30",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR",
+        "UE",
+        "DE",
+        "IT"
+      ],
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/migr_eirtn1?citizen=TOTAL&age=TOTAL&sex=T&c_dest=THRD&return=FORC&sinceTimePeriod=2025-Q1&untilTimePeriod=2025-Q4",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-retours-forces-pays-tiers-eurostat-2025"
       ]
     },
     {
@@ -2961,6 +3299,30 @@
       ]
     },
     {
+      "id": "immigration-eloignements-dgef-2025",
+      "chemin": "corpus/faits/immigration/immigration-eloignements-dgef-2025.md",
+      "enonce": "Selon les chiffres de la DGEF rapportés par l'AFP le 27 janvier 2026, 24 985 étrangers ont été éloignés de France en 2025 (+15,7 % sur un an), dont 15 569 par un éloignement forcé (+21 %).",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-01-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-01-27-afp-immigration-bilan-2025"
+      ]
+    },
+    {
       "id": "immigration-entrees-immigres-insee-2024",
       "chemin": "corpus/faits/immigration/immigration-entrees-immigres-insee-2024.md",
       "enonce": "Selon l'INSEE (Insee Première n° 2107, juin 2026), 313 000 personnes immigrées, c'est-à-dire nées étrangères à l'étranger, sont entrées en France en 2024 pour s'y installer pour au moins un an, sur 438 000 entrées au total (dont 85 000 personnes nées en France et 40 000 nées françaises à l'étranger) ; le nombre d'entrées d'immigrés diminue de 10 % entre 2023 et 2024.",
@@ -3038,6 +3400,33 @@
       ]
     },
     {
+      "id": "immigration-eurostat-retours-ordres-methode",
+      "chemin": "corpus/faits/immigration/immigration-eurostat-retours-ordres-methode.md",
+      "enonce": "Selon la méthodologie d'Eurostat, les statistiques d'ordres de quitter le territoire et de retours comptent des personnes et non des décisions, et une personne partie au cours d'une année peut avoir reçu son ordre de quitter une année antérieure : le nombre de personnes renvoyées au cours d'une période ne doit pas être directement rapporté au nombre de personnes ayant reçu un ordre de quitter au cours de la même période.",
+      "periode": "2026",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-11-02",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "UE",
+        "FR"
+      ],
+      "sources": [
+        "2024-02-21-eurostat-metadonnees-migr-eil-esms",
+        "2024-02-21-eurostat-metadonnees-migr-eil-esms",
+        "2026-06-19-eurostat-retours-trimestriels-statistics-explained"
+      ]
+    },
+    {
       "id": "immigration-immigres-nationalite-2025",
       "chemin": "corpus/faits/immigration/immigration-immigres-nationalite-2025.md",
       "enonce": "Au 1er janvier 2025, parmi les 7 970 milliers d'immigrés résidant en France, 2 625 milliers (2,6 millions, soit 33 %) ont acquis la nationalité française et 5 345 milliers (5,3 millions) sont de nationalité étrangère (INSEE, données provisoires, Mayotte incluse).",
@@ -3089,6 +3478,136 @@
         "2026-06-04-insee-population-immigree-etrangere-1921-2025",
         "2026-06-04-insee-note-rupture-serie-immigration",
         "2023-04-19-insee-definition-immigre"
+      ]
+    },
+    {
+      "id": "immigration-laissez-passer-consulaires-2023",
+      "chemin": "corpus/faits/immigration/immigration-laissez-passer-consulaires-2023.md",
+      "enonce": "Selon la commission des lois de l'Assemblée nationale (juin 2025), en 2023, seuls 30 % des laissez-passer consulaires (LPC) demandés par les préfectures aux consulats concernés ont été délivrés en temps utile ; la Cour des comptes (janvier 2024) relève que de nombreux pays d'origine sont réticents à délivrer ces documents, nécessaires à l'éloignement de leurs ressortissants.",
+      "periode": "2023",
+      "statut": "en-attente",
+      "niveau_validation": 2,
+      "etat_donnee": null,
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2025-06-01-assemblee-nationale-lois-controle-oqtf",
+        "2024-01-01-cour-des-comptes-immigration-irreguliere",
+        "2025-11-24-senat-avis-lois-plf-2026-immigration"
+      ]
+    },
+    {
+      "id": "immigration-oqtf-annulations-contentieux-2023",
+      "chemin": "corpus/faits/immigration/immigration-oqtf-annulations-contentieux-2023.md",
+      "enonce": "Selon la commission des lois de l'Assemblée nationale (juin 2025), 18 % des OQTF ont été annulées en première instance en 2023 ; selon la Cour des comptes (janvier 2024), le contentieux des étrangers a représenté 41 % des affaires des juridictions administratives.",
+      "periode": "2023",
+      "statut": "en-attente",
+      "niveau_validation": 2,
+      "etat_donnee": null,
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2025-06-01-assemblee-nationale-lois-controle-oqtf",
+        "2024-01-01-cour-des-comptes-immigration-irreguliere"
+      ]
+    },
+    {
+      "id": "immigration-oqtf-prononcees-ministere-2025",
+      "chemin": "corpus/faits/immigration/immigration-oqtf-prononcees-ministere-2025.md",
+      "enonce": "Selon les chiffres du ministère de l'Intérieur repris par un rapport de l'Assemblée nationale de septembre 2026, 137 602 OQTF ont été délivrées en France en 2025, contre 129 833 « OQTF (et APRF) » en 2024.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": 2,
+      "etat_donnee": null,
+      "date_validite": "2027-01-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-09-16-assemblee-nationale-rapport-rodwell-immigration-irreguliere",
+        "2025-06-01-assemblee-nationale-lois-controle-oqtf"
+      ]
+    },
+    {
+      "id": "immigration-ordres-quitter-eurostat-france-2024",
+      "chemin": "corpus/faits/immigration/immigration-ordres-quitter-eurostat-france-2024.md",
+      "enonce": "Selon Eurostat (jeu migr_eiord, mise à jour du 30/09/2026), 128 740 ressortissants de pays tiers ont fait l'objet en France d'un ordre de quitter le territoire en 2024, le nombre le plus élevé de l'UE, devant l'Espagne (62 930) et l'Allemagne (57 075), pour un total UE de 464 820 (personnes, valeurs arrondies à 5).",
+      "periode": "2024",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-05-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR",
+        "UE",
+        "ES",
+        "DE"
+      ],
+      "sources": [
+        "2026-09-30-eurostat-ordres-quitter-territoire-migr-eiord"
+      ]
+    },
+    {
+      "id": "immigration-ordres-quitter-eurostat-france-2025",
+      "chemin": "corpus/faits/immigration/immigration-ordres-quitter-eurostat-france-2025.md",
+      "enonce": "Selon Eurostat (jeu migr_eiord, mise à jour du 30/09/2026), 137 550 ressortissants de pays tiers ont fait l'objet en France d'un ordre de quitter le territoire en 2025, le nombre le plus élevé de l'UE, devant l'Allemagne (55 240) et l'Espagne (53 700), pour un total UE de 486 705 (personnes, valeurs arrondies à 5).",
+      "periode": "2025",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-05-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR",
+        "UE",
+        "DE",
+        "ES"
+      ],
+      "sources": [
+        "2026-09-30-eurostat-ordres-quitter-territoire-migr-eiord"
       ]
     },
     {
@@ -3222,6 +3741,113 @@
         "2026-04-07-courrier-atlas-immigration-legale",
         "2026-04-21-dsed-calendrier-diffusions-2026",
         "2024-07-30-ministere-interieur-notice-titres-de-sejour"
+      ]
+    },
+    {
+      "id": "immigration-retours-eurostat-france-2025",
+      "chemin": "corpus/faits/immigration/immigration-retours-eurostat-france-2025.md",
+      "enonce": "Selon Eurostat (jeu migr_eirtn, mise à jour du 25/09/2026), 14 940 ressortissants de pays tiers sont partis de France vers un pays tiers à la suite d'un ordre de quitter le territoire en 2025 (14 670 en 2024), et 18 930 toutes destinations confondues, y compris vers un autre État membre (16 665 en 2024). Pour les retours vers un pays tiers, la France est 2e de l'UE en 2025, derrière l'Allemagne (29 295) et devant la Suède (11 250).",
+      "periode": "2025",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-05-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR",
+        "UE",
+        "DE"
+      ],
+      "sources": [
+        "2026-09-25-eurostat-retours-migr-eirtn",
+        "2026-09-25-eurostat-retours-migr-eirtn"
+      ]
+    },
+    {
+      "id": "immigration-retours-forces-pays-tiers-eurostat-2025",
+      "chemin": "corpus/faits/immigration/immigration-retours-forces-pays-tiers-eurostat-2025.md",
+      "enonce": "Selon Eurostat (jeu trimestriel migr_eirtn1, mise à jour du 30/09/2026), pour les retours forcés de ressortissants de pays tiers vers un pays tiers, la France est au 2e rang de l'UE à chacun des quatre trimestres de 2025 (1 700, 1 555, 1 435 et 1 495 personnes), derrière l'Allemagne (3 625, 3 445, 3 710 et 3 370) et devant l'Italie (1 245, 1 150, 1 110 et 1 270).",
+      "periode": "2025",
+      "statut": "valide",
+      "niveau_validation": 1,
+      "etat_donnee": "provisoire",
+      "date_validite": "2026-12-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR",
+        "UE",
+        "DE",
+        "IT"
+      ],
+      "sources": [
+        "2026-09-30-eurostat-retours-par-type-migr-eirtn1"
+      ]
+    },
+    {
+      "id": "immigration-taux-execution-oqtf-2024",
+      "chemin": "corpus/faits/immigration/immigration-taux-execution-oqtf-2024.md",
+      "enonce": "Pour 2024, le « taux d'exécution des OQTF » publié varie selon les rapports parlementaires, tous fondés sur des données du ministère de l'Intérieur : 11,4 % selon la commission des finances du Sénat, 8,3 % selon un rapporteur de la commission des lois du Sénat (intervention en commission), environ une OQTF sur dix (de l'ordre de 15 000 sur 130 000) selon la commission des lois de l'Assemblée nationale.",
+      "periode": "2024",
+      "statut": "en-attente",
+      "niveau_validation": 2,
+      "etat_donnee": null,
+      "date_validite": "2027-01-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2025-11-24-senat-rapport-finances-plf-2026-immigration",
+        "2025-11-24-senat-avis-lois-plf-2026-immigration",
+        "2025-06-01-assemblee-nationale-lois-controle-oqtf"
+      ]
+    },
+    {
+      "id": "immigration-taux-execution-oqtf-2025",
+      "chemin": "corpus/faits/immigration/immigration-taux-execution-oqtf-2025.md",
+      "enonce": "Pour 2025, les rapports parlementaires publient plusieurs « taux d'exécution des OQTF », tous fondés sur des données du ministère de l'Intérieur : 10,6 % en cours d'année (Sénat, commission des finances), 10,9 % sur les neuf premiers mois (Sénat, commission des lois), un taux global « de l'ordre de 15 % » pour 23 549 éloignements depuis la métropole et 4,5 % pour les seuls éloignements forcés vers un pays tiers (Assemblée nationale, commission des finances).",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": 2,
+      "etat_donnee": null,
+      "date_validite": "2027-01-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "eloignements"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-09-16-assemblee-nationale-rapport-rodwell-immigration-irreguliere",
+        "2026-09-16-assemblee-nationale-rapport-rodwell-immigration-irreguliere",
+        "2025-11-24-senat-rapport-finances-plf-2026-immigration",
+        "2025-11-24-senat-avis-lois-plf-2026-immigration"
       ]
     }
   ]
