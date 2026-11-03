@@ -2,21 +2,31 @@
   "avertissement": "Fichier généré par scripts/generer_index.py. Ne pas modifier à la main.",
   "version_regles": 3,
   "statistiques": {
-    "sources": 32,
-    "faits": 26,
+    "sources": 44,
+    "faits": 38,
     "faits_valides": 22
   },
   "par_theme": {
     "immigration": {
       "sources": [
+        "2002-04-18-ofpra-rapport-activite-2001",
         "2020-12-07-insee-definition-etranger",
         "2023-04-19-insee-definition-immigre",
         "2024-07-30-ministere-interieur-notice-titres-de-sejour",
+        "2025-01-01-cnda-chiffres-cles-2024",
+        "2025-03-20-eurostat-premiers-demandeurs-asile-2024",
+        "2025-06-20-ofpra-rapport-activite-2024",
         "2025-10-07-insee-ip2076-etrangers-2024",
         "2025-11-18-insee-portrait-social-immigres-descendants",
+        "2026-01-01-cnda-chiffres-cles-2025",
+        "2026-01-01-dgef-rap-2025-immigration-asile",
         "2026-01-13-insee-ip2087-bilan-demographique-2025",
         "2026-01-27-afp-immigration-bilan-2025",
         "2026-01-27-dgef-titres-de-sejour-2025",
+        "2026-01-27-ministere-interieur-demandes-asile-2025",
+        "2026-01-27-ofpra-bilan-provisoire-2025",
+        "2026-03-24-cnda-bilan-2025",
+        "2026-03-25-eurostat-premiers-demandeurs-asile-2025",
         "2026-04-07-courrier-atlas-immigration-legale",
         "2026-04-21-dsed-calendrier-diffusions-2026",
         "2026-06-04-insee-ip2107-flux-migratoires-2024",
@@ -25,6 +35,8 @@
         "2026-06-04-insee-population-immigree-etrangere-1921-2025",
         "2026-06-22-insee-chomage-immigres-descendants-2025",
         "2026-06-25-insee-essentiel-immigres-etrangers",
+        "2026-07-08-senat-rapport-874-couts-asile",
+        "2026-07-27-ofpra-rapport-activite-2025-annonce",
         "2026-10-22-eurostat-premiers-permis-france",
         "2026-10-22-eurostat-premiers-permis-italie",
         "2026-10-22-eurostat-premiers-permis-ue27",
@@ -32,6 +44,18 @@
         "2026-10-30-eurostat-lfsa-urganedm-chomage-statut-migratoire"
       ],
       "faits": [
+        "immigration-asile-cnda-delai-moyen-constate-2025",
+        "immigration-asile-cnda-delai-previsible-moyen-2025",
+        "immigration-asile-cnda-recours-affaires-jugees-2025",
+        "immigration-asile-demandes-guichet-unique-2025",
+        "immigration-asile-demandes-ofpra-2024",
+        "immigration-asile-demandes-ofpra-2025",
+        "immigration-asile-eurostat-premiers-demandeurs-france-2024",
+        "immigration-asile-eurostat-premiers-demandeurs-france-2025",
+        "immigration-asile-ofpra-comptage-mineurs-2001",
+        "immigration-asile-premieres-demandes-ofpra-2024",
+        "immigration-asile-premieres-demandes-ofpra-2025",
+        "immigration-asile-reexamens-ofpra-2025",
         "immigration-chomage-descendants-immigres-insee-2025",
         "immigration-chomage-descendants-par-origine-insee-2025",
         "immigration-chomage-immigres-insee-2025",
@@ -114,6 +138,30 @@
       ]
     },
     {
+      "id": "2002-04-18-ofpra-rapport-activite-2001",
+      "chemin": "corpus/sources/immigration/2002/2002-04-18-ofpra-rapport-activite-2001.md",
+      "titre": "Rapport d'activité 2001",
+      "editeur": "Office français de protection des réfugiés et apatrides (OFPRA)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2002-04-18",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.vie-publique.fr/files/rapport/pdf/024000275.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-asile-ofpra-comptage-mineurs-2001",
+        "immigration-asile-ofpra-comptage-mineurs-2001"
+      ]
+    },
+    {
       "id": "2020-12-07-insee-definition-etranger",
       "chemin": "corpus/sources/immigration/2020/2020-12-07-insee-definition-etranger.md",
       "titre": "Définition : Étranger",
@@ -184,6 +232,80 @@
       ]
     },
     {
+      "id": "2025-01-01-cnda-chiffres-cles-2024",
+      "chemin": "corpus/sources/immigration/2025/2025-01-01-cnda-chiffres-cles-2024.md",
+      "titre": "Chiffres clés 2024 (dépliant)",
+      "editeur": "Cour nationale du droit d'asile (CNDA)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2025-01-01",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.cnda.fr/Media/mediatheque-cnda/documents/rapports-d-activite/tryptique-2024",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-asile-cnda-delai-moyen-constate-2025",
+        "immigration-asile-cnda-delai-previsible-moyen-2025",
+        "immigration-asile-cnda-recours-affaires-jugees-2025"
+      ]
+    },
+    {
+      "id": "2025-03-20-eurostat-premiers-demandeurs-asile-2024",
+      "chemin": "corpus/sources/immigration/2025/2025-03-20-eurostat-premiers-demandeurs-asile-2024.md",
+      "titre": "First-time asylum applications down 13% in 2024",
+      "editeur": "Eurostat",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2025-03-20",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "UE",
+        "FR"
+      ],
+      "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20250320-1",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-asile-eurostat-premiers-demandeurs-france-2024"
+      ]
+    },
+    {
+      "id": "2025-06-20-ofpra-rapport-activite-2024",
+      "chemin": "corpus/sources/immigration/2025/2025-06-20-ofpra-rapport-activite-2024.md",
+      "titre": "Rapport d'activité 2024 – « À l'écoute du monde »",
+      "editeur": "Office français de protection des réfugiés et apatrides (OFPRA)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2025-06-20",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.ofpra.gouv.fr/sites/default/files/2025-06/OFPRA_RA_2024_BD_PaP.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-asile-demandes-ofpra-2024",
+        "immigration-asile-premieres-demandes-ofpra-2024",
+        "immigration-asile-reexamens-ofpra-2025"
+      ]
+    },
+    {
       "id": "2025-10-07-insee-ip2076-etrangers-2024",
       "chemin": "corpus/sources/immigration/2025/2025-10-07-insee-ip2076-etrangers-2024.md",
       "titre": "En 2024, 6,0 millions d'étrangers vivent en France, 0,9 million y sont nés (Insee Première n° 2076)",
@@ -229,6 +351,61 @@
       ]
     },
     {
+      "id": "2026-01-01-cnda-chiffres-cles-2025",
+      "chemin": "corpus/sources/immigration/2026/2026-01-01-cnda-chiffres-cles-2025.md",
+      "titre": "Chiffres clés 2025 (dépliant)",
+      "editeur": "Cour nationale du droit d'asile (CNDA)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-01-01",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.cnda.fr/content/download/237326/file/D%C3%A9pliant%202025.pdf",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-asile-cnda-delai-moyen-constate-2025",
+        "immigration-asile-cnda-delai-previsible-moyen-2025",
+        "immigration-asile-cnda-recours-affaires-jugees-2025"
+      ]
+    },
+    {
+      "id": "2026-01-01-dgef-rap-2025-immigration-asile",
+      "chemin": "corpus/sources/immigration/2026/2026-01-01-dgef-rap-2025-immigration-asile.md",
+      "titre": "Rapport annuel de performances 2025 – Mission « Immigration, asile et intégration », programme 303 « Immigration et asile »",
+      "editeur": "Ministère de l'Intérieur (DGEF), annexe au projet de loi relatif aux résultats de la gestion 2025",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-01-01",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.assemblee-nationale.fr/dyn/contenu/visualisation/1109864/file/Immigration_asile_integration_IA.pdf",
+      "depend_de": [
+        "2026-01-27-ministere-interieur-demandes-asile-2025",
+        "2026-01-27-ofpra-bilan-provisoire-2025",
+        "2026-01-01-cnda-chiffres-cles-2025"
+      ],
+      "cite_par": [
+        "immigration-asile-cnda-delai-moyen-constate-2025",
+        "immigration-asile-demandes-ofpra-2025",
+        "immigration-asile-premieres-demandes-ofpra-2025",
+        "immigration-asile-reexamens-ofpra-2025"
+      ]
+    },
+    {
       "id": "2026-01-13-insee-ip2087-bilan-demographique-2025",
       "chemin": "corpus/sources/immigration/2026/2026-01-13-insee-ip2087-bilan-demographique-2025.md",
       "titre": "Bilan démographique 2025 (Insee Première n° 2087)",
@@ -254,7 +431,7 @@
     {
       "id": "2026-01-27-afp-immigration-bilan-2025",
       "chemin": "corpus/sources/immigration/2026/2026-01-27-afp-immigration-bilan-2025.md",
-      "titre": "Immigration: plus de titres de séjour et moins de régularisations en France en 2025",
+      "titre": "Immigration : plus de titres de séjour et moins de régularisations en France en 2025",
       "editeur": "AFP",
       "type": "agence-presse",
       "niveau": 2,
@@ -263,16 +440,21 @@
         "immigration"
       ],
       "sous_themes": [
-        "titres-de-sejour"
+        "titres-de-sejour",
+        "asile",
+        "eloignements"
       ],
       "pays": [
         "FR"
       ],
       "url": "https://lepetitjournal.com/fil-afp/immigration-plus-de-titres-de-sejour-et-moins-de-regularisations-en-france-en-2025-433266",
       "depend_de": [
-        "2026-01-27-dgef-titres-de-sejour-2025"
+        "2026-01-27-dgef-titres-de-sejour-2025",
+        "2026-01-27-ministere-interieur-demandes-asile-2025",
+        "2026-01-27-dgef-eloignements-2025"
       ],
       "cite_par": [
+        "immigration-asile-demandes-guichet-unique-2025",
         "immigration-premiers-titres-dgef-france-2025"
       ]
     },
@@ -296,6 +478,99 @@
       "url": "https://www.immigration.interieur.gouv.fr/documentation/etudes-et-statistiques/titres-de-sejour-en-2025-protections-subsidiaires-ont-plus-que-double.html",
       "depend_de": [],
       "cite_par": []
+    },
+    {
+      "id": "2026-01-27-ministere-interieur-demandes-asile-2025",
+      "chemin": "corpus/sources/immigration/2026/2026-01-27-ministere-interieur-demandes-asile-2025.md",
+      "titre": "Chiffres clés – Les demandes d'asile (année 2025)",
+      "editeur": "Ministère de l'Intérieur, Département des statistiques, des études et de la documentation (DSED)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-01-27",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.immigration.interieur.gouv.fr/publications/chiffres-de-limmigration-en-france/demandes-dasile-pour-lannee-2025",
+      "depend_de": [],
+      "cite_par": []
+    },
+    {
+      "id": "2026-01-27-ofpra-bilan-provisoire-2025",
+      "chemin": "corpus/sources/immigration/2026/2026-01-27-ofpra-bilan-provisoire-2025.md",
+      "titre": "Bilan 2025 de l'Ofpra : une activité record et des évolutions contrastées",
+      "editeur": "Office français de protection des réfugiés et apatrides (OFPRA)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-01-27",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.ofpra.gouv.fr/actualites/bilan-2025-de-lofpra-une-activite-record-et-des-evolutions-contrastees",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-asile-demandes-ofpra-2025",
+        "immigration-asile-premieres-demandes-ofpra-2025"
+      ]
+    },
+    {
+      "id": "2026-03-24-cnda-bilan-2025",
+      "chemin": "corpus/sources/immigration/2026/2026-03-24-cnda-bilan-2025.md",
+      "titre": "Augmentation des recours, protections accordées, défis à venir pour le juge de l'asile : la CNDA dresse le bilan de son année 2025",
+      "editeur": "Cour nationale du droit d'asile (CNDA)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-03-24",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.cnda.fr/qui-sommes-nous/vie-de-la-cour/augmentation-des-recours-protections-accordees-defis-a-venir-pour-le-juge-de-l-asile-la-cnda-dresse-le-bilan-de-son-annee-2025",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-asile-cnda-delai-moyen-constate-2025",
+        "immigration-asile-cnda-recours-affaires-jugees-2025"
+      ]
+    },
+    {
+      "id": "2026-03-25-eurostat-premiers-demandeurs-asile-2025",
+      "chemin": "corpus/sources/immigration/2026/2026-03-25-eurostat-premiers-demandeurs-asile-2025.md",
+      "titre": "27% drop in first-time asylum applications in 2025",
+      "editeur": "Eurostat",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-03-25",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "UE",
+        "FR"
+      ],
+      "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20260325-2",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-asile-eurostat-premiers-demandeurs-france-2025"
+      ]
     },
     {
       "id": "2026-04-07-courrier-atlas-immigration-legale",
@@ -518,6 +793,59 @@
         "immigration-immigres-nationalite-2025",
         "immigration-immigres-nationalite-2025",
         "immigration-immigres-nationalite-2025"
+      ]
+    },
+    {
+      "id": "2026-07-08-senat-rapport-874-couts-asile",
+      "chemin": "corpus/sources/immigration/2026/2026-07-08-senat-rapport-874-couts-asile.md",
+      "titre": "Les coûts de l'asile en France – Rapport d'information n° 874 (2025-2026)",
+      "editeur": "Sénat, commission des finances",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-07-08",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.senat.fr/rap/r25-874/r25-874_mono.html",
+      "depend_de": [
+        "2026-01-27-ministere-interieur-demandes-asile-2025",
+        "2026-03-25-eurostat-premiers-demandeurs-asile-2025"
+      ],
+      "cite_par": [
+        "immigration-asile-demandes-guichet-unique-2025",
+        "immigration-asile-demandes-ofpra-2024",
+        "immigration-asile-eurostat-premiers-demandeurs-france-2025",
+        "immigration-asile-premieres-demandes-ofpra-2025"
+      ]
+    },
+    {
+      "id": "2026-07-27-ofpra-rapport-activite-2025-annonce",
+      "chemin": "corpus/sources/immigration/2026/2026-07-27-ofpra-rapport-activite-2025-annonce.md",
+      "titre": "L'Ofpra publie son rapport d'activité 2025, à l'occasion des 75 ans de la Convention de Genève",
+      "editeur": "Office français de protection des réfugiés et apatrides (OFPRA)",
+      "type": "institution-publique",
+      "niveau": 2,
+      "date_publication": "2026-07-27",
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "url": "https://www.ofpra.gouv.fr/en/node/86788",
+      "depend_de": [],
+      "cite_par": [
+        "immigration-asile-demandes-ofpra-2025",
+        "immigration-asile-reexamens-ofpra-2025"
       ]
     },
     {
@@ -1136,6 +1464,312 @@
       "sources": [
         "2026-08-07-insee-chomage-t2-2026",
         "2026-08-07-insee-chomage-t2-2026"
+      ]
+    },
+    {
+      "id": "immigration-asile-cnda-delai-moyen-constate-2025",
+      "chemin": "corpus/faits/immigration/immigration-asile-cnda-delai-moyen-constate-2025.md",
+      "enonce": "Selon la CNDA, le délai moyen constaté de jugement des recours, toutes procédures confondues, est de 5 mois et 15 jours en 2025, contre 5 mois et 9 jours en 2024 (5 mois et 17 jours en 2025 selon le rapport annuel de performances).",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-03-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-01-01-cnda-chiffres-cles-2025",
+        "2026-03-24-cnda-bilan-2025",
+        "2025-01-01-cnda-chiffres-cles-2024",
+        "2026-01-01-dgef-rap-2025-immigration-asile"
+      ]
+    },
+    {
+      "id": "immigration-asile-cnda-delai-previsible-moyen-2025",
+      "chemin": "corpus/faits/immigration/immigration-asile-cnda-delai-previsible-moyen-2025.md",
+      "enonce": "Selon la CNDA, le délai prévisible moyen, qui traduit sa capacité à juger la totalité des affaires en instance, s'établit à 6 mois et 22 jours en 2025, contre 4 mois et 9 jours en 2024.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-03-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-01-01-cnda-chiffres-cles-2025",
+        "2025-01-01-cnda-chiffres-cles-2024"
+      ]
+    },
+    {
+      "id": "immigration-asile-cnda-recours-affaires-jugees-2025",
+      "chemin": "corpus/faits/immigration/immigration-asile-cnda-recours-affaires-jugees-2025.md",
+      "enonce": "Selon la CNDA, 60 065 recours ont été enregistrés et 53 086 affaires jugées en 2025, contre 56 497 recours enregistrés et 61 593 affaires jugées en 2024.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-03-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-01-01-cnda-chiffres-cles-2025",
+        "2026-03-24-cnda-bilan-2025",
+        "2025-01-01-cnda-chiffres-cles-2024"
+      ]
+    },
+    {
+      "id": "immigration-asile-demandes-guichet-unique-2025",
+      "chemin": "corpus/faits/immigration/immigration-asile-demandes-guichet-unique-2025.md",
+      "enonce": "Selon le ministère de l'Intérieur, rapporté par l'AFP et par le Sénat, environ 151 600 demandes d'asile (151 665 selon l'AFP) ont été enregistrées en 2025 dans les guichets uniques en préfecture, premières demandes et réexamens compris, soit une baisse de 3,7 % par rapport à 2024 (environ 157 500).",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "provisoire",
+      "date_validite": "2026-12-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-01-27-afp-immigration-bilan-2025",
+        "2026-07-08-senat-rapport-874-couts-asile"
+      ]
+    },
+    {
+      "id": "immigration-asile-demandes-ofpra-2024",
+      "chemin": "corpus/faits/immigration/immigration-asile-demandes-ofpra-2024.md",
+      "enonce": "Selon son rapport d'activité 2024, l'OFPRA a enregistré 153 715 demandes de protection internationale en 2024 (premières demandes et réexamens, mineurs accompagnants inclus), soit une hausse de 7,8 % en un an.",
+      "periode": "2024",
+      "statut": "en-attente",
+      "niveau_validation": 2,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2025-06-20-ofpra-rapport-activite-2024",
+        "2026-07-08-senat-rapport-874-couts-asile"
+      ]
+    },
+    {
+      "id": "immigration-asile-demandes-ofpra-2025",
+      "chemin": "corpus/faits/immigration/immigration-asile-demandes-ofpra-2025.md",
+      "enonce": "Selon l'OFPRA, 145 270 demandes de protection internationale ont été enregistrées à l'Office en 2025 (chiffre définitif ; premières demandes et réexamens, mineurs inclus), en baisse de 5,5 % par rapport à 2024.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": 2,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-07-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-07-27-ofpra-rapport-activite-2025-annonce",
+        "2026-01-27-ofpra-bilan-provisoire-2025",
+        "2026-01-01-dgef-rap-2025-immigration-asile"
+      ]
+    },
+    {
+      "id": "immigration-asile-eurostat-premiers-demandeurs-france-2024",
+      "chemin": "corpus/faits/immigration/immigration-asile-eurostat-premiers-demandeurs-france-2024.md",
+      "enonce": "Selon le communiqué Eurostat du 20 mars 2025, la France a compté 130 900 premiers demandeurs d'asile ressortissants de pays tiers en 2024, soit 14 % des 912 000 premiers demandeurs de l'Union européenne (4e rang).",
+      "periode": "2024",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "provisoire",
+      "date_validite": "2026-12-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR",
+        "UE"
+      ],
+      "sources": [
+        "2025-03-20-eurostat-premiers-demandeurs-asile-2024"
+      ]
+    },
+    {
+      "id": "immigration-asile-eurostat-premiers-demandeurs-france-2025",
+      "chemin": "corpus/faits/immigration/immigration-asile-eurostat-premiers-demandeurs-france-2025.md",
+      "enonce": "Selon le communiqué Eurostat du 25 mars 2026, la France a compté 116 400 premiers demandeurs d'asile ressortissants de pays tiers en 2025, soit 17 % des 669 400 premiers demandeurs de l'Union européenne (3e rang, derrière l'Espagne et l'Italie).",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "provisoire",
+      "date_validite": "2027-03-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR",
+        "UE"
+      ],
+      "sources": [
+        "2026-03-25-eurostat-premiers-demandeurs-asile-2025",
+        "2026-07-08-senat-rapport-874-couts-asile"
+      ]
+    },
+    {
+      "id": "immigration-asile-ofpra-comptage-mineurs-2001",
+      "chemin": "corpus/faits/immigration/immigration-asile-ofpra-comptage-mineurs-2001.md",
+      "enonce": "Selon son rapport d'activité 2001, l'OFPRA n'ouvrait de dossier que pour les demandeurs majeurs et ne comptabilisait pas les mineurs ; les mineurs sont recensés et pourvus d'un dossier individuel depuis le 1er juin 2001.",
+      "periode": "2001-06-01",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": null,
+      "date_validite": "2028-12-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2002-04-18-ofpra-rapport-activite-2001",
+        "2002-04-18-ofpra-rapport-activite-2001"
+      ]
+    },
+    {
+      "id": "immigration-asile-premieres-demandes-ofpra-2024",
+      "chemin": "corpus/faits/immigration/immigration-asile-premieres-demandes-ofpra-2024.md",
+      "enonce": "Selon son rapport d'activité 2024, l'OFPRA a enregistré 130 029 premières demandes d'asile en 2024 (+4,8 % en un an), dont 36 287 mineurs accompagnés.",
+      "periode": "2024",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "definitif",
+      "date_validite": "2027-06-30",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2025-06-20-ofpra-rapport-activite-2024"
+      ]
+    },
+    {
+      "id": "immigration-asile-premieres-demandes-ofpra-2025",
+      "chemin": "corpus/faits/immigration/immigration-asile-premieres-demandes-ofpra-2025.md",
+      "enonce": "Selon le rapport annuel de performances 2025 du programme « Immigration et asile », 111 276 premières demandes d'asile ont été introduites à l'OFPRA en 2025, soit une baisse de 14,4 % par rapport à 2024 selon l'OFPRA.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": null,
+      "etat_donnee": "provisoire",
+      "date_validite": "2026-12-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-01-01-dgef-rap-2025-immigration-asile",
+        "2026-01-27-ofpra-bilan-provisoire-2025",
+        "2026-07-08-senat-rapport-874-couts-asile"
+      ]
+    },
+    {
+      "id": "immigration-asile-reexamens-ofpra-2025",
+      "chemin": "corpus/faits/immigration/immigration-asile-reexamens-ofpra-2025.md",
+      "enonce": "Selon le rapport annuel de performances 2025, les demandes de réexamen introduites à l'OFPRA ont augmenté de 43 % en 2025, à 33 721, contre 23 573 en 2024 selon l'OFPRA.",
+      "periode": "2025",
+      "statut": "en-attente",
+      "niveau_validation": 2,
+      "etat_donnee": "provisoire",
+      "date_validite": "2026-12-31",
+      "date_ajout": "2026-11-02",
+      "date_derniere_verification": null,
+      "themes": [
+        "immigration"
+      ],
+      "sous_themes": [
+        "asile"
+      ],
+      "pays": [
+        "FR"
+      ],
+      "sources": [
+        "2026-01-01-dgef-rap-2025-immigration-asile",
+        "2025-06-20-ofpra-rapport-activite-2024",
+        "2026-07-27-ofpra-rapport-activite-2025-annonce"
       ]
     },
     {
