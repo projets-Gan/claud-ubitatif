@@ -14,7 +14,7 @@ etat_donnee: null
 statut: valide
 date_validite: 2027-01-01
 date_ajout: 2026-11-01
-date_derniere_verification: null
+date_derniere_verification: 2026-11-07
 sources:
   - source: 2026-05-24-jorf-arrete-smic-1er-juin-2026
     extrait: "son montant est porté à 12,31 € l'heure"
