@@ -14,7 +14,7 @@ etat_donnee: provisoire
 statut: en-attente
 date_validite: 2026-12-01
 date_ajout: 2026-11-01
-date_derniere_verification: null
+date_derniere_verification: 2026-11-07
 sources:
   - source: 2026-10-30-bta-chomage-ue-septembre-2026
     extrait: "the euro area seasonally adjusted unemployment rate was 6.5%, stable compared with August 2026 » ; « The EU unemployment rate remained unchanged from the previous month at 6.2%"
