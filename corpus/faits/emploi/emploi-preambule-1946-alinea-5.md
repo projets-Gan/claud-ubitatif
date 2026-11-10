@@ -14,7 +14,7 @@ etat_donnee: null
 statut: valide
 date_validite: 2027-11-01
 date_ajout: 2026-11-01
-date_derniere_verification: null
+date_derniere_verification: 2026-11-10
 sources:
   - source: 1946-10-27-conseil-constitutionnel-preambule-1946
     extrait: "Chacun a le devoir de travailler et le droit d'obtenir un emploi."

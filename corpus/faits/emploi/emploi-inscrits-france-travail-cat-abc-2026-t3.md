@@ -14,7 +14,7 @@ etat_donnee: provisoire
 statut: valide
 date_validite: 2027-01-28
 date_ajout: 2026-11-01
-date_derniere_verification: null
+date_derniere_verification: 2026-11-10
 sources:
   - source: 2026-10-28-dreets-normandie-tableaux-inscrits-t3-2026
     extrait: "TABLEAU 2 | Inscrits en catégories A, B, C ; ligne « Ensemble des inscrits tenus de rechercher un emploi (catégories A, B, C) », France (hors Mayotte), en milliers : 5 847,5 (T3 2026) ; +0,8 % sur un trimestre ; +2,4 % sur un an."
