@@ -14,7 +14,7 @@ etat_donnee: provisoire
 statut: valide
 date_validite: 2027-01-28
 date_ajout: 2026-11-01
-date_derniere_verification: null
+date_derniere_verification: 2026-11-14
 sources:
   - source: 2026-10-28-dreets-normandie-tableaux-inscrits-t3-2026
     extrait: "TABLEAU 1 | Inscrits à France Travail par catégorie ; ligne « Inscrits en catégorie A (tenus de rechercher un emploi, sans emploi) », France (hors Mayotte), en milliers : 3 353,4 (T3 2026) ; +0,9 % sur un trimestre ; +2,1 % sur un an."

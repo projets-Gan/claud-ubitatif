@@ -14,7 +14,7 @@ etat_donnee: provisoire
 statut: valide
 date_validite: 2026-11-27
 date_ajout: 2026-11-01
-date_derniere_verification: null
+date_derniere_verification: 2026-11-14
 sources:
   - source: 2026-10-30-insee-emploi-salarie-prive-flash-t3-2026
     extrait: "Entre juin et septembre 2026, l'emploi salarié du secteur privé est quasi stable (-0,1 %, soit -25 800 emplois)"
